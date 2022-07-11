@@ -1,0 +1,443 @@
+[
+  {
+    "model": "master.MasterCity",
+    "fields": {
+      "id": 1,
+      "name": "An Giang"
+    }
+  },
+  {
+    "model": "master.MasterCity",
+    "fields": {
+      "id": 2,
+      "name": "Bà Rịa - Vũng Tàu"
+    }
+  },
+  {
+    "model": "master.MasterCity",
+    "fields": {
+      "id": 3,
+      "name": "Bắc Giang"
+    }
+  },
+  {
+    "model": "master.MasterCity",
+    "fields": {
+      "id": 4,
+      "name": "Bắc Kạn"
+    }
+  },
+  {
+    "model": "master.MasterCity",
+    "fields": {
+      "id": 5,
+      "name": "Bạc Liêu"
+    }
+  },
+  {
+    "model": "master.MasterCity",
+    "fields": {
+      "id": 6,
+      "name": "Bắc Ninh"
+    }
+  },
+  {
+    "model": "master.MasterCity",
+    "fields": {
+      "id": 7,
+      "name": "Bến Tre"
+    }
+  },
+  {
+    "model": "master.MasterCity",
+    "fields": {
+      "id": 8,
+      "name": "Bình Định"
+    }
+  },
+  {
+    "model": "master.MasterCity",
+    "fields": {
+      "id": 9,
+      "name": "Bình Dương"
+    }
+  },
+  {
+    "model": "master.MasterCity",
+    "fields": {
+      "id": 10,
+      "name": "Bình Phước"
+    }
+  },
+  {
+    "model": "master.MasterCity",
+    "fields": {
+      "id": 11,
+      "name": "Bình Thuận"
+    }
+  },
+  {
+    "model": "master.MasterCity",
+    "fields": {
+      "id": 12,
+      "name": "Cà Mau"
+    }
+  },
+  {
+    "model": "master.MasterCity",
+    "fields": {
+      "id": 13,
+      "name": "Cần Thơ"
+    }
+  },
+  {
+    "model": "master.MasterCity",
+    "fields": {
+      "id": 14,
+      "name": "Cao Bằng"
+    }
+  },
+  {
+    "model": "master.MasterCity",
+    "fields": {
+      "id": 15,
+      "name": "Đà Nẵng"
+    }
+  },
+  {
+    "model": "master.MasterCity",
+    "fields": {
+      "id": 16,
+      "name": "Đắk Lắk"
+    }
+  },
+  {
+    "model": "master.MasterCity",
+    "fields": {
+      "id": 17,
+      "name": "Đắk Nông"
+    }
+  },
+  {
+    "model": "master.MasterCity",
+    "fields": {
+      "id": 18,
+      "name": "Điện Biên"
+    }
+  },
+  {
+    "model": "master.MasterCity",
+    "fields": {
+      "id": 19,
+      "name": "Đồng Nai"
+    }
+  },
+  {
+    "model": "master.MasterCity",
+    "fields": {
+      "id": 20,
+      "name": "Đồng Tháp"
+    }
+  },
+  {
+    "model": "master.MasterCity",
+    "fields": {
+      "id": 21,
+      "name": "Gia Lai"
+    }
+  },
+  {
+    "model": "master.MasterCity",
+    "fields": {
+      "id": 22,
+      "name": "Hà Giang"
+    }
+  },
+  {
+    "model": "master.MasterCity",
+    "fields": {
+      "id": 23,
+      "name": "Hà Nam"
+    }
+  },
+  {
+    "model": "master.MasterCity",
+    "fields": {
+      "id": 24,
+      "name": "Hà Nội"
+    }
+  },
+  {
+    "model": "master.MasterCity",
+    "fields": {
+      "id": 25,
+      "name": "Hà Tĩnh"
+    }
+  },
+  {
+    "model": "master.MasterCity",
+    "fields": {
+      "id": 26,
+      "name": "Hải Dương"
+    }
+  },
+  {
+    "model": "master.MasterCity",
+    "fields": {
+      "id": 27,
+      "name": "Hải Phòng"
+    }
+  },
+  {
+    "model": "master.MasterCity",
+    "fields": {
+      "id": 28,
+      "name": "Hậu Giang"
+    }
+  },
+  {
+    "model": "master.MasterCity",
+    "fields": {
+      "id": 29,
+      "name": "Hồ Chí Minh"
+    }
+  },
+  {
+    "model": "master.MasterCity",
+    "fields": {
+      "id": 30,
+      "name": "Hòa Bình"
+    }
+  },
+  {
+    "model": "master.MasterCity",
+    "fields": {
+      "id": 31,
+      "name": "Hưng Yên"
+    }
+  },
+  {
+    "model": "master.MasterCity",
+    "fields": {
+      "id": 32,
+      "name": "Khánh Hòa"
+    }
+  },
+  {
+    "model": "master.MasterCity",
+    "fields": {
+      "id": 33,
+      "name": "Kiên Giang"
+    }
+  },
+  {
+    "model": "master.MasterCity",
+    "fields": {
+      "id": 34,
+      "name": "Kon Tum"
+    }
+  },
+  {
+    "model": "master.MasterCity",
+    "fields": {
+      "id": 35,
+      "name": "Lai Châu"
+    }
+  },
+  {
+    "model": "master.MasterCity",
+    "fields": {
+      "id": 36,
+      "name": "Lâm Đồng"
+    }
+  },
+  {
+    "model": "master.MasterCity",
+    "fields": {
+      "id": 37,
+      "name": "Lạng Sơn"
+    }
+  },
+  {
+    "model": "master.MasterCity",
+    "fields": {
+      "id": 38,
+      "name": "Lào Cai"
+    }
+  },
+  {
+    "model": "master.MasterCity",
+    "fields": {
+      "id": 39,
+      "name": "Long An"
+    }
+  },
+  {
+    "model": "master.MasterCity",
+    "fields": {
+      "id": 40,
+      "name": "Nam Định"
+    }
+  },
+  {
+    "model": "master.MasterCity",
+    "fields": {
+      "id": 41,
+      "name": "Nghệ An"
+    }
+  },
+  {
+    "model": "master.MasterCity",
+    "fields": {
+      "id": 42,
+      "name": "Ninh Bình"
+    }
+  },
+  {
+    "model": "master.MasterCity",
+    "fields": {
+      "id": 43,
+      "name": "Ninh Thuận"
+    }
+  },
+  {
+    "model": "master.MasterCity",
+    "fields": {
+      "id": 44,
+      "name": "Phú Thọ"
+    }
+  },
+  {
+    "model": "master.MasterCity",
+    "fields": {
+      "id": 45,
+      "name": "Phú Yên"
+    }
+  },
+  {
+    "model": "master.MasterCity",
+    "fields": {
+      "id": 46,
+      "name": "Quảng Bình"
+    }
+  },
+  {
+    "model": "master.MasterCity",
+    "fields": {
+      "id": 47,
+      "name": "Quảng Nam"
+    }
+  },
+  {
+    "model": "master.MasterCity",
+    "fields": {
+      "id": 48,
+      "name": "Quảng Ngãi"
+    }
+  },
+  {
+    "model": "master.MasterCity",
+    "fields": {
+      "id": 49,
+      "name": "Quảng Ninh"
+    }
+  },
+  {
+    "model": "master.MasterCity",
+    "fields": {
+      "id": 50,
+      "name": "Quảng Trị"
+    }
+  },
+  {
+    "model": "master.MasterCity",
+    "fields": {
+      "id": 51,
+      "name": "Sóc Trăng"
+    }
+  },
+  {
+    "model": "master.MasterCity",
+    "fields": {
+      "id": 52,
+      "name": "Sơn La"
+    }
+  },
+  {
+    "model": "master.MasterCity",
+    "fields": {
+      "id": 53,
+      "name": "Tây Ninh"
+    }
+  },
+  {
+    "model": "master.MasterCity",
+    "fields": {
+      "id": 54,
+      "name": "Thái Bình"
+    }
+  },
+  {
+    "model": "master.MasterCity",
+    "fields": {
+      "id": 55,
+      "name": "Thái Nguyên"
+    }
+  },
+  {
+    "model": "master.MasterCity",
+    "fields": {
+      "id": 56,
+      "name": "Thanh Hóa"
+    }
+  },
+  {
+    "model": "master.MasterCity",
+    "fields": {
+      "id": 57,
+      "name": "Thừa Thiên – Huế"
+    }
+  },
+  {
+    "model": "master.MasterCity",
+    "fields": {
+      "id": 58,
+      "name": "Tiền Giang"
+    }
+  },
+  {
+    "model": "master.MasterCity",
+    "fields": {
+      "id": 59,
+      "name": "Trà Vinh"
+    }
+  },
+  {
+    "model": "master.MasterCity",
+    "fields": {
+      "id": 60,
+      "name": "Tuyên Quang"
+    }
+  },
+  {
+    "model": "master.MasterCity",
+    "fields": {
+      "id": 61,
+      "name": "Vĩnh Long"
+    }
+  },
+  {
+    "model": "master.MasterCity",
+    "fields": {
+      "id": 62,
+      "name": "Vĩnh Phúc"
+    }
+  },
+    {
+    "model": "master.MasterCity",
+    "fields": {
+      "id": 63,
+      "name": "Yên Bái"
+    }
+  }
+]
