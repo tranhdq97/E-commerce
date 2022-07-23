@@ -71,8 +71,8 @@ class CustomBaseUserModel(AbstractBaseUser, DateTimeModel):
         abstract = True
 
 
-class MasterBaseModel(models.Model):
-    name = models.CharField(max_length=255)
+class BaseMasterModel(models.Model):
+    name = models.CharField(max_length=255, unique=True)
     is_deleted = models.BooleanField(default=False)
 
     class Meta:
