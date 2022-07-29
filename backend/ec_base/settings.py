@@ -45,6 +45,8 @@ INSTALLED_APPS = [
     'corsheaders',
     'drf_spectacular',
     'ec_base.master',
+    'ec_base.user_info',
+    'ec_base.staff',
 ]
 
 MIDDLEWARE = [
@@ -65,7 +67,7 @@ CORS_ALLOWED_ORIGINS = env.list("CORS_ALLOWED_ORIGINS", default=[])
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'ec_base/templates'],
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -160,3 +162,10 @@ SPECTACULAR_SETTINGS = {
     'COMPONENT_SPLIT_REQUEST': True,
     'SCHEMA_PATH_PREFIX': '/api'
 }
+
+
+# ---------------------------------------------------------------------------- #
+#                                    AUTH                                      #
+# ---------------------------------------------------------------------------- #
+AUTH_USER_MODEL = 'staff.Staff'
+UPDATE_LAST_LOGIN = True

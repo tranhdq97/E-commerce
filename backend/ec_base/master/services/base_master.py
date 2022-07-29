@@ -2,8 +2,8 @@ from django.apps import apps
 from django.db import IntegrityError
 from django.shortcuts import get_object_or_404
 
-from ..serializers.base_master import BaseMasterListSerializer, BaseMasterCreateSerializer, BaseMasterDetailSerializer
-from ..serializers.district import DistrictListSerializer
+from ..serializers.base_master import BaseMasterListSlz, BaseMasterCreateSlz, BaseMasterDetailSlz
+from ..serializers.district import DistrictListSlz
 from ...common.constant.app_label import ModelAppLabel
 from ...common.constant.db_table import DBTable
 from ...common.constant.service import Master
@@ -12,7 +12,8 @@ from ...common.constant.service import Master
 class BaseMasterService:
     def __init__(self, master_name):
         self.master_name = master_name
-        self.table_name, self.model_name, self.allowed_to_create = getattr(Master, master_name)
+        print(master_name)
+        self.table_name, self.model_name, self.allowed_to_create = Master.unpack(master_name)
         self.app_label = ModelAppLabel.MASTER
         self.model = apps.get_model(self.app_label, self.model_name)
 
@@ -39,7 +40,7 @@ class BaseMasterService:
             else:
                 instance = self.model.objects.create(**serializer.validated_data)
 
-            serializer = BaseMasterDetailSerializer(instance)
+            serializer = BaseMasterDetailSlz(instance)
             return serializer
         except IntegrityError:
             raise ValueError("Duplicate item")
@@ -51,10 +52,12 @@ class BaseMasterService:
 
     def get_master_list_serializer(self, *args, **kwargs):
         if self.master_name == DBTable.MASTER_DISTRICT:
-            return DistrictListSerializer(*args, **kwargs)
+            return DistrictListSlz(*args, **kwargs)
 
-        return BaseMasterListSerializer(*args, **kwargs)
+        return BaseMasterListSlz(*args, **kwargs)
 
-    @staticmethod
-    def get_master_create_serializer():
-        return BaseMasterCreateSerializer
+    def get_master_create_serializer(self):
+        if not self.allowed_to_create:
+            raise ValueError("This master is not allowed to create.")
+
+        return BaseMasterCreateSlz

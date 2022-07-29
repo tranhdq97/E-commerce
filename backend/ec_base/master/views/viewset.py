@@ -7,20 +7,29 @@ from rest_framework.response import Response
 from rest_framework.viewsets import GenericViewSet
 
 from ..filters.base_master import BaseMasterListQueryFields
-from ..serializers.base_master import BaseMasterCreateSerializer, BaseMasterListSerializer, BaseMasterListReqParams
+from ..serializers.base_master import BaseMasterCreateSlz, BaseMasterListSlz, BaseMasterListReqParams
 from ..services.base_master import BaseMasterService
 from ...common.constant.db_fields import MasterFields
 from ...common.constant.db_table import DBTable
+from ...common.constant.service import Master
+from ...common.constant.view_action import BaseViewAction
 
 
 class MasterViewSet(mixins.ListModelMixin, mixins.CreateModelMixin, mixins.DestroyModelMixin, GenericViewSet):
     permission_classes = (AllowAny,)
     pagination_class = None
     filter_backends = (DjangoFilterBackend, OrderingFilter, SearchFilter)
-    serializer_class = BaseMasterListSerializer
+    serializer_class = BaseMasterListSlz
     search_fields = BaseMasterListQueryFields.SEARCH_FIELDS
     ordering_fields = BaseMasterListQueryFields.ORDER_FIELDS
     ordering = BaseMasterListQueryFields.ORDER_DEFAULT_FIELD
+
+    def get_serializer_class(self):
+        slz_switcher = {
+            BaseViewAction.LIST: BaseMasterListSlz,
+            BaseViewAction.CREATE: BaseMasterCreateSlz
+        }
+        return slz_switcher.get(self.action, BaseMasterListSlz)
 
     def destroy(self, request, *args, **kwargs):
         master_name = kwargs.pop('_'.join([DBTable.MASTER, MasterFields.NAME]))
@@ -29,7 +38,8 @@ class MasterViewSet(mixins.ListModelMixin, mixins.CreateModelMixin, mixins.Destr
         service.delete(pk)
         return Response(status=200)
 
-    @extend_schema(parameters=[BaseMasterListReqParams])
+    @extend_schema(parameters=[BaseMasterListReqParams],
+                   description=f'Choices: {" | ".join(Master.list(allowed_to_create=False))}')
     def list(self, request, **kwargs):
         master_name = kwargs.pop('_'.join([DBTable.MASTER, MasterFields.NAME]))
         service = BaseMasterService(master_name)
@@ -39,9 +49,9 @@ class MasterViewSet(mixins.ListModelMixin, mixins.CreateModelMixin, mixins.Destr
         serializer = service.get_master_list_serializer(queryset, many=True)
         return Response(serializer.data)
 
-    @extend_schema(parameters=[BaseMasterCreateSerializer])
+    @extend_schema(description=f'Choices: {" | ".join(Master.list(allowed_to_create=True))}')
     def create(self, request, **kwargs):
         master_name = kwargs.pop('_'.join([DBTable.MASTER, MasterFields.NAME]))
         service = BaseMasterService(master_name)
-        serializer = service.create(request.query_params)
+        serializer = service.create(request.data)
         return Response(serializer.data)

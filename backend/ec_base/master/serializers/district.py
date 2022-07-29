@@ -4,7 +4,7 @@ from ..models.district import MasterDistrict
 from ...common.constant.db_fields import MasterDistrictFields
 
 
-class DistrictListSerializer(serializers.ModelSerializer):
+class DistrictListSlz(serializers.ModelSerializer):
     class Meta:
         model = MasterDistrict
         fields = (

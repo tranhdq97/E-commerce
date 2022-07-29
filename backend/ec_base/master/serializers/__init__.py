@@ -1,1 +1,1 @@
-from .base_master import BaseMasterListSerializer
+from .base_master import BaseMasterListSlz

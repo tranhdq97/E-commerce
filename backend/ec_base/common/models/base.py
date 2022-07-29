@@ -62,10 +62,12 @@ class DateTimeModel(models.Model):
 
 
 class CustomBaseUserModel(AbstractBaseUser, DateTimeModel):
-    email = models.EmailField(max_length=255, unique=True)
+    email = models.EmailField(verbose_name='email address', max_length=255, unique=True)
     is_active = models.BooleanField(default=True)
-    USERNAME_FIELD = 'email'
+    is_admin = models.BooleanField(default=False)
     objects = CustomUserManager()
+    USERNAME_FIELD = 'email'
+    REQUIRED_FIELDS = []
 
     class Meta:
         abstract = True
