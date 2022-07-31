@@ -29,7 +29,7 @@ SECRET_KEY = env.str('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env.bool("DEBUG", default=True)
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
 # Application definition
 
@@ -68,7 +68,7 @@ CORS_ALLOWED_ORIGINS = env.list("CORS_ALLOWED_ORIGINS", default=[])
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates'],
+        'DIRS': [BASE_DIR / 'ec_base/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -138,23 +138,21 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-################################################################################
-
 ROOT_URLCONF = 'ec_base.urls'
 WSGI_APPLICATION = 'ec_base.wsgi.application'
 
-# ---------------------------------------------------------------------------- #
-#                                 SWAGGER                                      #
-# ---------------------------------------------------------------------------- #
 REST_FRAMEWORK = {
     'DATETIME_FORMAT': '%Y-%m-%d %H:%M:%S.%f%z',
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.IsAuthenticated',
     ],
     'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
-    # 'EXCEPTION_HANDLER': ,
+    'EXCEPTION_HANDLER': 'ec_base.common.custom.exceptions.custom_exception_handler',
 }
 
+# ---------------------------------------------------------------------------- #
+#                                 SWAGGER                                      #
+# ---------------------------------------------------------------------------- #
 SPECTACULAR_SETTINGS = {
     'TITLE': 'E-commerce Api',
     'DESCRIPTION': 'E-commerce Api',
@@ -164,9 +162,40 @@ SPECTACULAR_SETTINGS = {
     'SCHEMA_PATH_PREFIX': '/api'
 }
 
-
 # ---------------------------------------------------------------------------- #
 #                                    AUTH                                      #
 # ---------------------------------------------------------------------------- #
 AUTH_USER_MODEL = 'staff.Staff'
 UPDATE_LAST_LOGIN = True
+
+# ---------------------------------------------------------------------------- #
+#                                    LOGGING                                   #
+# ---------------------------------------------------------------------------- #
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'standard': {
+            'format': '%(asctime)s | %(levelname)-8s | %(message)s',
+        },
+    },
+    'handlers': {
+        'console': {
+            'level': 'DEBUG' if DEBUG else 'INFO',
+            'class': 'logging.StreamHandler',
+            'formatter': 'standard'
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['console'],
+            'level': "ERROR",
+            'propagate': True
+        },
+        '': {
+            'handlers': ['console'],
+            'level': 'DEBUG' if DEBUG else 'INFO',
+            'propagate': True
+        }
+    }
+}

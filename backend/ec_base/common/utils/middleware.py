@@ -1,6 +1,7 @@
 import logging
 import uuid
 from threading import local
+
 from django.conf import settings
 
 logger = logging.getLogger(__name__)
@@ -61,3 +62,11 @@ class CorrelationMiddleware:
         del_current_user()
         del_req_uuid()
         return response
+
+
+class RequestUuidFilter(logging.Filter):
+
+    def filter(self, record):
+        req_uuid = getattr(_thread_locals, REQ_UUID_ATTR_NAME, '')
+        record.req_uuid = req_uuid
+        return True

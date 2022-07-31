@@ -15,9 +15,9 @@ class UserInfoBaseSlz(serializers.ModelSerializer):
 
 
 class UserInfoCreateSlz(UserInfoBaseSlz):
-    sex_id = ForeignKeyField(model=MasterSex)
-    city_id = ForeignKeyField(model=MasterCity)
-    district_id = ForeignKeyField(model=MasterDistrict)
+    sex_id = ForeignKeyField(model=MasterSex, required=False)
+    city_id = ForeignKeyField(model=MasterCity, required=False)
+    district_id = ForeignKeyField(model=MasterDistrict, required=False)
 
     class Meta:
         model = UserInfoBaseSlz.Meta.model
@@ -27,9 +27,9 @@ class UserInfoCreateSlz(UserInfoBaseSlz):
 
 
 class UserInfoUpdateSlz(UserInfoBaseSlz):
-    sex_id = ForeignKeyField(model=MasterSex)
-    city_id = ForeignKeyField(model=MasterCity)
-    district_id = ForeignKeyField(model=MasterDistrict)
+    sex_id = ForeignKeyField(model=MasterSex, required=False)
+    city_id = ForeignKeyField(model=MasterCity, required=False)
+    district_id = ForeignKeyField(model=MasterDistrict, required=False)
 
     class Meta:
         model = UserInfoBaseSlz.Meta.model
