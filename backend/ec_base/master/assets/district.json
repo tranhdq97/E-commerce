@@ -1484,7 +1484,7 @@
         "fields": {
             "id": 186,
             "city_id": 20,
-            "name": "Cao Lãnh"
+            "name": "Châu Thành"
         }
     },
     {
@@ -1492,7 +1492,7 @@
         "fields": {
             "id": 187,
             "city_id": 20,
-            "name": "Châu Thành"
+            "name": "Hồng Ngự"
         }
     },
     {
@@ -1500,7 +1500,7 @@
         "fields": {
             "id": 188,
             "city_id": 20,
-            "name": "Hồng Ngự"
+            "name": "Lai Vung"
         }
     },
     {
@@ -1508,7 +1508,7 @@
         "fields": {
             "id": 189,
             "city_id": 20,
-            "name": "Hồng Ngự"
+            "name": "Lấp Vò"
         }
     },
     {
@@ -1516,7 +1516,7 @@
         "fields": {
             "id": 190,
             "city_id": 20,
-            "name": "Lai Vung"
+            "name": "Sa Đéc"
         }
     },
     {
@@ -1524,7 +1524,7 @@
         "fields": {
             "id": 191,
             "city_id": 20,
-            "name": "Lấp Vò"
+            "name": "Tam Nông"
         }
     },
     {
@@ -1532,7 +1532,7 @@
         "fields": {
             "id": 192,
             "city_id": 20,
-            "name": "Sa Đéc"
+            "name": "Tân Hồng"
         }
     },
     {
@@ -1540,7 +1540,7 @@
         "fields": {
             "id": 193,
             "city_id": 20,
-            "name": "Tam Nông"
+            "name": "Thanh Bình"
         }
     },
     {
@@ -1548,29 +1548,13 @@
         "fields": {
             "id": 194,
             "city_id": 20,
-            "name": "Tân Hồng"
-        }
-    },
-    {
-        "model": "master.MasterDistrict",
-        "fields": {
-            "id": 195,
-            "city_id": 20,
-            "name": "Thanh Bình"
-        }
-    },
-    {
-        "model": "master.MasterDistrict",
-        "fields": {
-            "id": 196,
-            "city_id": 20,
             "name": "Tháp Mười"
         }
     },
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 197,
+            "id": 195,
             "city_id": 21,
             "name": "Ayun Pa"
         }
@@ -1578,7 +1562,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 198,
+            "id": 196,
             "city_id": 21,
             "name": "An Khê"
         }
@@ -1586,7 +1570,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 199,
+            "id": 197,
             "city_id": 21,
             "name": "Chư Păh"
         }
@@ -1594,7 +1578,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 200,
+            "id": 198,
             "city_id": 21,
             "name": "Chư Prông"
         }
@@ -1602,7 +1586,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 201,
+            "id": 199,
             "city_id": 21,
             "name": "Chư Pưh"
         }
@@ -1610,7 +1594,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 202,
+            "id": 200,
             "city_id": 21,
             "name": "Chư Sê"
         }
@@ -1618,7 +1602,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 203,
+            "id": 201,
             "city_id": 21,
             "name": "Đắk Đoa"
         }
@@ -1626,7 +1610,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 204,
+            "id": 202,
             "city_id": 21,
             "name": "Đắk Pơ"
         }
@@ -1634,7 +1618,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 205,
+            "id": 203,
             "city_id": 21,
             "name": "Đức Cơ"
         }
@@ -1642,7 +1626,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 206,
+            "id": 204,
             "city_id": 21,
             "name": "Ia Grai"
         }
@@ -1650,7 +1634,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 207,
+            "id": 205,
             "city_id": 21,
             "name": "Ia Pa"
         }
@@ -1658,7 +1642,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 208,
+            "id": 206,
             "city_id": 21,
             "name": "K'Bang"
         }
@@ -1666,7 +1650,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 209,
+            "id": 207,
             "city_id": 21,
             "name": "Kông Chro"
         }
@@ -1674,7 +1658,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 210,
+            "id": 208,
             "city_id": 21,
             "name": "Krông Pa"
         }
@@ -1682,7 +1666,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 211,
+            "id": 209,
             "city_id": 21,
             "name": "Mang Yang"
         }
@@ -1690,7 +1674,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 212,
+            "id": 210,
             "city_id": 21,
             "name": "Phú Thiện"
         }
@@ -1698,7 +1682,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 213,
+            "id": 211,
             "city_id": 21,
             "name": "Pleiku"
         }
@@ -1706,7 +1690,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 214,
+            "id": 212,
             "city_id": 22,
             "name": "Bắc Mê"
         }
@@ -1714,7 +1698,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 215,
+            "id": 213,
             "city_id": 22,
             "name": "Bắc Quang"
         }
@@ -1722,7 +1706,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 216,
+            "id": 214,
             "city_id": 22,
             "name": "Đồng Văn"
         }
@@ -1730,7 +1714,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 217,
+            "id": 215,
             "city_id": 22,
             "name": "Hà Giang"
         }
@@ -1738,7 +1722,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 218,
+            "id": 216,
             "city_id": 22,
             "name": "Hoàng Su Phì"
         }
@@ -1746,7 +1730,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 219,
+            "id": 217,
             "city_id": 22,
             "name": "Mèo Vạc"
         }
@@ -1754,7 +1738,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 220,
+            "id": 218,
             "city_id": 22,
             "name": "Quản Bạ"
         }
@@ -1762,7 +1746,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 221,
+            "id": 219,
             "city_id": 22,
             "name": "Quang Bình"
         }
@@ -1770,7 +1754,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 222,
+            "id": 220,
             "city_id": 22,
             "name": "Vị Xuyên"
         }
@@ -1778,7 +1762,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 223,
+            "id": 221,
             "city_id": 22,
             "name": "Xín Mần"
         }
@@ -1786,7 +1770,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 224,
+            "id": 222,
             "city_id": 22,
             "name": "Yên Minh"
         }
@@ -1794,7 +1778,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 225,
+            "id": 223,
             "city_id": 23,
             "name": "Bình Lục"
         }
@@ -1802,7 +1786,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 226,
+            "id": 224,
             "city_id": 23,
             "name": "Duy Tiên"
         }
@@ -1810,7 +1794,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 227,
+            "id": 225,
             "city_id": 23,
             "name": "Kim Bảng"
         }
@@ -1818,7 +1802,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 228,
+            "id": 226,
             "city_id": 23,
             "name": "Lý Nhân"
         }
@@ -1826,7 +1810,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 229,
+            "id": 227,
             "city_id": 23,
             "name": "Phủ Lý"
         }
@@ -1834,7 +1818,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 230,
+            "id": 228,
             "city_id": 23,
             "name": "Thanh Liêm"
         }
@@ -1842,7 +1826,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 231,
+            "id": 229,
             "city_id": 24,
             "name": "Ba Đình"
         }
@@ -1850,7 +1834,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 232,
+            "id": 230,
             "city_id": 24,
             "name": "Bắc Từ Liêm"
         }
@@ -1858,7 +1842,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 233,
+            "id": 231,
             "city_id": 24,
             "name": "Cầu Giấy"
         }
@@ -1866,7 +1850,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 234,
+            "id": 232,
             "city_id": 24,
             "name": "Đống Đa"
         }
@@ -1874,7 +1858,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 235,
+            "id": 233,
             "city_id": 24,
             "name": "Hà Đông"
         }
@@ -1882,7 +1866,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 236,
+            "id": 234,
             "city_id": 24,
             "name": "Hai Bà Trưng"
         }
@@ -1890,7 +1874,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 237,
+            "id": 235,
             "city_id": 24,
             "name": "Hoàn Kiếm"
         }
@@ -1898,7 +1882,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 238,
+            "id": 236,
             "city_id": 24,
             "name": "Hoàng Mai"
         }
@@ -1906,7 +1890,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 239,
+            "id": 237,
             "city_id": 24,
             "name": "Long Biên"
         }
@@ -1914,7 +1898,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 240,
+            "id": 238,
             "city_id": 24,
             "name": "Nam Từ Liêm"
         }
@@ -1922,7 +1906,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 241,
+            "id": 239,
             "city_id": 24,
             "name": "Tây Hồ"
         }
@@ -1930,7 +1914,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 242,
+            "id": 240,
             "city_id": 24,
             "name": "Thanh Xuân"
         }
@@ -1938,7 +1922,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 243,
+            "id": 241,
             "city_id": 24,
             "name": "Sơn Tây"
         }
@@ -1946,7 +1930,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 244,
+            "id": 242,
             "city_id": 24,
             "name": "Ba Vì"
         }
@@ -1954,7 +1938,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 245,
+            "id": 243,
             "city_id": 24,
             "name": "Chương Mỹ"
         }
@@ -1962,7 +1946,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 246,
+            "id": 244,
             "city_id": 24,
             "name": "Đan Phượng"
         }
@@ -1970,7 +1954,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 247,
+            "id": 245,
             "city_id": 24,
             "name": "Đông Anh"
         }
@@ -1978,7 +1962,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 248,
+            "id": 246,
             "city_id": 24,
             "name": "Gia Lâm"
         }
@@ -1986,7 +1970,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 249,
+            "id": 247,
             "city_id": 24,
             "name": "Hoài Đức"
         }
@@ -1994,15 +1978,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 250,
-            "city_id": 24,
-            "name": "Long Biên"
-        }
-    },
-    {
-        "model": "master.MasterDistrict",
-        "fields": {
-            "id": 251,
+            "id": 248,
             "city_id": 24,
             "name": "Mê Linh"
         }
@@ -2010,7 +1986,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 252,
+            "id": 249,
             "city_id": 24,
             "name": "Mỹ Đức"
         }
@@ -2018,7 +1994,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 253,
+            "id": 250,
             "city_id": 24,
             "name": "Phú Xuyên"
         }
@@ -2026,7 +2002,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 254,
+            "id": 251,
             "city_id": 24,
             "name": "Phúc Thọ"
         }
@@ -2034,7 +2010,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 255,
+            "id": 252,
             "city_id": 24,
             "name": "Quốc Oai"
         }
@@ -2042,7 +2018,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 256,
+            "id": 253,
             "city_id": 24,
             "name": "Sóc Sơn"
         }
@@ -2050,7 +2026,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 257,
+            "id": 254,
             "city_id": 24,
             "name": "Thạch Thất"
         }
@@ -2058,7 +2034,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 258,
+            "id": 255,
             "city_id": 24,
             "name": "Thanh Oai"
         }
@@ -2066,7 +2042,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 259,
+            "id": 256,
             "city_id": 24,
             "name": "Thanh Trì"
         }
@@ -2074,7 +2050,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 260,
+            "id": 257,
             "city_id": 24,
             "name": "Thường Tín"
         }
@@ -2082,7 +2058,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 261,
+            "id": 258,
             "city_id": 24,
             "name": "Ứng Hòa"
         }
@@ -2090,7 +2066,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 262,
+            "id": 259,
             "city_id": 25,
             "name": "Cẩm Xuyên"
         }
@@ -2098,7 +2074,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 263,
+            "id": 260,
             "city_id": 25,
             "name": "Can Lộc"
         }
@@ -2106,7 +2082,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 264,
+            "id": 261,
             "city_id": 25,
             "name": "Đức Thọ"
         }
@@ -2114,7 +2090,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 265,
+            "id": 262,
             "city_id": 25,
             "name": "Hà Tĩnh"
         }
@@ -2122,7 +2098,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 266,
+            "id": 263,
             "city_id": 25,
             "name": "Hồng Lĩnh"
         }
@@ -2130,7 +2106,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 267,
+            "id": 264,
             "city_id": 25,
             "name": "Hương Khê"
         }
@@ -2138,7 +2114,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 268,
+            "id": 265,
             "city_id": 25,
             "name": "Hương Sơn"
         }
@@ -2146,7 +2122,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 269,
+            "id": 266,
             "city_id": 25,
             "name": "Kỳ Anh"
         }
@@ -2154,15 +2130,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 270,
-            "city_id": 25,
-            "name": "Kỳ Anh"
-        }
-    },
-    {
-        "model": "master.MasterDistrict",
-        "fields": {
-            "id": 271,
+            "id": 267,
             "city_id": 25,
             "name": "Lộc Hà"
         }
@@ -2170,7 +2138,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 272,
+            "id": 268,
             "city_id": 25,
             "name": "Nghi Xuân"
         }
@@ -2178,7 +2146,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 273,
+            "id": 269,
             "city_id": 25,
             "name": "Thạch Hà"
         }
@@ -2186,7 +2154,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 274,
+            "id": 270,
             "city_id": 25,
             "name": "Vũ Quang"
         }
@@ -2194,7 +2162,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 275,
+            "id": 271,
             "city_id": 26,
             "name": "Bình Giang"
         }
@@ -2202,7 +2170,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 276,
+            "id": 272,
             "city_id": 26,
             "name": "Cẩm Giàng"
         }
@@ -2210,7 +2178,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 277,
+            "id": 273,
             "city_id": 26,
             "name": "Chí Linh"
         }
@@ -2218,7 +2186,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 278,
+            "id": 274,
             "city_id": 26,
             "name": "Gia Lộc"
         }
@@ -2226,7 +2194,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 279,
+            "id": 275,
             "city_id": 26,
             "name": "Hải Dương"
         }
@@ -2234,7 +2202,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 280,
+            "id": 276,
             "city_id": 26,
             "name": "Kim Thành"
         }
@@ -2242,7 +2210,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 281,
+            "id": 277,
             "city_id": 26,
             "name": "Kinh Môn"
         }
@@ -2250,7 +2218,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 282,
+            "id": 278,
             "city_id": 26,
             "name": "Nam Sách"
         }
@@ -2258,7 +2226,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 283,
+            "id": 279,
             "city_id": 26,
             "name": "Ninh Giang"
         }
@@ -2266,7 +2234,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 284,
+            "id": 280,
             "city_id": 26,
             "name": "Thanh Hà"
         }
@@ -2274,7 +2242,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 285,
+            "id": 281,
             "city_id": 26,
             "name": "Thanh Miện"
         }
@@ -2282,7 +2250,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 286,
+            "id": 282,
             "city_id": 26,
             "name": "Tứ Kỳ"
         }
@@ -2290,7 +2258,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 287,
+            "id": 283,
             "city_id": 27,
             "name": "Đồ Sơn"
         }
@@ -2298,7 +2266,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 288,
+            "id": 284,
             "city_id": 27,
             "name": "Dương Kinh"
         }
@@ -2306,7 +2274,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 289,
+            "id": 285,
             "city_id": 27,
             "name": "Hải An"
         }
@@ -2314,7 +2282,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 290,
+            "id": 286,
             "city_id": 27,
             "name": "Hồng Bàng"
         }
@@ -2322,7 +2290,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 291,
+            "id": 287,
             "city_id": 27,
             "name": "Kiến An"
         }
@@ -2330,7 +2298,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 292,
+            "id": 288,
             "city_id": 27,
             "name": "Lê Chân"
         }
@@ -2338,7 +2306,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 293,
+            "id": 289,
             "city_id": 27,
             "name": "Ngô Quyền"
         }
@@ -2346,7 +2314,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 294,
+            "id": 290,
             "city_id": 27,
             "name": "An Dương"
         }
@@ -2354,7 +2322,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 295,
+            "id": 291,
             "city_id": 27,
             "name": "An Lão"
         }
@@ -2362,7 +2330,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 296,
+            "id": 292,
             "city_id": 27,
             "name": "Đảo Bạch Long Vĩ"
         }
@@ -2370,7 +2338,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 297,
+            "id": 293,
             "city_id": 27,
             "name": "Đảo Cát Hải"
         }
@@ -2378,7 +2346,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 298,
+            "id": 294,
             "city_id": 27,
             "name": "Kiến Thuỵ"
         }
@@ -2386,7 +2354,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 299,
+            "id": 295,
             "city_id": 27,
             "name": "Thủy Nguyên"
         }
@@ -2394,7 +2362,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 300,
+            "id": 296,
             "city_id": 27,
             "name": "Tiên Lãng"
         }
@@ -2402,7 +2370,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 301,
+            "id": 297,
             "city_id": 27,
             "name": "Vĩnh Bảo"
         }
@@ -2410,7 +2378,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 302,
+            "id": 298,
             "city_id": 28,
             "name": "Châu Thành"
         }
@@ -2418,7 +2386,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 303,
+            "id": 299,
             "city_id": 28,
             "name": "Châu Thành A"
         }
@@ -2426,7 +2394,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 304,
+            "id": 300,
             "city_id": 28,
             "name": "Long Mỹ"
         }
@@ -2434,15 +2402,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 305,
-            "city_id": 28,
-            "name": "Long Mỹ"
-        }
-    },
-    {
-        "model": "master.MasterDistrict",
-        "fields": {
-            "id": 306,
+            "id": 301,
             "city_id": 28,
             "name": "Ngã Bảy"
         }
@@ -2450,7 +2410,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 307,
+            "id": 302,
             "city_id": 28,
             "name": "Phụng Hiệp"
         }
@@ -2458,7 +2418,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 308,
+            "id": 303,
             "city_id": 28,
             "name": "Vị Thanh"
         }
@@ -2466,7 +2426,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 309,
+            "id": 304,
             "city_id": 28,
             "name": "Vị Thủy"
         }
@@ -2474,7 +2434,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 310,
+            "id": 305,
             "city_id": 29,
             "name": "Thủ Đức"
         }
@@ -2482,7 +2442,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 311,
+            "id": 306,
             "city_id": 29,
             "name": "Quận 1"
         }
@@ -2490,7 +2450,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 312,
+            "id": 307,
             "city_id": 29,
             "name": "Quận 3"
         }
@@ -2498,7 +2458,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 313,
+            "id": 308,
             "city_id": 29,
             "name": "Quận 4"
         }
@@ -2506,7 +2466,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 314,
+            "id": 309,
             "city_id": 29,
             "name": "Quận 5"
         }
@@ -2514,7 +2474,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 315,
+            "id": 310,
             "city_id": 29,
             "name": "Quận 6"
         }
@@ -2522,7 +2482,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 316,
+            "id": 311,
             "city_id": 29,
             "name": "Quận 7"
         }
@@ -2530,7 +2490,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 317,
+            "id": 312,
             "city_id": 29,
             "name": "Quận 8"
         }
@@ -2538,7 +2498,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 318,
+            "id": 313,
             "city_id": 29,
             "name": "Quận 10"
         }
@@ -2546,7 +2506,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 319,
+            "id": 314,
             "city_id": 29,
             "name": "Quận 11"
         }
@@ -2554,7 +2514,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 320,
+            "id": 315,
             "city_id": 29,
             "name": "Quận 12"
         }
@@ -2562,7 +2522,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 321,
+            "id": 316,
             "city_id": 29,
             "name": "Bình Tân"
         }
@@ -2570,7 +2530,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 322,
+            "id": 317,
             "city_id": 29,
             "name": "Bình Thạnh"
         }
@@ -2578,7 +2538,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 323,
+            "id": 318,
             "city_id": 29,
             "name": "Gò Vấp"
         }
@@ -2586,7 +2546,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 324,
+            "id": 319,
             "city_id": 29,
             "name": "Phú Nhuận"
         }
@@ -2594,7 +2554,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 325,
+            "id": 320,
             "city_id": 29,
             "name": "Tân Bình"
         }
@@ -2602,7 +2562,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 326,
+            "id": 321,
             "city_id": 29,
             "name": "Tân Phú"
         }
@@ -2610,7 +2570,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 327,
+            "id": 322,
             "city_id": 29,
             "name": "Bình Chánh"
         }
@@ -2618,7 +2578,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 328,
+            "id": 323,
             "city_id": 29,
             "name": "Cần Giờ"
         }
@@ -2626,7 +2586,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 329,
+            "id": 324,
             "city_id": 29,
             "name": "Củ Chi"
         }
@@ -2634,7 +2594,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 330,
+            "id": 325,
             "city_id": 29,
             "name": "Hóc Môn"
         }
@@ -2642,7 +2602,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 331,
+            "id": 326,
             "city_id": 29,
             "name": "Nhà Bè"
         }
@@ -2650,7 +2610,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 332,
+            "id": 327,
             "city_id": 30,
             "name": "Cao Phong"
         }
@@ -2658,7 +2618,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 333,
+            "id": 328,
             "city_id": 30,
             "name": "Đà Bắc"
         }
@@ -2666,7 +2626,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 334,
+            "id": 329,
             "city_id": 30,
             "name": "Hòa Bình"
         }
@@ -2674,7 +2634,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 335,
+            "id": 330,
             "city_id": 30,
             "name": "Kim Bôi"
         }
@@ -2682,7 +2642,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 336,
+            "id": 331,
             "city_id": 30,
             "name": "Lạc Sơn"
         }
@@ -2690,7 +2650,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 337,
+            "id": 332,
             "city_id": 30,
             "name": "Lạc Thủy"
         }
@@ -2698,7 +2658,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 338,
+            "id": 333,
             "city_id": 30,
             "name": "Lương Sơn"
         }
@@ -2706,7 +2666,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 339,
+            "id": 334,
             "city_id": 30,
             "name": "Mai Châu"
         }
@@ -2714,7 +2674,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 340,
+            "id": 335,
             "city_id": 30,
             "name": "Tân Lạc"
         }
@@ -2722,7 +2682,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 341,
+            "id": 336,
             "city_id": 30,
             "name": "Yên Thủy"
         }
@@ -2730,7 +2690,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 342,
+            "id": 337,
             "city_id": 31,
             "name": "Ân Thi"
         }
@@ -2738,7 +2698,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 343,
+            "id": 338,
             "city_id": 31,
             "name": "Hưng Yên"
         }
@@ -2746,7 +2706,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 344,
+            "id": 339,
             "city_id": 31,
             "name": "Khoái Châu"
         }
@@ -2754,7 +2714,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 345,
+            "id": 340,
             "city_id": 31,
             "name": "Kim Động"
         }
@@ -2762,7 +2722,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 346,
+            "id": 341,
             "city_id": 31,
             "name": "Mỹ Hào"
         }
@@ -2770,7 +2730,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 347,
+            "id": 342,
             "city_id": 31,
             "name": "Phù Cừ"
         }
@@ -2778,7 +2738,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 348,
+            "id": 343,
             "city_id": 31,
             "name": "Tiên Lữ"
         }
@@ -2786,7 +2746,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 349,
+            "id": 344,
             "city_id": 31,
             "name": "Văn Giang"
         }
@@ -2794,7 +2754,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 350,
+            "id": 345,
             "city_id": 31,
             "name": "Văn Lâm"
         }
@@ -2802,7 +2762,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 351,
+            "id": 346,
             "city_id": 31,
             "name": "Yên Mỹ"
         }
@@ -2810,7 +2770,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 352,
+            "id": 347,
             "city_id": 32,
             "name": "Cam Lâm"
         }
@@ -2818,7 +2778,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 353,
+            "id": 348,
             "city_id": 32,
             "name": "Cam Ranh"
         }
@@ -2826,7 +2786,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 354,
+            "id": 349,
             "city_id": 32,
             "name": "Diên Khánh"
         }
@@ -2834,7 +2794,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 355,
+            "id": 350,
             "city_id": 32,
             "name": "Khánh Sơn"
         }
@@ -2842,7 +2802,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 356,
+            "id": 351,
             "city_id": 32,
             "name": "Khánh Vĩnh"
         }
@@ -2850,7 +2810,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 357,
+            "id": 352,
             "city_id": 32,
             "name": "Nha Trang"
         }
@@ -2858,7 +2818,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 358,
+            "id": 353,
             "city_id": 32,
             "name": "Ninh Hòa"
         }
@@ -2866,7 +2826,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 359,
+            "id": 354,
             "city_id": 32,
             "name": "Quần Đảo Trường Sa"
         }
@@ -2874,7 +2834,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 360,
+            "id": 355,
             "city_id": 32,
             "name": "Vạn Ninh"
         }
@@ -2882,7 +2842,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 361,
+            "id": 356,
             "city_id": 33,
             "name": "An Biên"
         }
@@ -2890,7 +2850,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 362,
+            "id": 357,
             "city_id": 33,
             "name": "An Minh"
         }
@@ -2898,7 +2858,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 363,
+            "id": 358,
             "city_id": 33,
             "name": "Châu Thành"
         }
@@ -2906,7 +2866,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 364,
+            "id": 359,
             "city_id": 33,
             "name": "Giang Thành"
         }
@@ -2914,7 +2874,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 365,
+            "id": 360,
             "city_id": 33,
             "name": "Giồng Riềng"
         }
@@ -2922,7 +2882,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 366,
+            "id": 361,
             "city_id": 33,
             "name": "Gò Quao"
         }
@@ -2930,7 +2890,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 367,
+            "id": 362,
             "city_id": 33,
             "name": "Hà Tiên"
         }
@@ -2938,7 +2898,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 368,
+            "id": 363,
             "city_id": 33,
             "name": "Hòn Đất"
         }
@@ -2946,7 +2906,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 369,
+            "id": 364,
             "city_id": 33,
             "name": "Đảo Kiên Hải"
         }
@@ -2954,7 +2914,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 370,
+            "id": 365,
             "city_id": 33,
             "name": "Kiên Lương"
         }
@@ -2962,7 +2922,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 371,
+            "id": 366,
             "city_id": 33,
             "name": "Phú Quốc"
         }
@@ -2970,7 +2930,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 372,
+            "id": 367,
             "city_id": 33,
             "name": "Rạch Giá"
         }
@@ -2978,7 +2938,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 373,
+            "id": 368,
             "city_id": 33,
             "name": "Tân Hiệp"
         }
@@ -2986,7 +2946,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 374,
+            "id": 369,
             "city_id": 33,
             "name": "Vĩnh Thuận"
         }
@@ -2994,7 +2954,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 375,
+            "id": 370,
             "city_id": 33,
             "name": "U Minh Thượng"
         }
@@ -3002,7 +2962,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 376,
+            "id": 371,
             "city_id": 34,
             "name": "Đắk Glei"
         }
@@ -3010,7 +2970,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 377,
+            "id": 372,
             "city_id": 34,
             "name": "Đắk Hà"
         }
@@ -3018,7 +2978,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 378,
+            "id": 373,
             "city_id": 34,
             "name": "Đắk Tô"
         }
@@ -3026,7 +2986,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 379,
+            "id": 374,
             "city_id": 34,
             "name": "Ia H'Drai"
         }
@@ -3034,7 +2994,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 380,
+            "id": 375,
             "city_id": 34,
             "name": "Kon Plông"
         }
@@ -3042,7 +3002,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 381,
+            "id": 376,
             "city_id": 34,
             "name": "Kon Rẫy"
         }
@@ -3050,7 +3010,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 382,
+            "id": 377,
             "city_id": 34,
             "name": "Kon Tum"
         }
@@ -3058,7 +3018,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 383,
+            "id": 378,
             "city_id": 34,
             "name": "Ngọc Hồi"
         }
@@ -3066,7 +3026,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 384,
+            "id": 379,
             "city_id": 34,
             "name": "Sa Thầy"
         }
@@ -3074,7 +3034,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 385,
+            "id": 380,
             "city_id": 34,
             "name": "Tu Mơ Rông"
         }
@@ -3082,7 +3042,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 386,
+            "id": 381,
             "city_id": 35,
             "name": "Lai Châu"
         }
@@ -3090,7 +3050,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 387,
+            "id": 382,
             "city_id": 35,
             "name": "Mường Tè"
         }
@@ -3098,7 +3058,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 388,
+            "id": 383,
             "city_id": 35,
             "name": "Nậm Nhùn"
         }
@@ -3106,7 +3066,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 389,
+            "id": 384,
             "city_id": 35,
             "name": "Phong Thổ"
         }
@@ -3114,7 +3074,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 390,
+            "id": 385,
             "city_id": 35,
             "name": "Sìn Hồ"
         }
@@ -3122,7 +3082,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 391,
+            "id": 386,
             "city_id": 35,
             "name": "Tam Đường"
         }
@@ -3130,7 +3090,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 392,
+            "id": 387,
             "city_id": 35,
             "name": "Tân Uyên"
         }
@@ -3138,7 +3098,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 393,
+            "id": 388,
             "city_id": 35,
             "name": "Than Uyên"
         }
@@ -3146,7 +3106,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 394,
+            "id": 389,
             "city_id": 36,
             "name": "Bảo Lâm"
         }
@@ -3154,7 +3114,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 395,
+            "id": 390,
             "city_id": 36,
             "name": "Bảo Lộc"
         }
@@ -3162,7 +3122,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 396,
+            "id": 391,
             "city_id": 36,
             "name": "Cát Tiên"
         }
@@ -3170,7 +3130,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 397,
+            "id": 392,
             "city_id": 36,
             "name": "Đạ Huoai"
         }
@@ -3178,7 +3138,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 398,
+            "id": 393,
             "city_id": 36,
             "name": "Đà Lạt"
         }
@@ -3186,7 +3146,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 399,
+            "id": 394,
             "city_id": 36,
             "name": "Đạ Tẻh"
         }
@@ -3194,7 +3154,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 400,
+            "id": 395,
             "city_id": 36,
             "name": "Đam Rông"
         }
@@ -3202,7 +3162,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 401,
+            "id": 396,
             "city_id": 36,
             "name": "Di Linh"
         }
@@ -3210,7 +3170,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 402,
+            "id": 397,
             "city_id": 36,
             "name": "Đơn Dương"
         }
@@ -3218,7 +3178,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 403,
+            "id": 398,
             "city_id": 36,
             "name": "Đức Trọng"
         }
@@ -3226,7 +3186,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 404,
+            "id": 399,
             "city_id": 36,
             "name": "Lạc Dương"
         }
@@ -3234,7 +3194,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 405,
+            "id": 400,
             "city_id": 36,
             "name": "Lâm Hà"
         }
@@ -3242,7 +3202,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 406,
+            "id": 401,
             "city_id": 37,
             "name": "Bắc Sơn"
         }
@@ -3250,7 +3210,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 407,
+            "id": 402,
             "city_id": 37,
             "name": "Bình Gia"
         }
@@ -3258,7 +3218,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 408,
+            "id": 403,
             "city_id": 37,
             "name": "Cao Lộc"
         }
@@ -3266,7 +3226,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 409,
+            "id": 404,
             "city_id": 37,
             "name": "Chi Lăng"
         }
@@ -3274,7 +3234,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 410,
+            "id": 405,
             "city_id": 37,
             "name": "Đình Lập"
         }
@@ -3282,7 +3242,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 411,
+            "id": 406,
             "city_id": 37,
             "name": "Hữu Lũng"
         }
@@ -3290,7 +3250,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 412,
+            "id": 407,
             "city_id": 37,
             "name": "Lạng Sơn"
         }
@@ -3298,7 +3258,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 413,
+            "id": 408,
             "city_id": 37,
             "name": "Lộc Bình"
         }
@@ -3306,7 +3266,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 414,
+            "id": 409,
             "city_id": 37,
             "name": "Tràng Định"
         }
@@ -3314,7 +3274,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 415,
+            "id": 410,
             "city_id": 37,
             "name": "Văn Lãng"
         }
@@ -3322,7 +3282,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 416,
+            "id": 411,
             "city_id": 37,
             "name": "Văn Quân"
         }
@@ -3330,7 +3290,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 417,
+            "id": 412,
             "city_id": 38,
             "name": "Bắc Hà"
         }
@@ -3338,7 +3298,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 418,
+            "id": 413,
             "city_id": 38,
             "name": "Bảo Thắng"
         }
@@ -3346,7 +3306,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 419,
+            "id": 414,
             "city_id": 38,
             "name": "Bảo Yên"
         }
@@ -3354,7 +3314,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 420,
+            "id": 415,
             "city_id": 38,
             "name": "Bát Xát"
         }
@@ -3362,7 +3322,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 421,
+            "id": 416,
             "city_id": 38,
             "name": "Lào Cai"
         }
@@ -3370,7 +3330,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 422,
+            "id": 417,
             "city_id": 38,
             "name": "Mường Khương"
         }
@@ -3378,7 +3338,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 423,
+            "id": 418,
             "city_id": 38,
             "name": "Sa Pa"
         }
@@ -3386,7 +3346,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 424,
+            "id": 419,
             "city_id": 38,
             "name": "Si Ma Cai"
         }
@@ -3394,7 +3354,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 425,
+            "id": 420,
             "city_id": 38,
             "name": "Văn Bàn"
         }
@@ -3402,7 +3362,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 426,
+            "id": 421,
             "city_id": 39,
             "name": "Bến Lức"
         }
@@ -3410,7 +3370,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 427,
+            "id": 422,
             "city_id": 39,
             "name": "Cần Đước"
         }
@@ -3418,7 +3378,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 428,
+            "id": 423,
             "city_id": 39,
             "name": "Cần Giuộc"
         }
@@ -3426,7 +3386,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 429,
+            "id": 424,
             "city_id": 39,
             "name": "Châu Thành"
         }
@@ -3434,7 +3394,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 430,
+            "id": 425,
             "city_id": 39,
             "name": "Đức Hòa"
         }
@@ -3442,7 +3402,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 431,
+            "id": 426,
             "city_id": 39,
             "name": "Đức Huệ"
         }
@@ -3450,7 +3410,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 432,
+            "id": 427,
             "city_id": 39,
             "name": "Kiến Tường"
         }
@@ -3458,7 +3418,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 433,
+            "id": 428,
             "city_id": 39,
             "name": "Mộc Hóa"
         }
@@ -3466,7 +3426,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 434,
+            "id": 429,
             "city_id": 39,
             "name": "Tân An"
         }
@@ -3474,7 +3434,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 435,
+            "id": 430,
             "city_id": 39,
             "name": "Tân Hưng"
         }
@@ -3482,7 +3442,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 436,
+            "id": 431,
             "city_id": 39,
             "name": "Tân Thạnh"
         }
@@ -3490,7 +3450,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 437,
+            "id": 432,
             "city_id": 39,
             "name": "Tân Trụ"
         }
@@ -3498,7 +3458,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 438,
+            "id": 433,
             "city_id": 39,
             "name": "Thạnh Hóa"
         }
@@ -3506,7 +3466,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 439,
+            "id": 434,
             "city_id": 39,
             "name": "Thủ Thừa"
         }
@@ -3514,7 +3474,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 440,
+            "id": 435,
             "city_id": 39,
             "name": "Vĩnh Hưng"
         }
@@ -3522,7 +3482,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 441,
+            "id": 436,
             "city_id": 40,
             "name": "Giao Thủy"
         }
@@ -3530,7 +3490,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 442,
+            "id": 437,
             "city_id": 40,
             "name": "Hải Hậu"
         }
@@ -3538,7 +3498,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 443,
+            "id": 438,
             "city_id": 40,
             "name": "Mỹ Lộc"
         }
@@ -3546,7 +3506,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 444,
+            "id": 439,
             "city_id": 40,
             "name": "Nam Định"
         }
@@ -3554,7 +3514,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 445,
+            "id": 440,
             "city_id": 40,
             "name": "Nam Trực"
         }
@@ -3562,7 +3522,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 446,
+            "id": 441,
             "city_id": 40,
             "name": "Nghĩa Hưng"
         }
@@ -3570,7 +3530,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 447,
+            "id": 442,
             "city_id": 40,
             "name": "Trực Ninh"
         }
@@ -3578,7 +3538,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 448,
+            "id": 443,
             "city_id": 40,
             "name": "Vụ Bản"
         }
@@ -3586,7 +3546,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 449,
+            "id": 444,
             "city_id": 40,
             "name": "Xuân Trường"
         }
@@ -3594,7 +3554,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 450,
+            "id": 445,
             "city_id": 40,
             "name": "Ý Yên"
         }
@@ -3602,7 +3562,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 451,
+            "id": 446,
             "city_id": 41,
             "name": "Anh Sơn"
         }
@@ -3610,7 +3570,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 452,
+            "id": 447,
             "city_id": 41,
             "name": "Con Cuông"
         }
@@ -3618,7 +3578,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 453,
+            "id": 448,
             "city_id": 41,
             "name": "Cửa Lò"
         }
@@ -3626,7 +3586,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 454,
+            "id": 449,
             "city_id": 41,
             "name": "Diễn Châu"
         }
@@ -3634,7 +3594,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 455,
+            "id": 450,
             "city_id": 41,
             "name": "Đô Lương"
         }
@@ -3642,7 +3602,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 456,
+            "id": 451,
             "city_id": 41,
             "name": "Hoàng Mai"
         }
@@ -3650,7 +3610,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 457,
+            "id": 452,
             "city_id": 41,
             "name": "Hưng Nguyên"
         }
@@ -3658,7 +3618,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 458,
+            "id": 453,
             "city_id": 41,
             "name": "Kỳ Sơn"
         }
@@ -3666,7 +3626,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 459,
+            "id": 454,
             "city_id": 41,
             "name": "Nam Đàn"
         }
@@ -3674,7 +3634,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 460,
+            "id": 455,
             "city_id": 41,
             "name": "Nghi Lộc"
         }
@@ -3682,7 +3642,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 461,
+            "id": 456,
             "city_id": 41,
             "name": "Nghĩa Đàn"
         }
@@ -3690,7 +3650,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 462,
+            "id": 457,
             "city_id": 41,
             "name": "Quế Phong"
         }
@@ -3698,7 +3658,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 463,
+            "id": 458,
             "city_id": 41,
             "name": "Quỳ Châu"
         }
@@ -3706,7 +3666,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 464,
+            "id": 459,
             "city_id": 41,
             "name": "Quỳ Hợp"
         }
@@ -3714,7 +3674,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 465,
+            "id": 460,
             "city_id": 41,
             "name": "Quỳnh Lưu"
         }
@@ -3722,7 +3682,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 466,
+            "id": 461,
             "city_id": 41,
             "name": "Tân Kỳ"
         }
@@ -3730,7 +3690,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 467,
+            "id": 462,
             "city_id": 41,
             "name": "Thái Hòa"
         }
@@ -3738,7 +3698,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 468,
+            "id": 463,
             "city_id": 41,
             "name": "Thanh Chương"
         }
@@ -3746,7 +3706,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 469,
+            "id": 464,
             "city_id": 41,
             "name": "Tương Dương"
         }
@@ -3754,7 +3714,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 470,
+            "id": 465,
             "city_id": 41,
             "name": "Vinh"
         }
@@ -3762,7 +3722,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 471,
+            "id": 466,
             "city_id": 41,
             "name": "Yên Thành"
         }
@@ -3770,7 +3730,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 472,
+            "id": 467,
             "city_id": 42,
             "name": "Gia Viễn"
         }
@@ -3778,7 +3738,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 473,
+            "id": 468,
             "city_id": 42,
             "name": "Hoa Lư"
         }
@@ -3786,7 +3746,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 474,
+            "id": 469,
             "city_id": 42,
             "name": "Kim Sơn"
         }
@@ -3794,7 +3754,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 475,
+            "id": 470,
             "city_id": 42,
             "name": "Nho Quan"
         }
@@ -3802,7 +3762,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 476,
+            "id": 471,
             "city_id": 42,
             "name": "Ninh Bình"
         }
@@ -3810,7 +3770,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 477,
+            "id": 472,
             "city_id": 42,
             "name": "Tam Điệp"
         }
@@ -3818,7 +3778,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 478,
+            "id": 473,
             "city_id": 42,
             "name": "Yên Khánh"
         }
@@ -3826,7 +3786,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 479,
+            "id": 474,
             "city_id": 42,
             "name": "Yên Mô"
         }
@@ -3834,7 +3794,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 480,
+            "id": 475,
             "city_id": 43,
             "name": "Bác Ái"
         }
@@ -3842,7 +3802,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 481,
+            "id": 476,
             "city_id": 43,
             "name": "Ninh Hải"
         }
@@ -3850,7 +3810,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 482,
+            "id": 477,
             "city_id": 43,
             "name": "Ninh Phước"
         }
@@ -3858,7 +3818,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 483,
+            "id": 478,
             "city_id": 43,
             "name": "Ninh Sơn"
         }
@@ -3866,7 +3826,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 484,
+            "id": 479,
             "city_id": 43,
             "name": "Phan Rang–Tháp Chàm"
         }
@@ -3874,7 +3834,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 485,
+            "id": 480,
             "city_id": 43,
             "name": "Thuận Bắc"
         }
@@ -3882,7 +3842,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 486,
+            "id": 481,
             "city_id": 43,
             "name": "Thuận Nam"
         }
@@ -3890,7 +3850,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 487,
+            "id": 482,
             "city_id": 44,
             "name": "Cẩm Khê"
         }
@@ -3898,7 +3858,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 488,
+            "id": 483,
             "city_id": 44,
             "name": "Đoan Hùng"
         }
@@ -3906,7 +3866,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 489,
+            "id": 484,
             "city_id": 44,
             "name": "Hạ Hòa"
         }
@@ -3914,7 +3874,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 490,
+            "id": 485,
             "city_id": 44,
             "name": "Lâm Thao"
         }
@@ -3922,7 +3882,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 491,
+            "id": 486,
             "city_id": 44,
             "name": "Phù Ninh"
         }
@@ -3930,7 +3890,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 492,
+            "id": 487,
             "city_id": 44,
             "name": "Phú Thọ"
         }
@@ -3938,7 +3898,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 493,
+            "id": 488,
             "city_id": 44,
             "name": "Tam Nông"
         }
@@ -3946,7 +3906,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 494,
+            "id": 489,
             "city_id": 44,
             "name": "Tân Sơn"
         }
@@ -3954,7 +3914,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 495,
+            "id": 490,
             "city_id": 44,
             "name": "Thanh Ba"
         }
@@ -3962,7 +3922,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 496,
+            "id": 491,
             "city_id": 44,
             "name": "Thanh Sơn"
         }
@@ -3970,7 +3930,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 497,
+            "id": 492,
             "city_id": 44,
             "name": "Thanh Thủy"
         }
@@ -3978,7 +3938,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 498,
+            "id": 493,
             "city_id": 44,
             "name": "Việt Trì"
         }
@@ -3986,7 +3946,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 499,
+            "id": 494,
             "city_id": 44,
             "name": "Yên Lập"
         }
@@ -3994,7 +3954,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 500,
+            "id": 495,
             "city_id": 45,
             "name": "Đông Hòa"
         }
@@ -4002,7 +3962,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 501,
+            "id": 496,
             "city_id": 45,
             "name": "Đồng Xuân"
         }
@@ -4010,7 +3970,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 502,
+            "id": 497,
             "city_id": 45,
             "name": "Phú Hòa"
         }
@@ -4018,7 +3978,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 503,
+            "id": 498,
             "city_id": 45,
             "name": "Sơn Hòa"
         }
@@ -4026,7 +3986,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 504,
+            "id": 499,
             "city_id": 45,
             "name": "Sông Cầu"
         }
@@ -4034,7 +3994,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 505,
+            "id": 500,
             "city_id": 45,
             "name": "Sông Hinh"
         }
@@ -4042,7 +4002,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 506,
+            "id": 501,
             "city_id": 45,
             "name": "Tây Hòa"
         }
@@ -4050,7 +4010,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 507,
+            "id": 502,
             "city_id": 45,
             "name": "Tuy An"
         }
@@ -4058,7 +4018,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 508,
+            "id": 503,
             "city_id": 45,
             "name": "Tuy Hòa"
         }
@@ -4066,7 +4026,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 509,
+            "id": 504,
             "city_id": 46,
             "name": "Ba Đồn"
         }
@@ -4074,7 +4034,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 510,
+            "id": 505,
             "city_id": 46,
             "name": "Bố Trạch"
         }
@@ -4082,7 +4042,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 511,
+            "id": 506,
             "city_id": 46,
             "name": "Đồng Hới"
         }
@@ -4090,7 +4050,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 512,
+            "id": 507,
             "city_id": 46,
             "name": "Lệ Thủy"
         }
@@ -4098,7 +4058,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 513,
+            "id": 508,
             "city_id": 46,
             "name": "Minh Hóa"
         }
@@ -4106,7 +4066,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 514,
+            "id": 509,
             "city_id": 46,
             "name": "Quảng Ninh"
         }
@@ -4114,7 +4074,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 515,
+            "id": 510,
             "city_id": 46,
             "name": "Quảng Trạch"
         }
@@ -4122,7 +4082,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 516,
+            "id": 511,
             "city_id": 46,
             "name": "Tuyên Hóa"
         }
@@ -4130,7 +4090,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 517,
+            "id": 512,
             "city_id": 47,
             "name": "Bắc Trà My"
         }
@@ -4138,7 +4098,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 518,
+            "id": 513,
             "city_id": 47,
             "name": "Đại Lộc"
         }
@@ -4146,7 +4106,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 519,
+            "id": 514,
             "city_id": 47,
             "name": "Điện Bàn"
         }
@@ -4154,7 +4114,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 520,
+            "id": 515,
             "city_id": 47,
             "name": "Đông Giang"
         }
@@ -4162,7 +4122,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 521,
+            "id": 516,
             "city_id": 47,
             "name": "Duy Xuyên"
         }
@@ -4170,7 +4130,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 522,
+            "id": 517,
             "city_id": 47,
             "name": "Hiệp Đức"
         }
@@ -4178,7 +4138,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 523,
+            "id": 518,
             "city_id": 47,
             "name": "Hội An"
         }
@@ -4186,7 +4146,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 524,
+            "id": 519,
             "city_id": 47,
             "name": "Nam Giang"
         }
@@ -4194,7 +4154,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 525,
+            "id": 520,
             "city_id": 47,
             "name": "Nam Trà My"
         }
@@ -4202,7 +4162,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 526,
+            "id": 521,
             "city_id": 47,
             "name": "Nông Sơn"
         }
@@ -4210,7 +4170,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 527,
+            "id": 522,
             "city_id": 47,
             "name": "Núi Thành"
         }
@@ -4218,7 +4178,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 528,
+            "id": 523,
             "city_id": 47,
             "name": "Phước Sơn"
         }
@@ -4226,7 +4186,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 529,
+            "id": 524,
             "city_id": 47,
             "name": "Quế Sơn"
         }
@@ -4234,7 +4194,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 530,
+            "id": 525,
             "city_id": 47,
             "name": "Tam Kỳ"
         }
@@ -4242,7 +4202,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 531,
+            "id": 526,
             "city_id": 47,
             "name": "Tây Giang"
         }
@@ -4250,7 +4210,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 532,
+            "id": 527,
             "city_id": 47,
             "name": "Thăng Bình"
         }
@@ -4258,7 +4218,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 533,
+            "id": 528,
             "city_id": 47,
             "name": "Tiên Phước"
         }
@@ -4266,7 +4226,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 534,
+            "id": 529,
             "city_id": 48,
             "name": "Ba Tơ"
         }
@@ -4274,7 +4234,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 535,
+            "id": 530,
             "city_id": 48,
             "name": "Bình Sơn"
         }
@@ -4282,7 +4242,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 536,
+            "id": 531,
             "city_id": 48,
             "name": "Đức Phổ"
         }
@@ -4290,7 +4250,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 537,
+            "id": 532,
             "city_id": 48,
             "name": "Đảo Lý Sơn"
         }
@@ -4298,7 +4258,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 538,
+            "id": 533,
             "city_id": 48,
             "name": "Minh Long"
         }
@@ -4306,7 +4266,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 539,
+            "id": 534,
             "city_id": 48,
             "name": "Mộ Đức"
         }
@@ -4314,7 +4274,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 540,
+            "id": 535,
             "city_id": 48,
             "name": "Nghĩa Hành"
         }
@@ -4322,7 +4282,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 541,
+            "id": 536,
             "city_id": 48,
             "name": "Quảng Ngãi"
         }
@@ -4330,7 +4290,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 542,
+            "id": 537,
             "city_id": 48,
             "name": "Sơn Hà"
         }
@@ -4338,7 +4298,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 543,
+            "id": 538,
             "city_id": 48,
             "name": "Sơn Tây"
         }
@@ -4346,7 +4306,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 544,
+            "id": 539,
             "city_id": 48,
             "name": "Sơn Tịnh"
         }
@@ -4354,7 +4314,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 545,
+            "id": 540,
             "city_id": 48,
             "name": "Tây Trà"
         }
@@ -4362,7 +4322,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 546,
+            "id": 541,
             "city_id": 48,
             "name": "Trà Bồng"
         }
@@ -4370,7 +4330,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 547,
+            "id": 542,
             "city_id": 48,
             "name": "Tư Nghĩa"
         }
@@ -4378,7 +4338,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 548,
+            "id": 543,
             "city_id": 49,
             "name": "Ba Chẽ"
         }
@@ -4386,7 +4346,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 549,
+            "id": 544,
             "city_id": 49,
             "name": "Bình Liêu"
         }
@@ -4394,7 +4354,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 550,
+            "id": 545,
             "city_id": 49,
             "name": "Cẩm Phả"
         }
@@ -4402,7 +4362,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 551,
+            "id": 546,
             "city_id": 49,
             "name": "Đảo Cô Tô"
         }
@@ -4410,7 +4370,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 552,
+            "id": 547,
             "city_id": 49,
             "name": "Đầm Hà"
         }
@@ -4418,7 +4378,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 553,
+            "id": 548,
             "city_id": 49,
             "name": "Đông Triều"
         }
@@ -4426,7 +4386,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 554,
+            "id": 549,
             "city_id": 49,
             "name": "Hạ Long"
         }
@@ -4434,7 +4394,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 555,
+            "id": 550,
             "city_id": 49,
             "name": "Hải Hà"
         }
@@ -4442,7 +4402,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 556,
+            "id": 551,
             "city_id": 49,
             "name": "Hoành Bồ"
         }
@@ -4450,7 +4410,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 557,
+            "id": 552,
             "city_id": 49,
             "name": "Móng Cái"
         }
@@ -4458,7 +4418,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 558,
+            "id": 553,
             "city_id": 49,
             "name": "Quảng Yên"
         }
@@ -4466,7 +4426,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 559,
+            "id": 554,
             "city_id": 49,
             "name": "Tiên Yên"
         }
@@ -4474,7 +4434,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 560,
+            "id": 555,
             "city_id": 49,
             "name": "Uông Bí"
         }
@@ -4482,7 +4442,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 561,
+            "id": 556,
             "city_id": 49,
             "name": "Đảo Vân Đồn"
         }
@@ -4490,7 +4450,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 562,
+            "id": 557,
             "city_id": 50,
             "name": "Cam Lộ"
         }
@@ -4498,7 +4458,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 563,
+            "id": 558,
             "city_id": 50,
             "name": "Đảo Cồn Cỏ"
         }
@@ -4506,7 +4466,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 564,
+            "id": 559,
             "city_id": 50,
             "name": "Đa Krông"
         }
@@ -4514,7 +4474,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 565,
+            "id": 560,
             "city_id": 50,
             "name": "Đông Hà"
         }
@@ -4522,7 +4482,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 566,
+            "id": 561,
             "city_id": 50,
             "name": "Gio Linh"
         }
@@ -4530,7 +4490,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 567,
+            "id": 562,
             "city_id": 50,
             "name": "Hải Lăng"
         }
@@ -4538,7 +4498,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 568,
+            "id": 563,
             "city_id": 50,
             "name": "Hướng Hóa"
         }
@@ -4546,7 +4506,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 569,
+            "id": 564,
             "city_id": 50,
             "name": "Quảng Trị"
         }
@@ -4554,7 +4514,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 570,
+            "id": 565,
             "city_id": 50,
             "name": "Triệu Phong"
         }
@@ -4562,7 +4522,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 571,
+            "id": 566,
             "city_id": 50,
             "name": "Vĩnh Linh"
         }
@@ -4570,7 +4530,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 572,
+            "id": 567,
             "city_id": 51,
             "name": "Châu Thành"
         }
@@ -4578,7 +4538,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 573,
+            "id": 568,
             "city_id": 51,
             "name": "Cù Lao Dung"
         }
@@ -4586,7 +4546,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 574,
+            "id": 569,
             "city_id": 51,
             "name": "Long Phú"
         }
@@ -4594,7 +4554,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 575,
+            "id": 570,
             "city_id": 51,
             "name": "Kế Sách"
         }
@@ -4602,7 +4562,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 576,
+            "id": 571,
             "city_id": 51,
             "name": "Mỹ Tú"
         }
@@ -4610,7 +4570,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 577,
+            "id": 572,
             "city_id": 51,
             "name": "Mỹ Xuyên"
         }
@@ -4618,7 +4578,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 578,
+            "id": 573,
             "city_id": 51,
             "name": "Ngã Năm"
         }
@@ -4626,7 +4586,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 579,
+            "id": 574,
             "city_id": 51,
             "name": "Sóc Trăng"
         }
@@ -4634,7 +4594,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 580,
+            "id": 575,
             "city_id": 51,
             "name": "Thạnh Trị"
         }
@@ -4642,7 +4602,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 581,
+            "id": 576,
             "city_id": 51,
             "name": "Trần Đề"
         }
@@ -4650,7 +4610,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 582,
+            "id": 577,
             "city_id": 51,
             "name": "Vĩnh Châu"
         }
@@ -4658,7 +4618,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 583,
+            "id": 578,
             "city_id": 52,
             "name": "Bắc Yên"
         }
@@ -4666,7 +4626,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 584,
+            "id": 579,
             "city_id": 52,
             "name": "Mai Sơn"
         }
@@ -4674,7 +4634,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 585,
+            "id": 580,
             "city_id": 52,
             "name": "Mộc Châu"
         }
@@ -4682,7 +4642,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 586,
+            "id": 581,
             "city_id": 52,
             "name": "Mường La"
         }
@@ -4690,7 +4650,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 587,
+            "id": 582,
             "city_id": 52,
             "name": "Phù Yên"
         }
@@ -4698,7 +4658,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 588,
+            "id": 583,
             "city_id": 52,
             "name": "Quỳnh Nhai"
         }
@@ -4706,7 +4666,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 589,
+            "id": 584,
             "city_id": 52,
             "name": "Sơn La"
         }
@@ -4714,7 +4674,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 590,
+            "id": 585,
             "city_id": 52,
             "name": "Sông Mã"
         }
@@ -4722,7 +4682,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 591,
+            "id": 586,
             "city_id": 52,
             "name": "Sốp Cộp"
         }
@@ -4730,7 +4690,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 592,
+            "id": 587,
             "city_id": 52,
             "name": "Thuận Châu"
         }
@@ -4738,7 +4698,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 593,
+            "id": 588,
             "city_id": 52,
             "name": "Vân Hồ"
         }
@@ -4746,7 +4706,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 594,
+            "id": 589,
             "city_id": 52,
             "name": "Yên Châu"
         }
@@ -4754,7 +4714,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 595,
+            "id": 590,
             "city_id": 53,
             "name": "Bến Cầu"
         }
@@ -4762,7 +4722,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 596,
+            "id": 591,
             "city_id": 53,
             "name": "Châu Thành"
         }
@@ -4770,7 +4730,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 597,
+            "id": 592,
             "city_id": 53,
             "name": "Dương Minh Châu"
         }
@@ -4778,7 +4738,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 598,
+            "id": 593,
             "city_id": 53,
             "name": "Gò Dầu"
         }
@@ -4786,7 +4746,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 599,
+            "id": 594,
             "city_id": 53,
             "name": "Hòa Thành"
         }
@@ -4794,7 +4754,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 600,
+            "id": 595,
             "city_id": 53,
             "name": "Tân Biên"
         }
@@ -4802,7 +4762,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 601,
+            "id": 596,
             "city_id": 53,
             "name": "Tân Châu"
         }
@@ -4810,7 +4770,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 602,
+            "id": 597,
             "city_id": 53,
             "name": "Tây Ninh"
         }
@@ -4818,7 +4778,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 603,
+            "id": 598,
             "city_id": 53,
             "name": "Trảng Bàng"
         }
@@ -4826,7 +4786,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 604,
+            "id": 599,
             "city_id": 54,
             "name": "Đông Hưng"
         }
@@ -4834,7 +4794,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 605,
+            "id": 600,
             "city_id": 54,
             "name": "Hưng Hà"
         }
@@ -4842,7 +4802,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 606,
+            "id": 601,
             "city_id": 54,
             "name": "Kiến Xương"
         }
@@ -4850,7 +4810,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 607,
+            "id": 602,
             "city_id": 54,
             "name": "Quỳnh Phụ"
         }
@@ -4858,7 +4818,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 608,
+            "id": 603,
             "city_id": 54,
             "name": "Thái Bình"
         }
@@ -4866,7 +4826,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 609,
+            "id": 604,
             "city_id": 54,
             "name": "Thái Thụy"
         }
@@ -4874,7 +4834,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 610,
+            "id": 605,
             "city_id": 54,
             "name": "Tiền Hải"
         }
@@ -4882,7 +4842,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 611,
+            "id": 606,
             "city_id": 54,
             "name": "Vũ Thư"
         }
@@ -4890,7 +4850,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 612,
+            "id": 607,
             "city_id": 55,
             "name": "Đại Từ"
         }
@@ -4898,7 +4858,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 613,
+            "id": 608,
             "city_id": 55,
             "name": "Định Hóa"
         }
@@ -4906,7 +4866,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 614,
+            "id": 609,
             "city_id": 55,
             "name": "Đồng Hỷ"
         }
@@ -4914,7 +4874,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 615,
+            "id": 610,
             "city_id": 55,
             "name": "Phổ Yên"
         }
@@ -4922,7 +4882,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 616,
+            "id": 611,
             "city_id": 55,
             "name": "Phú Bình"
         }
@@ -4930,7 +4890,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 617,
+            "id": 612,
             "city_id": 55,
             "name": "Phú Lương"
         }
@@ -4938,7 +4898,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 618,
+            "id": 613,
             "city_id": 55,
             "name": "Sông Công"
         }
@@ -4946,7 +4906,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 619,
+            "id": 614,
             "city_id": 55,
             "name": "Thái Nguyên"
         }
@@ -4954,7 +4914,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 620,
+            "id": 615,
             "city_id": 55,
             "name": "Võ Nhai"
         }
@@ -4962,7 +4922,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 621,
+            "id": 616,
             "city_id": 56,
             "name": "Bá Thước"
         }
@@ -4970,7 +4930,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 622,
+            "id": 617,
             "city_id": 56,
             "name": "Bỉm Sơn"
         }
@@ -4978,7 +4938,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 623,
+            "id": 618,
             "city_id": 56,
             "name": "Cẩm Thủy"
         }
@@ -4986,7 +4946,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 624,
+            "id": 619,
             "city_id": 56,
             "name": "Đông Sơn"
         }
@@ -4994,7 +4954,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 625,
+            "id": 620,
             "city_id": 56,
             "name": "Hà Trung"
         }
@@ -5002,7 +4962,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 626,
+            "id": 621,
             "city_id": 56,
             "name": "Hậu Lộc"
         }
@@ -5010,7 +4970,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 627,
+            "id": 622,
             "city_id": 56,
             "name": "Hoằng Hóa"
         }
@@ -5018,7 +4978,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 628,
+            "id": 623,
             "city_id": 56,
             "name": "Lang Chánh"
         }
@@ -5026,7 +4986,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 629,
+            "id": 624,
             "city_id": 56,
             "name": "Mường Lát"
         }
@@ -5034,7 +4994,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 630,
+            "id": 625,
             "city_id": 56,
             "name": "Nga Sơn"
         }
@@ -5042,7 +5002,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 631,
+            "id": 626,
             "city_id": 56,
             "name": "Nghi Sơn"
         }
@@ -5050,7 +5010,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 632,
+            "id": 627,
             "city_id": 56,
             "name": "Ngọc Lặc"
         }
@@ -5058,7 +5018,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 633,
+            "id": 628,
             "city_id": 56,
             "name": "Như Thanh"
         }
@@ -5066,7 +5026,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 634,
+            "id": 629,
             "city_id": 56,
             "name": "Như Xuân"
         }
@@ -5074,7 +5034,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 635,
+            "id": 630,
             "city_id": 56,
             "name": "Nông Cống"
         }
@@ -5082,7 +5042,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 636,
+            "id": 631,
             "city_id": 56,
             "name": "Quan Hóa"
         }
@@ -5090,7 +5050,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 637,
+            "id": 632,
             "city_id": 56,
             "name": "Quan Sơn"
         }
@@ -5098,7 +5058,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 638,
+            "id": 633,
             "city_id": 56,
             "name": "Quảng Xương"
         }
@@ -5106,7 +5066,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 639,
+            "id": 634,
             "city_id": 56,
             "name": "Sầm Sơn"
         }
@@ -5114,7 +5074,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 640,
+            "id": 635,
             "city_id": 56,
             "name": "Thạch Thành"
         }
@@ -5122,7 +5082,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 641,
+            "id": 636,
             "city_id": 56,
             "name": "Thanh Hóa"
         }
@@ -5130,7 +5090,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 642,
+            "id": 637,
             "city_id": 56,
             "name": "Thiệu Hóa"
         }
@@ -5138,7 +5098,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 643,
+            "id": 638,
             "city_id": 56,
             "name": "Thọ Xuân"
         }
@@ -5146,7 +5106,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 644,
+            "id": 639,
             "city_id": 56,
             "name": "Thường Xuân"
         }
@@ -5154,7 +5114,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 645,
+            "id": 640,
             "city_id": 56,
             "name": "Triệu Sơn"
         }
@@ -5162,7 +5122,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 646,
+            "id": 641,
             "city_id": 56,
             "name": "Vĩnh Lộc"
         }
@@ -5170,7 +5130,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 647,
+            "id": 642,
             "city_id": 56,
             "name": "Yên Định"
         }
@@ -5178,7 +5138,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 648,
+            "id": 643,
             "city_id": 57,
             "name": "A Lưới"
         }
@@ -5186,7 +5146,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 649,
+            "id": 644,
             "city_id": 57,
             "name": "Huế"
         }
@@ -5194,7 +5154,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 650,
+            "id": 645,
             "city_id": 57,
             "name": "Hương Thủy"
         }
@@ -5202,7 +5162,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 651,
+            "id": 646,
             "city_id": 57,
             "name": "Hương Trà"
         }
@@ -5210,7 +5170,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 652,
+            "id": 647,
             "city_id": 57,
             "name": "Nam Đông"
         }
@@ -5218,7 +5178,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 653,
+            "id": 648,
             "city_id": 57,
             "name": "Phong Điền"
         }
@@ -5226,7 +5186,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 654,
+            "id": 649,
             "city_id": 57,
             "name": "Phú Lộc"
         }
@@ -5234,7 +5194,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 655,
+            "id": 650,
             "city_id": 57,
             "name": "Phú Vang"
         }
@@ -5242,7 +5202,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 656,
+            "id": 651,
             "city_id": 57,
             "name": "Quảng Điền"
         }
@@ -5250,7 +5210,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 657,
+            "id": 652,
             "city_id": 58,
             "name": "Cái Bè"
         }
@@ -5258,7 +5218,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 658,
+            "id": 653,
             "city_id": 58,
             "name": "Cai Lậy"
         }
@@ -5266,15 +5226,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 659,
-            "city_id": 58,
-            "name": "Cai Lậy"
-        }
-    },
-    {
-        "model": "master.MasterDistrict",
-        "fields": {
-            "id": 660,
+            "id": 654,
             "city_id": 58,
             "name": "Châu Thành"
         }
@@ -5282,7 +5234,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 661,
+            "id": 655,
             "city_id": 58,
             "name": "Chợ Gạo"
         }
@@ -5290,7 +5242,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 662,
+            "id": 656,
             "city_id": 58,
             "name": "Gò Công"
         }
@@ -5298,7 +5250,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 663,
+            "id": 657,
             "city_id": 58,
             "name": "Gò Công Dông"
         }
@@ -5306,7 +5258,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 664,
+            "id": 658,
             "city_id": 58,
             "name": "Gò Công Tây"
         }
@@ -5314,7 +5266,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 665,
+            "id": 659,
             "city_id": 58,
             "name": "Mỹ Tho"
         }
@@ -5322,7 +5274,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 666,
+            "id": 660,
             "city_id": 58,
             "name": "Tân Phú Đông"
         }
@@ -5330,7 +5282,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 667,
+            "id": 661,
             "city_id": 58,
             "name": "Tân Phước"
         }
@@ -5338,7 +5290,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 668,
+            "id": 662,
             "city_id": 59,
             "name": "Càng Long"
         }
@@ -5346,7 +5298,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 669,
+            "id": 663,
             "city_id": 59,
             "name": "Cầu Kè"
         }
@@ -5354,7 +5306,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 670,
+            "id": 664,
             "city_id": 59,
             "name": "Cầu Ngang"
         }
@@ -5362,7 +5314,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 671,
+            "id": 665,
             "city_id": 59,
             "name": "Châu Thành"
         }
@@ -5370,7 +5322,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 672,
+            "id": 666,
             "city_id": 59,
             "name": "Duyên Hải"
         }
@@ -5378,15 +5330,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 673,
-            "city_id": 59,
-            "name": "Duyên Hải"
-        }
-    },
-    {
-        "model": "master.MasterDistrict",
-        "fields": {
-            "id": 674,
+            "id": 667,
             "city_id": 59,
             "name": "Tiểu Cần"
         }
@@ -5394,7 +5338,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 675,
+            "id": 668,
             "city_id": 59,
             "name": "Trà Cú"
         }
@@ -5402,7 +5346,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 676,
+            "id": 669,
             "city_id": 59,
             "name": "Trà Vinh"
         }
@@ -5410,7 +5354,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 677,
+            "id": 670,
             "city_id": 60,
             "name": "Chiêm Hóa"
         }
@@ -5418,7 +5362,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 678,
+            "id": 671,
             "city_id": 60,
             "name": "Hàm Yên"
         }
@@ -5426,7 +5370,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 679,
+            "id": 672,
             "city_id": 60,
             "name": "Lâm Bình"
         }
@@ -5434,7 +5378,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 680,
+            "id": 673,
             "city_id": 60,
             "name": "Nà Hang"
         }
@@ -5442,7 +5386,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 681,
+            "id": 674,
             "city_id": 60,
             "name": "Sơn Dương"
         }
@@ -5450,7 +5394,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 682,
+            "id": 675,
             "city_id": 60,
             "name": "Tuyên Quang"
         }
@@ -5458,7 +5402,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 683,
+            "id": 676,
             "city_id": 60,
             "name": "Yên Sơn"
         }
@@ -5466,7 +5410,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 684,
+            "id": 677,
             "city_id": 61,
             "name": "Bình Minh"
         }
@@ -5474,7 +5418,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 685,
+            "id": 678,
             "city_id": 61,
             "name": "Bình Tân"
         }
@@ -5482,7 +5426,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 686,
+            "id": 679,
             "city_id": 61,
             "name": "Long Hồ"
         }
@@ -5490,7 +5434,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 687,
+            "id": 680,
             "city_id": 61,
             "name": "Mang Thít"
         }
@@ -5498,7 +5442,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 688,
+            "id": 681,
             "city_id": 61,
             "name": "Tâm Bình"
         }
@@ -5506,7 +5450,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 689,
+            "id": 682,
             "city_id": 61,
             "name": "Trà Ôn"
         }
@@ -5514,7 +5458,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 690,
+            "id": 683,
             "city_id": 61,
             "name": "Vĩnh Long"
         }
@@ -5522,7 +5466,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 691,
+            "id": 684,
             "city_id": 61,
             "name": "Vũng Liêm"
         }
@@ -5530,7 +5474,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 692,
+            "id": 685,
             "city_id": 62,
             "name": "Bình Xuyên"
         }
@@ -5538,7 +5482,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 693,
+            "id": 686,
             "city_id": 62,
             "name": "Lập Thạch"
         }
@@ -5546,7 +5490,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 694,
+            "id": 687,
             "city_id": 62,
             "name": "Phúc Yên"
         }
@@ -5554,7 +5498,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 695,
+            "id": 688,
             "city_id": 62,
             "name": "Sông Lô"
         }
@@ -5562,7 +5506,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 696,
+            "id": 689,
             "city_id": 62,
             "name": "Tam Đảo"
         }
@@ -5570,7 +5514,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 697,
+            "id": 690,
             "city_id": 62,
             "name": "Tam Dương"
         }
@@ -5578,7 +5522,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 698,
+            "id": 691,
             "city_id": 62,
             "name": "Vĩnh Tường"
         }
@@ -5586,7 +5530,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 699,
+            "id": 692,
             "city_id": 62,
             "name": "Vĩnh Yên"
         }
@@ -5594,7 +5538,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 700,
+            "id": 693,
             "city_id": 62,
             "name": "Yên Lạc"
         }
@@ -5602,7 +5546,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 701,
+            "id": 694,
             "city_id": 63,
             "name": "Lục Yên"
         }
@@ -5610,7 +5554,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 702,
+            "id": 695,
             "city_id": 63,
             "name": "Mù Cang Chải"
         }
@@ -5618,7 +5562,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 703,
+            "id": 696,
             "city_id": 63,
             "name": "Nghĩa Lộ"
         }
@@ -5626,7 +5570,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 704,
+            "id": 697,
             "city_id": 63,
             "name": "Trạm Tấu"
         }
@@ -5634,7 +5578,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 705,
+            "id": 698,
             "city_id": 63,
             "name": "Trấn Yên"
         }
@@ -5642,7 +5586,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 706,
+            "id": 699,
             "city_id": 63,
             "name": "Văn Chấn"
         }
@@ -5650,7 +5594,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 707,
+            "id": 700,
             "city_id": 63,
             "name": "Văn Yên"
         }
@@ -5658,7 +5602,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 708,
+            "id": 701,
             "city_id": 63,
             "name": "Yên Bái"
         }
@@ -5666,7 +5610,7 @@
     {
         "model": "master.MasterDistrict",
         "fields": {
-            "id": 709,
+            "id": 702,
             "city_id": 63,
             "name": "Yên Bình"
         }
