@@ -1,0 +1,149 @@
+[
+  {
+    "model": "master.MasterDiscountRate",
+    "fields": {
+      "id": "1",
+      "name": "0"
+    }
+  },
+  {
+    "model": "master.MasterDiscountRate",
+    "fields": {
+      "id": "2",
+      "name": "5"
+    }
+  },
+  {
+    "model": "master.MasterDiscountRate",
+    "fields": {
+      "id": "3",
+      "name": "10"
+    }
+  },
+  {
+    "model": "master.MasterDiscountRate",
+    "fields": {
+      "id": "4",
+      "name": "15"
+    }
+  },
+  {
+    "model": "master.MasterDiscountRate",
+    "fields": {
+      "id": "5",
+      "name": "20"
+    }
+  },
+  {
+    "model": "master.MasterDiscountRate",
+    "fields": {
+      "id": "6",
+      "name": "25"
+    }
+  },
+  {
+    "model": "master.MasterDiscountRate",
+    "fields": {
+      "id": "7",
+      "name": "30"
+    }
+  },
+  {
+    "model": "master.MasterDiscountRate",
+    "fields": {
+      "id": "8",
+      "name": "35"
+    }
+  },
+  {
+    "model": "master.MasterDiscountRate",
+    "fields": {
+      "id": "9",
+      "name": "40"
+    }
+  },
+  {
+    "model": "master.MasterDiscountRate",
+    "fields": {
+      "id": "10",
+      "name": "45"
+    }
+  },
+  {
+    "model": "master.MasterDiscountRate",
+    "fields": {
+      "id": "11",
+      "name": "50"
+    }
+  },
+  {
+    "model": "master.MasterDiscountRate",
+    "fields": {
+      "id": "12",
+      "name": "55"
+    }
+  },
+  {
+    "model": "master.MasterDiscountRate",
+    "fields": {
+      "id": "13",
+      "name": "60"
+    }
+  },
+  {
+    "model": "master.MasterDiscountRate",
+    "fields": {
+      "id": "14",
+      "name": "65"
+    }
+  },
+  {
+    "model": "master.MasterDiscountRate",
+    "fields": {
+      "id": "15",
+      "name": "70"
+    }
+  },
+  {
+    "model": "master.MasterDiscountRate",
+    "fields": {
+      "id": "16",
+      "name": "75"
+    }
+  },
+  {
+    "model": "master.MasterDiscountRate",
+    "fields": {
+      "id": "17",
+      "name": "80"
+    }
+  },
+  {
+    "model": "master.MasterDiscountRate",
+    "fields": {
+      "id": "18",
+      "name": "85"
+    }
+  },
+  {
+    "model": "master.MasterDiscountRate",
+    "fields": {
+      "id": "19",
+      "name": "90"
+    }
+  },
+  {
+    "model": "master.MasterDiscountRate",
+    "fields": {
+      "id": "20",
+      "name": "95"
+    }
+  },
+  {
+    "model": "master.MasterDiscountRate",
+    "fields": {
+      "id": "21",
+      "name": "100"
+    }
+  }
+]

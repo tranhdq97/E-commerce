@@ -4,7 +4,7 @@ services:
     # TODO: Add specify tag for mysql image
     image: mysql
     ports:
-      - "3307:3306"
+      - "3306:3306"
     environment:
       MYSQL_ROOT_HOST: '%'
       MYSQL_DATABASE: 'ec_db'
@@ -25,4 +25,3 @@ services:
       - /tmp/app/mysqld:/run/mysqld
     links:
       - db
-

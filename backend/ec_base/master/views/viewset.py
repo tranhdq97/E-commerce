@@ -6,7 +6,7 @@ from rest_framework.response import Response
 from rest_framework.viewsets import GenericViewSet
 
 from ..filters.base_master import BaseMasterListQueryFields
-from ..serializers.base_master import BaseMasterListReqParams
+from ..serializers.base_master import BaseMasterListReqParams, BaseMasterCreateSlz
 from ..services.base_master import BaseMasterService
 from ...common.constant.db_fields import MasterFields, CommonFields
 from ...common.constant.db_table import DBTable
@@ -41,7 +41,8 @@ class MasterViewSet(GenericViewSet):
         serializer = service.get_master_list_serializer(queryset, many=True)
         return Response(serializer.data)
 
-    @extend_schema(description=f'Choices: {" | ".join(Master.list(allowed_to_create=True))}')
+    @extend_schema(request=BaseMasterCreateSlz,
+                   description=f'Choices: {" | ".join(Master.list(allowed_to_create=True))}')
     def create(self, request, **kwargs):
         master_name = kwargs.pop('_'.join([DBTable.MASTER, MasterFields.NAME]))
         service = BaseMasterService(master_name)

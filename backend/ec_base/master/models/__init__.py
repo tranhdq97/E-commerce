@@ -4,3 +4,5 @@ from .discount_type import MasterDiscountType
 from .district import MasterDistrict
 from .staff_type import MasterStaffType
 from .product_category import MasterProductCategory
+from .discount_rate import MasterDiscountRate
+from .discount_type import MasterDiscountType
