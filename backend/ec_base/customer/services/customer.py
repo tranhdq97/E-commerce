@@ -1,6 +1,7 @@
 from ..models import Customer
 from ..serializers.customer import CustomerUpdateSlz
 from ...common.constant.db_fields import CustomerFields, CommonFields
+from ...common.utils.decorator import log
 
 
 class CustomerSvc:
@@ -13,6 +14,7 @@ class CustomerSvc:
         except Customer.DoesNotExist:
             raise ValueError('Customer does not exist')
 
+    @log
     def update_customer(self, pk, data):
         instance = self.get_customer(pk)
         if instance.info_id and data.get(CustomerFields.INFO) is not None:
