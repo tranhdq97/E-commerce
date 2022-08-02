@@ -1,0 +1,28 @@
+version: '3'
+services:
+  db:
+    # TODO: Add specify tag for mysql image
+    image: mysql
+    ports:
+      - "3307:3306"
+    environment:
+      MYSQL_ROOT_HOST: '%'
+      MYSQL_DATABASE: 'ec_db'
+      MYSQL_ROOT_USER: 'root'
+      MYSQL_PASSWORD: '1'
+      MYSQL_ROOT_PASSWORD: '1'
+
+  web:
+    build: .
+    command: bash -c "sleep 15
+                      && python manage.py migrate
+                      && python manage.py init_master_data
+                      && python manage.py runserver 0.0.0.0:8000"
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+      - /tmp/app/mysqld:/run/mysqld
+    links:
+      - db
+
