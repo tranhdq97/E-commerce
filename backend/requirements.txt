@@ -8,3 +8,5 @@ djangorestframework-simplejwt~=5.2.0
 mysqlclient~=2.1.1
 drf-spectacular==0.23.1
 drf_writable_nested~=0.6.4
+whitenoise~=6.2.0
+django-crum~=0.7.9

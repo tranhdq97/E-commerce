@@ -9,7 +9,10 @@ from ..filters.customer import CustomerListQueryFields
 from ..models import Customer
 from ..serializers.customer import CustomerListSlz, CustomerCreateSlz, CustomerUpdateSlz, CustomerRetrieveSlz
 from ..services.customer import CustomerSvc
+from ...auth.permissions.permission import IsApproved
+from ...common.constant import message
 from ...common.constant.view_action import BaseViewAction
+from ...common.custom.exceptions import PermissionDenied, APIErr
 from ...common.custom.pagination import CustomPagination
 
 
@@ -31,11 +34,24 @@ class CustomerViewSet(mixins.ListModelMixin, mixins.CreateModelMixin, mixins.Upd
             BaseViewAction.CREATE: CustomerCreateSlz,
             BaseViewAction.UPDATE: CustomerUpdateSlz
         }
-        slz = slz_switcher.get(self.action, None)
+        slz = slz_switcher.get(self.action)
         if slz is None:
-            raise ValueError('There is no serializer matched with this action')
+            raise APIErr(message.NO_SERIALIZER_MATCHED)
 
         return slz
+
+    def get_permissions(self):
+        perm_switcher = {
+            BaseViewAction.LIST: (IsApproved,),
+            BaseViewAction.RETRIEVE: (IsApproved,),
+            BaseViewAction.CREATE: (IsApproved,),
+            BaseViewAction.UPDATE: (IsApproved,),
+        }
+        self.permission_classes = perm_switcher.get(self.action)
+        if self.permission_classes is None:
+            raise PermissionDenied()
+
+        return super().get_permissions()
 
     def update(self, request, *args, **kwargs):
         svc = CustomerSvc()

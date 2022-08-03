@@ -1,6 +1,8 @@
 from ..models import Customer
 from ..serializers.customer import CustomerUpdateSlz
+from ...common.constant import message
 from ...common.constant.db_fields import CustomerFields, CommonFields
+from ...common.custom.exceptions import APIErr
 from ...common.utils.decorator import log
 
 
@@ -12,7 +14,7 @@ class CustomerSvc:
         try:
             return Customer.objects.get(pk=pk)
         except Customer.DoesNotExist:
-            raise ValueError('Customer does not exist')
+            raise APIErr(message.NOT_EXIST)
 
     @log
     def update_customer(self, pk, data):

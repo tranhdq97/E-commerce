@@ -34,7 +34,9 @@ class CustomerUpdateSlz(CustomerBaseSlz, WritableNestedModelSerializer):
 
     class Meta:
         model = CustomerBaseSlz.Meta.model
-        fields = CustomerBaseSlz.Meta.fields + (CustomerFields.INFO,)
+        fields = CustomerBaseSlz.Meta.fields + (CustomerFields.INFO,) + (
+            CommonFields.CREATED_BY_ID, CommonFields.UPDATED_BY_ID)
+        read_only_fields = (CommonFields.ID, CommonFields.CREATED_BY_ID, CommonFields.UPDATED_BY_ID,)
 
 
 class CustomerCreateSlz(CustomerBaseSlz, WritableNestedModelSerializer):
@@ -42,5 +44,6 @@ class CustomerCreateSlz(CustomerBaseSlz, WritableNestedModelSerializer):
 
     class Meta:
         model = CustomerBaseSlz.Meta.model
-        fields = CustomerBaseSlz.Meta.fields + (CustomerFields.INFO,)
-        read_only_fields = (CommonFields.ID,)
+        fields = CustomerBaseSlz.Meta.fields + (CustomerFields.INFO,) + (
+            CommonFields.CREATED_BY_ID, CommonFields.UPDATED_BY_ID)
+        read_only_fields = (CommonFields.ID, CommonFields.CREATED_BY_ID, CommonFields.UPDATED_BY_ID,)

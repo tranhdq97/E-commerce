@@ -5,9 +5,11 @@ from django.shortcuts import get_object_or_404
 from ..serializers.base_master import BaseMasterListSlz, BaseMasterRetrieveSlz, BaseMasterCreateSlz
 from ..serializers.discount_rate import MasterDiscountRateSlz
 from ..serializers.district import MasterDistrictSlz
+from ...common.constant import message
 from ...common.constant.app_label import ModelAppLabel
 from ...common.constant.db_table import DBTable
 from ...common.constant.service import Master
+from ...common.custom.exceptions import APIErr
 
 
 class BaseMasterService:
@@ -43,7 +45,7 @@ class BaseMasterService:
             serializer = BaseMasterRetrieveSlz(instance)
             return serializer
         except IntegrityError:
-            raise ValueError("Duplicate item")
+            raise APIErr(message.DUPLICATE_ENTRY)
 
     def delete(self, pk):
         instance = self.get_item_by_id(pk)
@@ -60,6 +62,6 @@ class BaseMasterService:
 
     def get_master_create_serializer(self):
         if not self.allowed_to_create:
-            raise ValueError("This master is not allowed to create.")
+            raise APIErr(message.NOT_ALLOWED_TO_CREATE)
 
         return BaseMasterCreateSlz

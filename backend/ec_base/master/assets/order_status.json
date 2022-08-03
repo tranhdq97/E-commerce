@@ -1,0 +1,16 @@
+[
+  {
+    "model": "master.MasterOrderStatus",
+    "fields": {
+      "id": 1,
+      "name": "Ordered"
+    }
+  },
+  {
+    "model": "master.MasterOrderStatus",
+    "fields": {
+      "id": 2,
+      "name": "Canceled"
+    }
+  }
+]
