@@ -12,3 +12,7 @@ class Customer(Creator, Editor):
     class Meta:
         db_table = DBTable.CUSTOMER
         app_label = ModelAppLabel.CUSTOMER
+
+    @property
+    def is_staff(self):
+        return False

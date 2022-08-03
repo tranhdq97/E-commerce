@@ -3,13 +3,13 @@ from django.db import models
 from django.db.models import ForeignKey
 
 from .managers import CustomUserManager
-from ..utils.middleware import get_current_user
+from crum import get_current_user
 
 
 class CurrentUserField(ForeignKey):
     def __init__(self, to, **kwargs):
         self.auto_current = kwargs.pop('auto_current', False)
-        self.auto_current_add = kwargs.pop('auto_curren_add', False)
+        self.auto_current_add = kwargs.pop('auto_current_add', False)
         super().__init__(to, **kwargs)
 
     def pre_save(self, model_instance, add):
@@ -27,7 +27,7 @@ class CurrentUserField(ForeignKey):
 class Creator(models.Model):
     created_by = CurrentUserField(
         to='staff.Staff',
-        auto_curren_add=True,
+        auto_current_add=True,
         null=True,
         on_delete=models.RESTRICT,
         related_name="%(app_label)s_%(class)s_created_by"
@@ -40,7 +40,7 @@ class Creator(models.Model):
 class Editor(models.Model):
     updated_by = CurrentUserField(
         to='staff.Staff',
-        auto_curren_add=True,
+        auto_current=True,
         null=True,
         on_delete=models.RESTRICT,
         related_name="%(app_label)s_%(class)s_updated_by"
