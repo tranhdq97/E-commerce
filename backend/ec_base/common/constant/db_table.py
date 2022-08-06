@@ -10,6 +10,7 @@ class DBTable(str, BaseEnum):
     MASTER_DISTRICT = 'm_district'
     MASTER_PRODUCT_CATEGORY = 'm_product_category'
     MASTER_DISCOUNT_TYPE = 'm_discount_type'
+    MASTER_DISCOUNT_RATE = 'm_discount_rate'
 
     STAFF = 'staff'
     USER_INFO = 'user_info'

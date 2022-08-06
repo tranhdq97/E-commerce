@@ -1,11 +1,13 @@
-from .db_table import DBTable
 from ..utils.utils import BaseEnum
+from .db_table import DBTable
 
 
 class Master(BaseEnum):
     # table_name, model_name, allowed_to_create
     m_city = DBTable.MASTER_CITY, 'MasterCity', True
     m_district = DBTable.MASTER_DISTRICT, 'MasterDistrict', False
+    m_discount_rate = DBTable.MASTER_DISCOUNT_RATE, 'MasterDiscountRate', False
+    m_discount_type = DBTable.MASTER_DISCOUNT_TYPE, 'MasterDiscountType', True
 
     @staticmethod
     def list(allowed_to_create=False):

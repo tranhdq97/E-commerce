@@ -2,7 +2,8 @@ from django.apps import apps
 from django.db import IntegrityError
 from django.shortcuts import get_object_or_404
 
-from ..serializers.base_master import BaseMasterListSlz, BaseMasterCreateSlz, BaseMasterRetrieveSlz
+from ..serializers.base_master import BaseMasterListSlz, BaseMasterRetrieveSlz, BaseMasterCreateSlz
+from ..serializers.discount_rate import MasterDiscountRateSlz
 from ..serializers.district import MasterDistrictSlz
 from ...common.constant.app_label import ModelAppLabel
 from ...common.constant.db_table import DBTable
@@ -50,10 +51,12 @@ class BaseMasterService:
         instance.save()
 
     def get_master_list_serializer(self, *args, **kwargs):
-        if self.master_name == DBTable.MASTER_DISTRICT:
-            return MasterDistrictSlz(*args, **kwargs)
-
-        return BaseMasterListSlz(*args, **kwargs)
+        slz_switcher = {
+            DBTable.MASTER_DISTRICT: MasterDistrictSlz,
+            DBTable.MASTER_DISCOUNT_RATE: MasterDiscountRateSlz,
+        }
+        slz = slz_switcher.get(self.master_name, BaseMasterListSlz)
+        return slz(*args, **kwargs)
 
     def get_master_create_serializer(self):
         if not self.allowed_to_create:

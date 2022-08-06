@@ -1,0 +1,30 @@
+[
+  {
+    "model": "master.MasterDiscountType",
+    "fields": {
+      "id": "1",
+      "name": "new"
+    }
+  },
+  {
+    "model": "master.MasterDiscountType",
+    "fields": {
+      "id": "2",
+      "name": "friend"
+    }
+  },
+  {
+    "model": "master.MasterDiscountType",
+    "fields": {
+      "id": "3",
+      "name": "patron"
+    }
+  },
+  {
+    "model": "master.MasterDiscountType",
+    "fields": {
+      "id": "4",
+      "name": "event"
+    }
+  }
+]
