@@ -23,7 +23,8 @@
             requestInterceptor: (request) => {
                 request.headers['X-CSRFToken'] = "{{ csrf_token }}"
                 return request;
-            }
+            },
+            persistAuthorization: true
         })
     </script>
 </body>

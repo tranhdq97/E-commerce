@@ -4,6 +4,7 @@ from ..utils.utils import BaseEnum
 # --------------------------------------  Common
 class CommonFields(str, BaseEnum):
     ID = 'id'
+    USER = 'user'
     IS_DELETED = 'is_deleted'
     CREATED_AT = 'created_at'
     UPDATED_AT = 'updated_at'
@@ -53,6 +54,7 @@ class StaffFields(str, BaseEnum):
     TYPE_ID = 'type_id'
     EMAIL = 'email'
     PASSWORD = 'password'
+    NEW_PASSWORD = 'new_password'
     IS_ACTIVATE = 'is_activate'
     IS_LEAVE = 'is_leave'
     IS_ADMIN = 'is_admin'
