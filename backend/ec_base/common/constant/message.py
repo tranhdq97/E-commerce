@@ -7,3 +7,7 @@ PASSWORD_CHANGE_SUCCESSFUL = _("Change password successfully")
 
 NO_SERIALIZER_MATCHED = _("There is no serializer matched with this action")
 DUPLICATE_ENTRY = _("Duplicate entry")
+
+FILE_SIZE_EXCEED_LIMIT = _('Please keep filesize under %(limit_value)s. Current filesize %(show_value)s')
+NOT_SUPPORTED_FILE_TYPE = _('Filetype is not supported.')
+NOT_MATCHED_FILE_TYPE = _('Filetype does not match the submitted file')

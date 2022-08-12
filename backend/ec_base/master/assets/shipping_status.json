@@ -1,0 +1,16 @@
+[
+  {
+    "model": "master.MasterShippingStatus",
+    "fields": {
+      "id": 1,
+      "name": "Undelivered"
+    }
+  },
+  {
+    "model": "master.MasterShippingStatus",
+    "fields": {
+      "id": 2,
+      "name": "Delivered"
+    }
+  }
+]

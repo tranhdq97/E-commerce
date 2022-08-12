@@ -27,3 +27,8 @@ class IsApproved(IsAuthenticated):
 class IsStaff(IsAuthenticated):
     def has_permission(self, request, view):
         return not request.user.is_anonymous and request.user.is_staff
+
+
+class IsCustomer(IsAuthenticated):
+    def has_permission(self, request, view):
+        return not request.user.is_anonymous and not request.user.is_staff
