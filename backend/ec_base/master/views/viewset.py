@@ -37,7 +37,10 @@ class MasterViewSet(mixins.ListModelMixin, mixins.CreateModelMixin, mixins.Destr
             BaseViewAction.DESTROY: (IsSuperStaff | IsManager,),
             BaseViewAction.CREATE: (IsSuperStaff | IsManager,)
         }
-        self.permission_classes = perm_switcher.get(self.action, PermissionDenied)
+        self.permission_classes = perm_switcher.get(self.action)
+        if self.permission_classes is None:
+            raise PermissionDenied()
+
         return super().get_permissions()
 
     @extend_schema(description=f'Choices: {" | ".join(Master.list(allowed_to_create=False))}')

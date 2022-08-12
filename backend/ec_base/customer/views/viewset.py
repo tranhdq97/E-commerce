@@ -46,7 +46,10 @@ class CustomerViewSet(mixins.ListModelMixin, mixins.CreateModelMixin, mixins.Upd
             BaseViewAction.CREATE: (IsApproved,),
             BaseViewAction.UPDATE: (IsApproved,),
         }
-        self.permission_classes = perm_switcher.get(self.action, PermissionDenied)
+        self.permission_classes = perm_switcher.get(self.action)
+        if self.permission_classes is None:
+            raise PermissionDenied()
+
         return super().get_permissions()
 
     def update(self, request, *args, **kwargs):
