@@ -7,3 +7,6 @@ class ModelAppLabel(str, BaseEnum):
     CUSTOMER = 'customer'
     MASTER = 'master'
     DISCOUNT = 'discount'
+    FILE_MANAGEMENT = 'file_management'
+    RATING = 'rating'
+    PRODUCT = 'product'

@@ -1,0 +1,16 @@
+[
+  {
+    "model": "master.MasterPaymentStatus",
+    "fields": {
+      "id": 1,
+      "name": "Unpaid"
+    }
+  },
+  {
+    "model": "master.MasterPaymentStatus",
+    "fields": {
+      "id": 2,
+      "name": "Paid"
+    }
+  }
+]

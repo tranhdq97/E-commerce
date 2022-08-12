@@ -1,16 +1,13 @@
-from django.db import IntegrityError
 from django_filters.rest_framework import DjangoFilterBackend
-from rest_framework import mixins, status
+from rest_framework import mixins
 from rest_framework.filters import OrderingFilter, SearchFilter
 from rest_framework.permissions import AllowAny
-from rest_framework.response import Response
 from rest_framework.viewsets import GenericViewSet
 
 from ..filters.discount import DiscountListQueryFields
 from ..models import Discount
 from ..serializers.discount import DiscountListSlz, DiscountRetrieveSlz, DiscountCreateSlz, DiscountUpdateSlz
 from ...auth.permissions.permission import IsSuperStaff, IsManager, IsApproved
-from ...common.constant import message
 from ...common.constant.view_action import BaseViewAction
 from ...common.custom.exceptions import PermissionDenied
 from ...common.custom.pagination import CustomPagination
@@ -35,11 +32,7 @@ class DiscountViewSet(mixins.ListModelMixin, mixins.CreateModelMixin, mixins.Upd
             BaseViewAction.CREATE: DiscountCreateSlz,
             BaseViewAction.UPDATE: DiscountUpdateSlz,
         }
-        slz = slz_switcher.get(self.action)
-        if slz is None:
-            raise ValueError(message.NO_SERIALIZER_MATCHED)
-
-        return slz
+        return slz_switcher.get(self.action, DiscountListSlz)
 
     def get_permissions(self):
         perm_switcher = {

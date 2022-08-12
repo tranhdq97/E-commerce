@@ -1,0 +1,44 @@
+[
+  {
+    "model": "master.MasterFileType",
+    "fields": {
+      "id": 1,
+      "name": "Image"
+    }
+  },
+  {
+    "model": "master.MasterFileType",
+    "fields": {
+      "id": 2,
+      "name": "Document"
+    }
+  },
+  {
+    "model": "master.MasterFileType",
+    "fields": {
+      "id": 3,
+      "name": "Video"
+    }
+  },
+  {
+    "model": "master.MasterFileType",
+    "fields": {
+      "id": 4,
+      "name": "Presentation"
+    }
+  },
+  {
+    "model": "master.MasterFileType",
+    "fields": {
+      "id": 5,
+      "name": "Audio"
+    }
+  },
+  {
+    "model": "master.MasterFileType",
+    "fields": {
+      "id": 6,
+      "name": "Any"
+    }
+  }
+]

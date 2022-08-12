@@ -3,6 +3,7 @@ from rest_framework import serializers
 from ..models import Discount
 from ...common.constant import message
 from ...common.constant.db_fields import CommonFields, DiscountFields
+from ...common.custom.exceptions import APIErr
 from ...common.utils.serializer import ForeignKeyField
 from ...master.models import MasterDiscountType, MasterDiscountRate
 from ...master.serializers.discount_rate import MasterDiscountRateSlz
@@ -16,7 +17,7 @@ class DiscountBaseSlz(serializers.ModelSerializer):
 
     def validate_discount_type_id(self, discount_type_id):
         if DiscountBaseSlz.Meta.model.objects.filter(is_deleted=False, discount_type_id=discount_type_id).exists():
-            raise ValueError(message.DUPLICATE_ENTRY)
+            raise APIErr(message.DUPLICATE_ENTRY)
 
         return discount_type_id
 

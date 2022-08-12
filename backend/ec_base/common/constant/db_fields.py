@@ -67,3 +67,34 @@ class DiscountFields(str, BaseEnum):
     DISCOUNT_RATE = 'discount_rate'
     DISCOUNT_RATE_ID = 'discount_rate_id'
     IS_DELETED = 'is_deleted'
+
+
+class FileManagementFields(str, BaseEnum):
+    NAME = 'name'
+    DESC = 'desc'
+    FILE = 'file'
+    TYPE = 'type'
+    TYPE_ID = 'type_id'
+    IS_DELETED = 'is_deleted'
+
+
+class RatingFields(str, BaseEnum):
+    COMMENT = 'comment'
+    NUM_STARS = 'num_stars'
+    MEDIA = 'media'
+    MEDIA_ID = 'media_id'
+    PRODUCT = 'product'
+    PRODUCT_ID = 'product_id'
+
+
+class ProductFields(str, BaseEnum):
+    NAME = 'name'
+    CATEGORY = 'category'
+    CATEGORY_ID = 'category_id'
+    QUANTITY = 'quantity'
+    PURCHASE_PRICE = 'purchase_price'
+    PRICE = 'price'
+    PHOTO = 'photo'
+    PHOTO_ID = 'photo_id'
+    DESC = 'desc'
+    IS_DELETED = 'is_deleted'
