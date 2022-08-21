@@ -10,6 +10,7 @@ from ..models import Customer
 from ..serializers.customer import CustomerListSlz, CustomerCreateSlz, CustomerUpdateSlz, CustomerRetrieveSlz
 from ..services.customer import CustomerSvc
 from ...auth.permissions.permission import IsApproved
+from ...common.constant import message
 from ...common.constant.view_action import BaseViewAction
 from ...common.custom.exceptions import PermissionDenied
 from ...common.custom.pagination import CustomPagination
@@ -33,9 +34,9 @@ class CustomerViewSet(mixins.ListModelMixin, mixins.CreateModelMixin, mixins.Upd
             BaseViewAction.CREATE: CustomerCreateSlz,
             BaseViewAction.UPDATE: CustomerUpdateSlz
         }
-        slz = slz_switcher.get(self.action, None)
+        slz = slz_switcher.get(self.action)
         if slz is None:
-            raise ValueError('There is no serializer matched with this action')
+            raise ValueError(message.NO_SERIALIZER_MATCHED)
 
         return slz
 

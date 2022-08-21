@@ -6,3 +6,4 @@ class ModelAppLabel(str, BaseEnum):
     STAFF = 'staff'
     CUSTOMER = 'customer'
     MASTER = 'master'
+    DISCOUNT = 'discount'
