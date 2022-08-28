@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'ec_base.user_info',
     'ec_base.staff',
     'ec_base.customer',
+    'ec_base.discount',
 ]
 
 MIDDLEWARE = [

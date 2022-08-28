@@ -59,3 +59,11 @@ class StaffFields(str, BaseEnum):
     IS_LEAVE = 'is_leave'
     IS_ADMIN = 'is_admin'
     LAST_LOGIN = 'last_login'
+
+
+class DiscountFields(str, BaseEnum):
+    DISCOUNT_TYPE = 'discount_type'
+    DISCOUNT_TYPE_ID = 'discount_type_id'
+    DISCOUNT_RATE = 'discount_rate'
+    DISCOUNT_RATE_ID = 'discount_rate_id'
+    IS_DELETED = 'is_deleted'

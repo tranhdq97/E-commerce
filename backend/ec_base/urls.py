@@ -11,4 +11,5 @@ urlpatterns = [
     path('api/auth/', include('ec_base.auth.urls'), name='auth'),
     path('api/master/', include('ec_base.master.urls'), name='master'),
     path('api/customer/', include('ec_base.customer.urls'), name='customer'),
+    path('api/discount/', include('ec_base.discount.urls'), name='discount'),
 ]

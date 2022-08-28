@@ -15,3 +15,4 @@ class DBTable(str, BaseEnum):
     STAFF = 'staff'
     USER_INFO = 'user_info'
     CUSTOMER = 'customer'
+    DISCOUNT = 'discount'
