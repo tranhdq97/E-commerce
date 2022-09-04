@@ -17,18 +17,22 @@
 
 ``pip install -r requirements.txt``
 
-### 5. Migrate database
+### 5. Add pre-commit hook
+
+``pre-commit install``
+
+### 6. Migrate database
 
 ``python manage.py migrate``
 
-### 6. Create master data
+### 7. Create master data
 
 ``python manage.py init_master_data``
 
-### 7. Create super staff
+### 8. Create super staff
 
 ```python manage.py createsuperuser```
 
-### 8. Run app
+### 9. Run app
 
 ``python manage.py runserver``
