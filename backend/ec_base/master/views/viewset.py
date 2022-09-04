@@ -6,15 +6,15 @@ from rest_framework.permissions import AllowAny
 from rest_framework.response import Response
 from rest_framework.viewsets import GenericViewSet
 
-from ..filters.base_master import BaseMasterListQueryFields
-from ..serializers.base_master import BaseMasterListReqParams, BaseMasterListSlz, BaseMasterCreateSlz
-from ..services.base_master import BaseMasterService
-from ...auth.permissions.permission import IsManager, IsSuperStaff
-from ...common.constant.db_fields import MasterFields, CommonFields
-from ...common.constant.db_table import DBTable
-from ...common.constant.service import Master
-from ...common.constant.view_action import BaseViewAction
-from ...common.custom.exceptions import PermissionDenied
+from ec_base.auth.permissions.permission import IsManager, IsSuperStaff
+from ec_base.common.constant.db_fields import CommonFields, MasterFields
+from ec_base.common.constant.db_table import DBTable
+from ec_base.common.constant.service import Master
+from ec_base.common.constant.view_action import BaseViewAction
+from ec_base.common.utils.exceptions import PermissionDenied
+from ec_base.master.filters.base_master import BaseMasterListQueryFields
+from ec_base.master.serializers.base_master import BaseMasterListReqParams, BaseMasterListSlz, BaseMasterCreateSlz
+from ec_base.master.services.base_master import BaseMasterService
 
 
 class MasterViewSet(mixins.ListModelMixin, mixins.CreateModelMixin, mixins.DestroyModelMixin, GenericViewSet):

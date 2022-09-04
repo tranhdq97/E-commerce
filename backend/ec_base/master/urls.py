@@ -1,7 +1,7 @@
 from django.urls import path
 
-from .views.viewset import MasterViewSet
-from ..common.constant.view_action import BaseViewAction
+from ec_base.common.constant.view_action import BaseViewAction
+from ec_base.master.views.viewset import MasterViewSet
 
 urlpatterns = [
     path('<str:master_name>/list', MasterViewSet.as_view({'get': BaseViewAction.LIST})),

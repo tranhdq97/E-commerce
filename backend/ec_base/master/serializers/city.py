@@ -1,7 +1,7 @@
 from rest_framework import serializers
 
-from ..models.district import MasterCity
-from ...common.constant.db_fields import CommonFields, MasterFields
+from ec_base.common.constant.db_fields import CommonFields, MasterFields
+from ec_base.master.models.district import MasterCity
 
 
 class MasterCitySlz(serializers.ModelSerializer):

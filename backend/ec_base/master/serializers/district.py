@@ -1,7 +1,7 @@
 from rest_framework import serializers
 
-from ..models.district import MasterDistrict
-from ...common.constant.db_fields import MasterDistrictFields, CommonFields
+from ec_base.common.constant.db_fields import CommonFields, MasterDistrictFields
+from ec_base.master.models.district import MasterDistrict
 
 
 class MasterDistrictSlz(serializers.ModelSerializer):

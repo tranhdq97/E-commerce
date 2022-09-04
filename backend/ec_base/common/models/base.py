@@ -1,9 +1,9 @@
+from crum import get_current_user
 from django.contrib.auth.base_user import AbstractBaseUser
 from django.db import models
 from django.db.models import ForeignKey
 
-from .managers import CustomUserManager
-from crum import get_current_user
+from ec_base.common.models.managers import CustomUserManager
 
 
 class CurrentUserField(ForeignKey):
@@ -50,6 +50,32 @@ class Editor(models.Model):
         abstract = True
 
 
+class CustomerCreator(models.Model):
+    created_by = CurrentUserField(
+        to='customer.Customer',
+        auto_current_add=True,
+        null=True,
+        on_delete=models.RESTRICT,
+        related_name="%(app_label)s_%(class)s_created_by"
+    )
+
+    class Meta:
+        abstract = True
+
+
+class CustomerEditor(models.Model):
+    updated_by = CurrentUserField(
+        to='customer.Customer',
+        auto_current=True,
+        null=True,
+        on_delete=models.RESTRICT,
+        related_name="%(app_label)s_%(class)s_updated_by"
+    )
+
+    class Meta:
+        abstract = True
+
+
 class DateTimeModel(models.Model):
     created_at = models.DateTimeField(auto_now_add=True, editable=False)
     updated_at = models.DateTimeField(auto_now=True, editable=False)
@@ -61,10 +87,16 @@ class DateTimeModel(models.Model):
 class CustomBaseUserModel(AbstractBaseUser, DateTimeModel):
     email = models.EmailField(verbose_name='email address', max_length=255, unique=True)
     is_active = models.BooleanField(default=True)
-    is_admin = models.BooleanField(default=False)
     objects = CustomUserManager()
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = []
+
+    @property
+    def is_staff(self):
+        return False
+
+    def __str__(self):
+        return f"{self.email}"
 
     class Meta:
         abstract = True

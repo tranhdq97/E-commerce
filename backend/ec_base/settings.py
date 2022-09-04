@@ -156,36 +156,26 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 ROOT_URLCONF = 'ec_base.urls'
 WSGI_APPLICATION = 'ec_base.wsgi.application'
 
+# ---------------------------------------------------------------------------- #
+#                                    AUTH                                      #
+# ---------------------------------------------------------------------------- #
+AUTH_USER_MODEL = 'staff.Staff'
+AUTHENTICATION_BACKENDS = [
+    "ec_base.common.custom.backends.ModelBackend",
+]
+UPDATE_LAST_LOGIN = True
+
 REST_FRAMEWORK = {
     'DATETIME_FORMAT': '%Y-%m-%d %H:%M:%S.%f%z',
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.IsAuthenticated',
     ],
     'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
-    'EXCEPTION_HANDLER': 'ec_base.common.custom.exceptions.custom_exception_handler',
     'DEFAULT_AUTHENTICATION_CLASSES': [
-        'rest_framework_simplejwt.authentication.JWTAuthentication',
+        'ec_base.common.custom.authentication.CustomJWTAuthentication',
     ],
-    'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend']
+    'EXCEPTION_HANDLER': 'ec_base.common.custom.exceptions.custom_exception_handler',
 }
-
-# ---------------------------------------------------------------------------- #
-#                                 SWAGGER                                      #
-# ---------------------------------------------------------------------------- #
-SPECTACULAR_SETTINGS = {
-    'TITLE': 'E-commerce Api',
-    'DESCRIPTION': 'E-commerce Api',
-    'VERSION': '1.0.0',
-    'SERVE_INCLUDE_SCHEMA': False,
-    'COMPONENT_SPLIT_REQUEST': True,
-    'SCHEMA_PATH_PREFIX': '/api',
-}
-
-# ---------------------------------------------------------------------------- #
-#                                    AUTH                                      #
-# ---------------------------------------------------------------------------- #
-AUTH_USER_MODEL = 'staff.Staff'
-UPDATE_LAST_LOGIN = True
 
 # ---------------------------------------------------------------------------- #
 #                                    LOGGING                                   #
@@ -232,4 +222,16 @@ SIMPLE_JWT = {
     'UPDATE_LAST_LOGIN': False,
     'ROTATE_REFRESH_TOKENS': True,
     'BLACKLIST_AFTER_ROTATION': True,
+}
+
+# ---------------------------------------------------------------------------- #
+#                                 SWAGGER                                      #
+# ---------------------------------------------------------------------------- #
+SPECTACULAR_SETTINGS = {
+    'TITLE': 'E-commerce Api',
+    'DESCRIPTION': 'E-commerce Api',
+    'VERSION': '1.0.0',
+    'SERVE_INCLUDE_SCHEMA': False,
+    'COMPONENT_SPLIT_REQUEST': True,
+    'SCHEMA_PATH_PREFIX': '/api',
 }

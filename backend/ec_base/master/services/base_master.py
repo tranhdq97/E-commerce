@@ -2,14 +2,14 @@ from django.apps import apps
 from django.db import IntegrityError
 from django.shortcuts import get_object_or_404
 
-from ..serializers.base_master import BaseMasterListSlz, BaseMasterRetrieveSlz, BaseMasterCreateSlz
-from ..serializers.discount_rate import MasterDiscountRateSlz
-from ..serializers.district import MasterDistrictSlz
-from ...common.constant import message
-from ...common.constant.app_label import ModelAppLabel
-from ...common.constant.db_table import DBTable
-from ...common.constant.service import Master
-from ...common.custom.exceptions import APIErr
+from ec_base.common.constant import message
+from ec_base.common.constant.app_label import ModelAppLabel
+from ec_base.common.constant.db_table import DBTable
+from ec_base.common.constant.service import Master
+from ec_base.common.utils.exceptions import APIErr
+from ec_base.master.serializers.base_master import BaseMasterListSlz, BaseMasterRetrieveSlz, BaseMasterCreateSlz
+from ec_base.master.serializers.discount_rate import MasterDiscountRateSlz
+from ec_base.master.serializers.district import MasterDistrictSlz
 
 
 class BaseMasterService:

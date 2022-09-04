@@ -1,9 +1,11 @@
 import logging
 
-from ..serializers.auth import ChangePasswordSlz
-from ...common.constant import message
-from ...staff.serializers.staff import StaffInfoSlz
-from ...common.utils.decorator import log
+from ec_base.auth.serializers.auth import ChangePasswordSlz
+from ec_base.common.constant import message
+from ec_base.common.constant.auth import UserEnum
+from ec_base.common.utils.decorator import log
+from ec_base.customer.serializers.customer import CustomerRetrieveSlz
+from ec_base.staff.serializers.staff import StaffRetrieveSlz
 
 logger = logging.getLogger(__name__)
 
@@ -21,5 +23,9 @@ class AuthSvc:
     @staticmethod
     @log
     def get_me(user):
-        slz = StaffInfoSlz(user)
+        slz_switcher = {
+            UserEnum.CUSTOMER: CustomerRetrieveSlz,
+            UserEnum.STAFF: StaffRetrieveSlz,
+        }
+        slz = slz_switcher.get(user.provider)(user)
         return slz.data

@@ -35,7 +35,9 @@ class CorrelationMiddleware:
         set_req_uuid(req_uuid)
         logger.info(f'START | path={request.path} | method={request.method}')
         response = self.get_response(request)
-        logger.info(f'END   | path={request.path} | status={response.status_code} | user_logged={request.user}')
+        provider = request.user.provider if not request.user.is_anonymous else None
+        logger.info(f'END   | path={request.path} | status={response.status_code} | ' +
+                    f'provider={provider} | user_logged={request.user}')
         del_req_uuid()
         return response
 

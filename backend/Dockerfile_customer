@@ -1,0 +1,18 @@
+FROM python:3.9.12
+
+ENV PYTHONUNBUFFERED 1
+ENV DJANGO_APP_TARGET "ec_customer.wsgi:application"
+ENV PORT 8000
+
+EXPOSE 8002
+
+WORKDIR /app
+
+RUN apt-get update && apt-get install -y gettext
+RUN pip install --upgrade pip
+
+COPY requirements.txt .
+RUN pip install -r requirements.txt
+
+COPY . .
+RUN rm -rf venv ec_staff ec_storage

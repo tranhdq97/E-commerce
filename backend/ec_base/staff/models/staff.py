@@ -1,22 +1,20 @@
 from django.contrib import admin
 from django.db import models
 
-from ...common.constant.app_label import ModelAppLabel
-from ...common.constant.db_table import DBTable
-from ...common.constant.master import MasterStaffID
-from ...common.models.base import CustomBaseUserModel
-from ...master.models import MasterStaffType
-from ...user_info.models.user_info import UserInfo
+from ec_base.common.constant.app_label import ModelAppLabel
+from ec_base.common.constant.db_table import DBTable
+from ec_base.common.constant.master import MasterStaffTypeID
+from ec_base.common.models.base import CustomBaseUserModel
+from ec_base.master.models import MasterStaffType
+from ec_base.user_info.models.user_info import UserInfo
 
 
 class Staff(CustomBaseUserModel):
     is_leave = models.BooleanField(default=False)
+    is_admin = models.BooleanField(default=False)
     info = models.OneToOneField(to=UserInfo, on_delete=models.RESTRICT, null=True, related_name=DBTable.STAFF)
-    type = models.ForeignKey(MasterStaffType, on_delete=models.RESTRICT, default=MasterStaffID.UNAPPROVED,
+    type = models.ForeignKey(MasterStaffType, on_delete=models.RESTRICT, default=MasterStaffTypeID.UNAPPROVED,
                              related_name=DBTable.STAFF)
-
-    def __str__(self):
-        return self.email
 
     def has_perm(self, perm, obj=None):
         return True
@@ -34,7 +32,7 @@ class Staff(CustomBaseUserModel):
 
     def save(self, *args, **kwargs):
         if self.is_admin:
-            self.type_id = MasterStaffID.SUPER_STAFF
+            self.type_id = MasterStaffTypeID.SUPER_STAFF
 
         super(Staff, self).save(*args, **kwargs)
 

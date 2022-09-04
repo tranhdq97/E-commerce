@@ -1,4 +1,4 @@
-from ..utils.utils import BaseEnum
+from ec_base.common.utils.utils import BaseEnum
 
 
 # --------------------------------------  Common
@@ -40,14 +40,11 @@ class UserInfoFields(str, BaseEnum):
     BUILDING = 'building'
     POSTAL_CODE = 'postal_code'
     PHONE_NUMBER = 'phone_number'
+    PHOTO = 'photo'
+    PHOTO_ID = 'photo_id'
 
 
-class CustomerFields(str, BaseEnum):
-    INFO = 'info'
-    INFO_ID = 'info_id'
-
-
-class StaffFields(str, BaseEnum):
+class UserFields(str, BaseEnum):
     INFO = 'info'
     INFO_ID = 'info_id'
     TYPE = 'type'

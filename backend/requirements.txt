@@ -10,3 +10,4 @@ drf-spectacular==0.23.1
 drf_writable_nested~=0.6.4
 whitenoise~=6.2.0
 django-crum~=0.7.9
+gunicorn~=20.1.0

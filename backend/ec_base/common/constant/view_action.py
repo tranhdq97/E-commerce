@@ -1,4 +1,4 @@
-from ..utils.utils import BaseEnum
+from ec_base.common.utils.utils import BaseEnum
 
 
 class BaseViewAction(str, BaseEnum):

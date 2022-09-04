@@ -2,7 +2,7 @@ from django.contrib.auth.base_user import BaseUserManager
 from django.core.management.base import CommandError
 
 from ec_base.common.constant import message
-from ec_base.common.custom.exceptions import APIErr
+from ec_base.common.utils.exceptions import APIErr
 
 
 class CustomUserManager(BaseUserManager):

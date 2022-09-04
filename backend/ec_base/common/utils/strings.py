@@ -11,5 +11,4 @@ def str2bool(input_string):
 
 
 def get_file_field_directory(instance, filename):
-    return f'{instance.type_id}/{"staff" if instance.created_by.is_staff else "customer"}/{instance.created_by_id}/' + \
-           f'{datetime.today().strftime("%Y/%m/%d")}/{filename}'
+    return f'{instance.type_id}/{datetime.today().strftime("%Y/%m/%d")}/{filename}'

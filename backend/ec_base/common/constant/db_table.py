@@ -1,4 +1,4 @@
-from ..utils.utils import BaseEnum
+from ec_base.common.utils.utils import BaseEnum
 
 
 class DBTable(str, BaseEnum):
@@ -15,6 +15,7 @@ class DBTable(str, BaseEnum):
     MASTER_ORDER_STATUS = 'm_order_status'
     MASTER_SHIPPING_STATUS = 'm_shipping_status'
     MASTER_PAYMENT_STATUS = 'm_payment_status'
+    MASTER_CUSTOMER_TYPE = 'm_customer_type'
 
     STAFF = 'staff'
     USER_INFO = 'user_info'
