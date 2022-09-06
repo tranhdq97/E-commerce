@@ -2,7 +2,7 @@ from django.db import models
 
 from ec_base.common.constant.app_label import ModelAppLabel
 from ec_base.common.constant.db_table import DBTable
-from ec_base.common.models.base import Creator, Editor, DateTimeModel
+from ec_base.common.models.base import DateTimeModel
 from ec_base.common.utils.strings import get_file_field_directory
 from ec_base.common.utils.validators import FileSizeValidator
 from ec_base.master.models import MasterFileType
