@@ -1,7 +1,7 @@
 from rest_framework import serializers
 
-from ..models.discount_type import MasterDiscountType
-from ...common.constant.db_fields import CommonFields, MasterFields
+from ec_base.common.constant.db_fields import CommonFields, MasterFields
+from ec_base.master.models.discount_type import MasterDiscountType
 
 
 class MasterDiscountTypeSlz(serializers.ModelSerializer):

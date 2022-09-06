@@ -3,21 +3,21 @@
     "model": "master.MasterStaffType",
     "fields": {
       "id": 1,
-      "name": "Employee"
-    }
-  },
-  {
-    "model": "master.MasterStaffType",
-    "fields": {
-      "id": 2,
       "name": "Super staff"
     }
   },
   {
     "model": "master.MasterStaffType",
     "fields": {
-      "id": 3,
+      "id": 2,
       "name": "Manager"
+    }
+  },
+  {
+    "model": "master.MasterStaffType",
+    "fields": {
+      "id": 3,
+      "name": "Employee"
     }
   },
   {

@@ -1,8 +1,8 @@
 from django.db import models
 
-from ...common.constant.app_label import ModelAppLabel
-from ...common.constant.db_table import DBTable
-from ...common.models.base import BaseMasterModel
+from ec_base.common.constant.app_label import ModelAppLabel
+from ec_base.common.constant.db_table import DBTable
+from ec_base.common.models.base import BaseMasterModel
 
 
 class MasterDiscountRate(BaseMasterModel):

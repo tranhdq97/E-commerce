@@ -1,4 +1,4 @@
-from ...common.constant.db_fields import MasterFields, CommonFields
+from ec_base.common.constant.db_fields import MasterFields, CommonFields
 
 
 class BaseMasterListQueryFields:

@@ -1,0 +1,16 @@
+[
+  {
+    "model": "master.MasterCustomerType",
+    "fields": {
+      "id": 1,
+      "name": "Unverified"
+    }
+  },
+  {
+    "model": "master.MasterCustomerType",
+    "fields": {
+      "id": 2,
+      "name": "Verified"
+    }
+  }
+]

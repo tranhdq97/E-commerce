@@ -1,10 +1,10 @@
 from django.db import models
 
-from ...common.constant.app_label import ModelAppLabel
-from ...common.constant.db_table import DBTable
-from ...common.models.base import Creator, Editor, DateTimeModel
-from ...file_management.models import FileManagement
-from ...master.models import MasterProductCategory
+from ec_base.common.constant.app_label import ModelAppLabel
+from ec_base.common.constant.db_table import DBTable
+from ec_base.common.models.base import Creator, Editor, DateTimeModel
+from ec_base.file_management.models import FileManagement
+from ec_base.master.models import MasterProductCategory
 
 
 class Product(Creator, Editor, DateTimeModel):

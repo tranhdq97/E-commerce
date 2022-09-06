@@ -1,13 +1,13 @@
 from rest_framework import serializers
 
-from ..models import Staff
-from ...common.constant.db_fields import StaffFields, CommonFields
-from ...user_info.serializers.user_info import UserInfoRetrieveSlz
+from ec_base.common.constant.db_fields import UserFields, CommonFields
+from ec_base.staff.models import Staff
+from ec_base.user_info.serializers.user_info import UserInfoRetrieveSlz
 
 
-class StaffInfoSlz(serializers.ModelSerializer):
+class StaffRetrieveSlz(serializers.ModelSerializer):
     info = UserInfoRetrieveSlz(many=False)
 
     class Meta:
         model = Staff
-        fields = (CommonFields.ID, StaffFields.INFO)
+        fields = (CommonFields.ID, UserFields.EMAIL, UserFields.INFO, CommonFields.CREATED_AT, CommonFields.UPDATED_AT)

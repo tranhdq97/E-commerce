@@ -1,9 +1,9 @@
 from django.db import models
 
-from ...common.constant.app_label import ModelAppLabel
-from ...common.constant.db_table import DBTable
-from ...common.models.base import Creator, Editor, DateTimeModel
-from ...master.models import MasterDiscountType, MasterDiscountRate
+from ec_base.common.constant.app_label import ModelAppLabel
+from ec_base.common.constant.db_table import DBTable
+from ec_base.common.models.base import Creator, Editor, DateTimeModel
+from ec_base.master.models import MasterDiscountType, MasterDiscountRate
 
 
 class Discount(DateTimeModel, Creator, Editor):

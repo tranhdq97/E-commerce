@@ -1,7 +1,7 @@
 from django.core.validators import BaseValidator
 from django.utils.deconstruct import deconstructible
 
-from ..constant import message
+from ec_base.common.constant import message
 
 
 @deconstructible

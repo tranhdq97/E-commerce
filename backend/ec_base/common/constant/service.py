@@ -1,7 +1,7 @@
-from . import message
-from .db_table import DBTable
-from ..custom.exceptions import APIErr
-from ..utils.utils import BaseEnum
+from ec_base.common.constant import message
+from ec_base.common.constant.db_table import DBTable
+from ec_base.common.utils.exceptions import APIErr
+from ec_base.common.utils.utils import BaseEnum
 
 
 class Master(BaseEnum):
@@ -15,6 +15,7 @@ class Master(BaseEnum):
     m_order_status = DBTable.MASTER_ORDER_STATUS, 'MasterOrderStatus', False
     m_payment_status = DBTable.MASTER_PAYMENT_STATUS, 'MasterPaymentStatus', False
     m_shipping_status = DBTable.MASTER_SHIPPING_STATUS, 'MasterShippingStatus', False
+    m_customer_type = DBTable.MASTER_CUSTOMER_TYPE, 'MasterCustomerType', False
 
     @staticmethod
     def list(allowed_to_create=False):
