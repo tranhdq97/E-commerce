@@ -1,4 +1,3 @@
-from django.contrib import admin
 from django.db import models
 
 from ec_base.common.constant.app_label import ModelAppLabel
@@ -39,6 +38,3 @@ class Staff(CustomBaseUserModel):
     class Meta:
         db_table = DBTable.STAFF
         app_label = ModelAppLabel.STAFF
-
-
-admin.site.register(Staff)
