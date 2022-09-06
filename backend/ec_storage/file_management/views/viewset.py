@@ -5,6 +5,7 @@ from rest_framework.parsers import MultiPartParser, FormParser
 from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework.viewsets import GenericViewSet
 
+from ec_base.auth.permissions.permission import IsManager, IsSuperStaff
 from ec_base.common.constant.view_action import BaseViewAction
 from ec_base.common.serializer.custom_mixins import CustomDestroyMixin
 from ec_base.common.utils.exceptions import PermissionDenied
@@ -37,8 +38,8 @@ class FileManagementViewSet(CreateModelMixin, RetrieveModelMixin, ListModelMixin
 
     def get_permissions(self):
         perm_switcher = {
-            BaseViewAction.LIST: (AllowAny,),
-            BaseViewAction.RETRIEVE: (AllowAny,),
+            BaseViewAction.LIST: (IsSuperStaff | IsManager,),
+            BaseViewAction.RETRIEVE: (IsAuthenticated,),
             BaseViewAction.CREATE: (IsAuthenticated,),
             BaseViewAction.UPDATE: (IsAuthenticated,),
             BaseViewAction.DESTROY: (IsAuthenticated,),

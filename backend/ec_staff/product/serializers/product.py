@@ -40,7 +40,6 @@ class ProductUpdateSlz(BaseProductSlz):
 
 class ProductListSlz(BaseProductSlz):
     category = BaseMasterListSlz(many=False)
-    photo_id = ForeignKeyField(model=FileManagement, required=False)
     num_stars = serializers.FloatField()
 
     class Meta:
@@ -52,7 +51,6 @@ class ProductListSlz(BaseProductSlz):
 
 class ProductRetrieveSlz(BaseProductSlz):
     category = BaseMasterRetrieveSlz(many=False)
-    photo_id = ForeignKeyField(model=FileManagement, required=False)
     num_stars = serializers.FloatField()
 
     class Meta:
@@ -64,7 +62,6 @@ class ProductRetrieveSlz(BaseProductSlz):
 
 class ProductRetrieveForStaffSlz(BaseProductSlz):
     category = BaseMasterRetrieveSlz(many=False)
-    photo_id = ForeignKeyField(model=FileManagement, required=False)
     num_stars = serializers.FloatField()
 
     class Meta:

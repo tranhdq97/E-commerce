@@ -33,18 +33,12 @@ class RatingUpdateSlz(BaseRatingSlz):
 
 
 class RatingListSlz(BaseRatingSlz):
-    media_id = ForeignKeyField(model=FileManagement, required=False)
-    product_id = ForeignKeyField(model=Product)
-
     class Meta:
         model = BaseRatingSlz.Meta.model
         fields = BaseRatingSlz.Meta.fields + (RatingFields.NUM_STARS, RatingFields.MEDIA_ID)
 
 
 class RatingRetrieveSlz(BaseRatingSlz):
-    media_id = ForeignKeyField(model=FileManagement, required=False)
-    product_id = ForeignKeyField(model=Product)
-
     class Meta:
         model = BaseRatingSlz.Meta.model
         fields = BaseRatingSlz.Meta.fields + (RatingFields.COMMENT, RatingFields.NUM_STARS, RatingFields.MEDIA_ID) + (
