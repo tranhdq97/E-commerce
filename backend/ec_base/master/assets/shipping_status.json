@@ -10,6 +10,13 @@
     "model": "master.MasterShippingStatus",
     "fields": {
       "id": 2,
+      "name": "Delivering"
+    }
+  },
+  {
+    "model": "master.MasterShippingStatus",
+    "fields": {
+      "id": 3,
       "name": "Delivered"
     }
   }

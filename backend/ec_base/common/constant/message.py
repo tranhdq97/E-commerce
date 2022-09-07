@@ -29,6 +29,10 @@ ALREADY_EXISTS = 'Already exists'
 # Master
 NOT_ALLOWED_TO_CREATE = _("This master is not allowed to create.")
 
+# Order
+NOT_ENOUGH_QUANTITY = _("The number of %(name)s quantities are %(quantity)s. Please change your order.")
+QUANTITY_IS_ZERO = _("You're trying to order 0 %(name)s. Please change your order.")
+
 # Other
 PASSWORD_INAPPROPRIATE = _(
     "Password must contain 7 letters or greater, one digit from 0 to 9, one lowercase letter, one uppercase letter")

@@ -20,3 +20,19 @@ class MasterFileTypeID(int, BaseEnum):
     PRESENTATION = 4
     AUDIO = 5
     ANY = 6
+
+
+class MasterOrderStatusID(int, BaseEnum):
+    ORDERED = 1
+    CANCELED = 2
+
+
+class MasterShippingStatusID(int, BaseEnum):
+    UNDELIVERED = 1
+    DELIVERING = 2
+    DELIVERED = 3
+
+
+class MasterPaymentStatusID(int, BaseEnum):
+    UNPAID = 1
+    PAID = 2

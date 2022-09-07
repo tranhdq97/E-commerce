@@ -2,10 +2,10 @@ from django.db import models
 
 from ec_base.common.constant.app_label import ModelAppLabel
 from ec_base.common.constant.db_table import DBTable
-from ec_base.common.models.base import BaseMasterModel
+from ec_base.common.models.base import MasterBaseModel
 
 
-class MasterDiscountRate(BaseMasterModel):
+class MasterDiscountRate(MasterBaseModel):
     name = models.IntegerField(unique=True)
 
     class Meta:

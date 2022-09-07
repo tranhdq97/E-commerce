@@ -14,7 +14,7 @@ from ec_base.common.constant.view_action import BaseViewAction
 from ec_base.common.utils.exceptions import PermissionDenied
 from ec_base.master.filters.base_master import BaseMasterListQueryFields
 from ec_base.master.serializers.base_master import BaseMasterListReqParams, BaseMasterListSlz, BaseMasterCreateSlz
-from ec_base.master.services.base_master import BaseMasterService
+from ec_base.master.services.base_master import MasterBaseService
 
 
 class MasterViewSet(mixins.ListModelMixin, mixins.CreateModelMixin, mixins.DestroyModelMixin, GenericViewSet):
@@ -47,7 +47,7 @@ class MasterViewSet(mixins.ListModelMixin, mixins.CreateModelMixin, mixins.Destr
     def destroy(self, request, *args, **kwargs):
         master_name = kwargs.pop('_'.join([DBTable.MASTER, MasterFields.NAME]))
         pk = kwargs.pop(CommonFields.ID)
-        service = BaseMasterService(master_name)
+        service = MasterBaseService(master_name)
         service.delete(pk)
         return Response(status=200)
 
@@ -55,7 +55,7 @@ class MasterViewSet(mixins.ListModelMixin, mixins.CreateModelMixin, mixins.Destr
                    description=f'Choices: {" | ".join(Master.list(allowed_to_create=False))}')
     def list(self, request, **kwargs):
         master_name = kwargs.pop('_'.join([DBTable.MASTER, MasterFields.NAME]))
-        service = BaseMasterService(master_name)
+        service = MasterBaseService(master_name)
         queryset = service.list(parent_id=request.query_params.get(MasterFields.PARENT_ID))
         queryset = self.filter_queryset(queryset).filter(is_deleted=False, **kwargs)
         serializer = service.get_master_list_serializer(queryset, many=True)
@@ -64,6 +64,6 @@ class MasterViewSet(mixins.ListModelMixin, mixins.CreateModelMixin, mixins.Destr
     @extend_schema(description=f'Choices: {" | ".join(Master.list(allowed_to_create=True))}')
     def create(self, request, **kwargs):
         master_name = kwargs.pop('_'.join([DBTable.MASTER, MasterFields.NAME]))
-        service = BaseMasterService(master_name)
+        service = MasterBaseService(master_name)
         serializer = service.create(request.data)
         return Response(serializer.data)

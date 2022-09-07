@@ -10,3 +10,5 @@ class ModelAppLabel(str, BaseEnum):
     FILE_MANAGEMENT = 'file_management'
     RATING = 'rating'
     PRODUCT = 'product'
+    ORDER = 'order'
+    ORDER_ITEM = 'order_item'

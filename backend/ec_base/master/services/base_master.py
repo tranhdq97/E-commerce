@@ -12,7 +12,7 @@ from ec_base.master.serializers.discount_rate import MasterDiscountRateSlz
 from ec_base.master.serializers.district import MasterDistrictSlz
 
 
-class BaseMasterService:
+class MasterBaseService:
     def __init__(self, master_name):
         self.master_name = master_name
         self.table_name, self.model_name, self.allowed_to_create = Master.unpack(master_name)

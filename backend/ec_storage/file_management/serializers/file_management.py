@@ -9,7 +9,7 @@ from ec_base.file_management.models import FileManagement
 from ec_base.master.models import MasterFileType
 
 
-class BaseFileManagementSlz(serializers.ModelSerializer):
+class FileManagementBaseSlz(serializers.ModelSerializer):
     class Meta:
         model = FileManagement
         fields = (CommonFields.ID, FileManagementFields.FILE.value,)
@@ -31,39 +31,39 @@ class BaseFileManagementSlz(serializers.ModelSerializer):
         return attrs
 
 
-class FileManagementCreateSlz(BaseFileManagementSlz):
+class FileManagementCreateSlz(FileManagementBaseSlz):
     type_id = ForeignKeyField(model=MasterFileType)
 
     class Meta:
-        model = BaseFileManagementSlz.Meta.model
-        fields = BaseFileManagementSlz.Meta.fields + (
+        model = FileManagementBaseSlz.Meta.model
+        fields = FileManagementBaseSlz.Meta.fields + (
             FileManagementFields.NAME, FileManagementFields.DESC, FileManagementFields.TYPE_ID,)
 
 
-class FileManagementListSlz(BaseFileManagementSlz):
+class FileManagementListSlz(FileManagementBaseSlz):
     type_id = ForeignKeyField(model=MasterFileType)
 
     class Meta:
-        model = BaseFileManagementSlz.Meta.model
-        fields = BaseFileManagementSlz.Meta.fields + (
+        model = FileManagementBaseSlz.Meta.model
+        fields = FileManagementBaseSlz.Meta.fields + (
             FileManagementFields.NAME, FileManagementFields.TYPE_ID,)
 
 
-class FileManagementRetrieveSlz(BaseFileManagementSlz):
+class FileManagementRetrieveSlz(FileManagementBaseSlz):
     type_id = ForeignKeyField(model=MasterFileType)
 
     class Meta:
-        model = BaseFileManagementSlz.Meta.model
-        fields = BaseFileManagementSlz.Meta.fields + \
+        model = FileManagementBaseSlz.Meta.model
+        fields = FileManagementBaseSlz.Meta.fields + \
                  (FileManagementFields.NAME, FileManagementFields.DESC, FileManagementFields.TYPE_ID,) + \
                  (CommonFields.CREATED_AT, CommonFields.UPDATED_AT,)
 
 
-class FileManagementUpdateSlz(BaseFileManagementSlz):
+class FileManagementUpdateSlz(FileManagementBaseSlz):
     type_id = ForeignKeyField(model=MasterFileType, required=False)
 
     class Meta:
-        model = BaseFileManagementSlz.Meta.model
-        fields = BaseFileManagementSlz.Meta.fields + (
+        model = FileManagementBaseSlz.Meta.model
+        fields = FileManagementBaseSlz.Meta.fields + (
             FileManagementFields.NAME, FileManagementFields.DESC, FileManagementFields.TYPE_ID,)
         extra_kwargs = {FileManagementFields.FILE: {"required": False}}

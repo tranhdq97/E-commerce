@@ -143,7 +143,7 @@ class Migration(migrations.Migration):
                 ('is_deleted', models.BooleanField(default=False)),
                 ('name', models.CharField(max_length=255)),
                 ('city', models.ForeignKey(on_delete=django.db.models.deletion.RESTRICT,
-                                           related_name=ec_base.common.constant.related_name.RelatedName[
+                                           related_name=ec_base.common.constant.db_table.DBTable[
                                                'MASTER_DISTRICT'], to='master.mastercity')),
             ],
             options={

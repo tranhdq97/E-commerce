@@ -20,4 +20,5 @@ handler500 = 'ec_base.common.custom.exceptions.server_error'
 urlpatterns = [
     path('', include('ec_base.urls')),
     path('api/customer/', include('ec_customer.customer.urls'), name='customer'),
+    path('api/order/', include('ec_customer.order.urls'), name='order'),
 ]

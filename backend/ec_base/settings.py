@@ -55,6 +55,8 @@ INSTALLED_APPS = [
     'ec_base.product',
     'ec_base.file_management',
     'ec_base.rating',
+    'ec_base.order',
+    'ec_base.order_item',
 ]
 
 MIDDLEWARE = [
