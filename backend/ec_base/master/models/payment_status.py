@@ -1,9 +1,9 @@
 from ec_base.common.constant.app_label import ModelAppLabel
 from ec_base.common.constant.db_table import DBTable
-from ec_base.common.models.base import BaseMasterModel
+from ec_base.common.models.base import MasterBaseModel
 
 
-class MasterPaymentStatus(BaseMasterModel):
+class MasterPaymentStatus(MasterBaseModel):
     class Meta:
         db_table = DBTable.MASTER_PAYMENT_STATUS
         app_label = ModelAppLabel.MASTER

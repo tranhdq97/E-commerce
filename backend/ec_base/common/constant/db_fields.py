@@ -95,3 +95,23 @@ class ProductFields(str, BaseEnum):
     PHOTO_ID = 'photo_id'
     DESC = 'desc'
     IS_DELETED = 'is_deleted'
+
+
+class OrderFields(str, BaseEnum):
+    STATUS = 'status'
+    STATUS_ID = 'status_id'
+    SHIPPING_STATUS = 'shipping_status'
+    SHIPPING_STATUS_ID = 'shipping_status_id'
+    PAYMENT_STATUS = 'payment_status'
+    PAYMENT_STATUS_ID = 'payment_status_id'
+    ORDER_ITEMS = 'order_items'
+
+
+class OrderItemFields(str, BaseEnum):
+    ORDER = 'order'
+    ORDER_ID = 'order_id'
+    PRODUCT = 'product'
+    PRODUCT_ID = 'product_id'
+    QUANTITY = 'quantity'
+    DISCOUNTS = 'discounts'
+    ACTUAL_AMOUNT = 'actual_amount'

@@ -24,3 +24,5 @@ class DBTable(str, BaseEnum):
     PRODUCT = 'product'
     FILE_MANAGEMENT = 'file_management'
     RATING = 'rating'
+    ORDER = 'order'
+    ORDER_ITEM = 'order_item'

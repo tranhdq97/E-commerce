@@ -7,3 +7,7 @@ class BaseViewAction(str, BaseEnum):
     CREATE = 'create'
     UPDATE = 'update'
     DESTROY = 'destroy'
+
+
+class OrderViewAction(str, BaseEnum):
+    CANCEL = 'cancel'
