@@ -6,7 +6,7 @@ from ec_base.discount.models import Discount
 from ec_base.order_item.serializers.order_item import OrderItemBaseSlz
 from ec_base.product.models import Product
 from ec_customer.discount.serializers.discount import DiscountForOrderItemRetrieveSlz
-from ec_staff.product.serializers.product import ProductForOrderItemRetrieveSlz
+from ec_customer.product.serializers.product import ProductForOrderItemRetrieveSlz
 
 
 class OrderItemCreateSlz(OrderItemBaseSlz):
