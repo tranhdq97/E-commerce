@@ -12,7 +12,10 @@ from ec_base.master.models import MasterFileType
 class FileManagementBaseSlz(serializers.ModelSerializer):
     class Meta:
         model = FileManagement
-        fields = (CommonFields.ID, FileManagementFields.FILE.value,)
+        fields = (
+            CommonFields.ID,
+            FileManagementFields.FILE.value,
+        )
 
     def validate(self, attrs):
         extension_switcher = {
@@ -23,7 +26,7 @@ class FileManagementBaseSlz(serializers.ModelSerializer):
             MasterFileTypeID.AUDIO: ("m4a", "mp3", "wav"),
         }
         file = attrs.get(FileManagementFields.FILE).name
-        file_ext = file.split('.')[-1]
+        file_ext = file.split(".")[-1]
         valid_extensions = extension_switcher.get(attrs.get(FileManagementFields.TYPE_ID))
         if valid_extensions and file_ext not in valid_extensions:
             raise APIErr(message.NOT_MATCHED_FILE_TYPE)
@@ -37,7 +40,10 @@ class FileManagementCreateSlz(FileManagementBaseSlz):
     class Meta:
         model = FileManagementBaseSlz.Meta.model
         fields = FileManagementBaseSlz.Meta.fields + (
-            FileManagementFields.NAME, FileManagementFields.DESC, FileManagementFields.TYPE_ID,)
+            FileManagementFields.NAME,
+            FileManagementFields.DESC,
+            FileManagementFields.TYPE_ID,
+        )
 
 
 class FileManagementListSlz(FileManagementBaseSlz):
@@ -46,7 +52,9 @@ class FileManagementListSlz(FileManagementBaseSlz):
     class Meta:
         model = FileManagementBaseSlz.Meta.model
         fields = FileManagementBaseSlz.Meta.fields + (
-            FileManagementFields.NAME, FileManagementFields.TYPE_ID,)
+            FileManagementFields.NAME,
+            FileManagementFields.TYPE_ID,
+        )
 
 
 class FileManagementRetrieveSlz(FileManagementBaseSlz):
@@ -54,9 +62,18 @@ class FileManagementRetrieveSlz(FileManagementBaseSlz):
 
     class Meta:
         model = FileManagementBaseSlz.Meta.model
-        fields = FileManagementBaseSlz.Meta.fields + \
-                 (FileManagementFields.NAME, FileManagementFields.DESC, FileManagementFields.TYPE_ID,) + \
-                 (CommonFields.CREATED_AT, CommonFields.UPDATED_AT,)
+        fields = (
+            FileManagementBaseSlz.Meta.fields
+            + (
+                FileManagementFields.NAME,
+                FileManagementFields.DESC,
+                FileManagementFields.TYPE_ID,
+            )
+            + (
+                CommonFields.CREATED_AT,
+                CommonFields.UPDATED_AT,
+            )
+        )
 
 
 class FileManagementUpdateSlz(FileManagementBaseSlz):
@@ -65,5 +82,8 @@ class FileManagementUpdateSlz(FileManagementBaseSlz):
     class Meta:
         model = FileManagementBaseSlz.Meta.model
         fields = FileManagementBaseSlz.Meta.fields + (
-            FileManagementFields.NAME, FileManagementFields.DESC, FileManagementFields.TYPE_ID,)
+            FileManagementFields.NAME,
+            FileManagementFields.DESC,
+            FileManagementFields.TYPE_ID,
+        )
         extra_kwargs = {FileManagementFields.FILE: {"required": False}}

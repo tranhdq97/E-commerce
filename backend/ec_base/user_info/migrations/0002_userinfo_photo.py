@@ -8,16 +8,19 @@ import ec_base.common.constant.db_table
 
 class Migration(migrations.Migration):
     dependencies = [
-        ('file_management', '0001_initial'),
-        ('user_info', '0001_initial'),
+        ("file_management", "0001_initial"),
+        ("user_info", "0001_initial"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='userinfo',
-            name='photo',
-            field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.RESTRICT,
-                                    related_name=ec_base.common.constant.db_table.DBTable['USER_INFO'],
-                                    to='file_management.filemanagement'),
+            model_name="userinfo",
+            name="photo",
+            field=models.ForeignKey(
+                null=True,
+                on_delete=django.db.models.deletion.RESTRICT,
+                related_name=ec_base.common.constant.db_table.DBTable["USER_INFO"],
+                to="file_management.filemanagement",
+            ),
         ),
     ]

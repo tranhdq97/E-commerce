@@ -7,10 +7,10 @@ from ec_base.staff.models import Staff
 
 
 class UserEnum(str, BaseEnum):
-    PROVIDER = 'provider'
-    CUSTOMER = 'customer'
-    STAFF = 'staff'
-    EMAIL = 'email'
+    PROVIDER = "provider"
+    CUSTOMER = "customer"
+    STAFF = "staff"
+    EMAIL = "email"
 
 
 def get_user_model_by_provider(provider=UserEnum.STAFF):

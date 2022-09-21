@@ -12,41 +12,62 @@ class Migration(migrations.Migration):
     initial = True
 
     dependencies = [
-        (ec_base.common.constant.app_label.ModelAppLabel['MASTER'], '0001_initial'),
+        (ec_base.common.constant.app_label.ModelAppLabel["MASTER"], "0001_initial"),
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
-        (ec_base.common.constant.app_label.ModelAppLabel['FILE_MANAGEMENT'], '0001_initial'),
+        (ec_base.common.constant.app_label.ModelAppLabel["FILE_MANAGEMENT"], "0001_initial"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='Product',
+            name="Product",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('created_at', models.DateTimeField(auto_now_add=True)),
-                ('updated_at', models.DateTimeField(auto_now=True)),
-                ('name', models.CharField(max_length=256)),
-                ('quantity', models.IntegerField(default=0)),
-                ('purchase_price', models.FloatField(default=0.0)),
-                ('price', models.FloatField(default=0.0)),
-                ('desc', models.TextField()),
-                ('is_deleted', models.BooleanField(default=False)),
-                ('category', models.ForeignKey(on_delete=django.db.models.deletion.RESTRICT,
-                                               related_name=ec_base.common.constant.db_table.DBTable['PRODUCT'],
-                                               to='master.masterproductcategory')),
-                ('created_by',
-                 ec_base.common.models.base.CurrentUserField(null=True, on_delete=django.db.models.deletion.RESTRICT,
-                                                             related_name='%(app_label)s_%(class)s_created_by',
-                                                             to=settings.AUTH_USER_MODEL)),
-                ('photo', models.ForeignKey(null=True, on_delete=django.db.models.deletion.RESTRICT,
-                                            related_name=ec_base.common.constant.db_table.DBTable['PRODUCT'],
-                                            to='file_management.filemanagement')),
-                ('updated_by',
-                 ec_base.common.models.base.CurrentUserField(null=True, on_delete=django.db.models.deletion.RESTRICT,
-                                                             related_name='%(app_label)s_%(class)s_updated_by',
-                                                             to=settings.AUTH_USER_MODEL)),
+                ("id", models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name="ID")),
+                ("created_at", models.DateTimeField(auto_now_add=True)),
+                ("updated_at", models.DateTimeField(auto_now=True)),
+                ("name", models.CharField(max_length=256)),
+                ("quantity", models.IntegerField(default=0)),
+                ("purchase_price", models.FloatField(default=0.0)),
+                ("price", models.FloatField(default=0.0)),
+                ("desc", models.TextField()),
+                ("is_deleted", models.BooleanField(default=False)),
+                (
+                    "category",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.RESTRICT,
+                        related_name=ec_base.common.constant.db_table.DBTable["PRODUCT"],
+                        to="master.masterproductcategory",
+                    ),
+                ),
+                (
+                    "created_by",
+                    ec_base.common.models.base.CurrentUserField(
+                        null=True,
+                        on_delete=django.db.models.deletion.RESTRICT,
+                        related_name="%(app_label)s_%(class)s_created_by",
+                        to=settings.AUTH_USER_MODEL,
+                    ),
+                ),
+                (
+                    "photo",
+                    models.ForeignKey(
+                        null=True,
+                        on_delete=django.db.models.deletion.RESTRICT,
+                        related_name=ec_base.common.constant.db_table.DBTable["PRODUCT"],
+                        to="file_management.filemanagement",
+                    ),
+                ),
+                (
+                    "updated_by",
+                    ec_base.common.models.base.CurrentUserField(
+                        null=True,
+                        on_delete=django.db.models.deletion.RESTRICT,
+                        related_name="%(app_label)s_%(class)s_updated_by",
+                        to=settings.AUTH_USER_MODEL,
+                    ),
+                ),
             ],
             options={
-                'db_table': ec_base.common.constant.db_table.DBTable['PRODUCT'],
+                "db_table": ec_base.common.constant.db_table.DBTable["PRODUCT"],
             },
         ),
     ]

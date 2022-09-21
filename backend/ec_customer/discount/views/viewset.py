@@ -11,12 +11,22 @@ from ec_base.common.serializer.custom_mixins import CustomDestroyMixin
 from ec_base.common.utils.exceptions import PermissionDenied
 from ec_base.discount.models import Discount
 from ec_staff.discount.filters.discount import DiscountListQueryFields
-from ec_staff.discount.serializers.discount import DiscountListSlz, DiscountRetrieveSlz, DiscountCreateSlz, \
-    DiscountUpdateSlz
+from ec_staff.discount.serializers.discount import (
+    DiscountListSlz,
+    DiscountRetrieveSlz,
+    DiscountCreateSlz,
+    DiscountUpdateSlz,
+)
 
 
-class DiscountViewSet(mixins.ListModelMixin, mixins.CreateModelMixin, mixins.UpdateModelMixin,
-                      mixins.RetrieveModelMixin, CustomDestroyMixin, GenericViewSet):
+class DiscountViewSet(
+    mixins.ListModelMixin,
+    mixins.CreateModelMixin,
+    mixins.UpdateModelMixin,
+    mixins.RetrieveModelMixin,
+    CustomDestroyMixin,
+    GenericViewSet,
+):
     permission_classes = (AllowAny,)
     pagination_class = CustomPagination
     filter_backends = (DjangoFilterBackend, OrderingFilter, SearchFilter)

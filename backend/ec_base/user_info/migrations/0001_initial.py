@@ -10,34 +10,52 @@ class Migration(migrations.Migration):
     initial = True
 
     dependencies = [
-        (ec_base.common.constant.app_label.ModelAppLabel['MASTER'], '0001_initial'),
+        (ec_base.common.constant.app_label.ModelAppLabel["MASTER"], "0001_initial"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='UserInfo',
+            name="UserInfo",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('created_at', models.DateTimeField(auto_now_add=True)),
-                ('updated_at', models.DateTimeField(auto_now=True)),
-                ('first_name', models.CharField(max_length=32)),
-                ('last_name', models.CharField(max_length=32, null=True)),
-                ('dob', models.DateField(null=True)),
-                ('building', models.CharField(max_length=256, null=True)),
-                ('postal_code', models.CharField(max_length=6, null=True)),
-                ('phone_number', models.CharField(max_length=12, null=True, unique=True)),
-                ('city', models.ForeignKey(null=True, on_delete=django.db.models.deletion.RESTRICT,
-                                           related_name=ec_base.common.constant.db_table.DBTable['USER_INFO'],
-                                           to='master.mastercity')),
-                ('district', models.ForeignKey(null=True, on_delete=django.db.models.deletion.RESTRICT,
-                                               related_name=ec_base.common.constant.db_table.DBTable['USER_INFO'],
-                                               to='master.masterdistrict')),
-                ('sex', models.ForeignKey(null=True, on_delete=django.db.models.deletion.RESTRICT,
-                                          related_name=ec_base.common.constant.db_table.DBTable['USER_INFO'],
-                                          to='master.mastersex')),
+                ("id", models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name="ID")),
+                ("created_at", models.DateTimeField(auto_now_add=True)),
+                ("updated_at", models.DateTimeField(auto_now=True)),
+                ("first_name", models.CharField(max_length=32)),
+                ("last_name", models.CharField(max_length=32, null=True)),
+                ("dob", models.DateField(null=True)),
+                ("building", models.CharField(max_length=256, null=True)),
+                ("postal_code", models.CharField(max_length=6, null=True)),
+                ("phone_number", models.CharField(max_length=12, null=True, unique=True)),
+                (
+                    "city",
+                    models.ForeignKey(
+                        null=True,
+                        on_delete=django.db.models.deletion.RESTRICT,
+                        related_name=ec_base.common.constant.db_table.DBTable["USER_INFO"],
+                        to="master.mastercity",
+                    ),
+                ),
+                (
+                    "district",
+                    models.ForeignKey(
+                        null=True,
+                        on_delete=django.db.models.deletion.RESTRICT,
+                        related_name=ec_base.common.constant.db_table.DBTable["USER_INFO"],
+                        to="master.masterdistrict",
+                    ),
+                ),
+                (
+                    "sex",
+                    models.ForeignKey(
+                        null=True,
+                        on_delete=django.db.models.deletion.RESTRICT,
+                        related_name=ec_base.common.constant.db_table.DBTable["USER_INFO"],
+                        to="master.mastersex",
+                    ),
+                ),
             ],
             options={
-                'db_table': ec_base.common.constant.db_table.DBTable['USER_INFO'],
+                "db_table": ec_base.common.constant.db_table.DBTable["USER_INFO"],
             },
         ),
     ]

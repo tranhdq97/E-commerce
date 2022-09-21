@@ -14,11 +14,21 @@ from ec_staff.rating.filters.rating import RatingListQueryFields
 from ec_staff.rating.serializers.rating import RatingListSlz, RatingRetrieveSlz, RatingCreateSlz, RatingUpdateSlz
 
 
-class RatingViewSet(mixins.ListModelMixin, mixins.CreateModelMixin, mixins.UpdateModelMixin, mixins.RetrieveModelMixin,
-                    CustomDestroyMixin, GenericViewSet):
+class RatingViewSet(
+    mixins.ListModelMixin,
+    mixins.CreateModelMixin,
+    mixins.UpdateModelMixin,
+    mixins.RetrieveModelMixin,
+    CustomDestroyMixin,
+    GenericViewSet,
+):
     permission_classes = (AllowAny,)
     pagination_class = CustomPagination
-    filter_backends = (DjangoFilterBackend, OrderingFilter, SearchFilter,)
+    filter_backends = (
+        DjangoFilterBackend,
+        OrderingFilter,
+        SearchFilter,
+    )
     serializer_class = RatingListSlz
     queryset = Rating.objects.all()
     filterset_fields = RatingListQueryFields.FILTERSET_FIELDS
@@ -38,7 +48,7 @@ class RatingViewSet(mixins.ListModelMixin, mixins.CreateModelMixin, mixins.Updat
             BaseViewAction.RETRIEVE: (AllowAny,),
             BaseViewAction.CREATE: (IsCustomer,),
             BaseViewAction.UPDATE: (IsCustomer,),
-            BaseViewAction.DESTROY: (IsManager | IsSuperStaff,)
+            BaseViewAction.DESTROY: (IsManager | IsSuperStaff,),
         }
         self.permission_classes = perm_switcher.get(self.action)
         if self.permission_classes is None:

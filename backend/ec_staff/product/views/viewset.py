@@ -16,8 +16,14 @@ from ec_staff.product.filters.product import ProductListQueryFields
 from ec_staff.product.serializers.product import ProductListSlz, ProductRetrieveSlz, ProductCreateSlz, ProductUpdateSlz
 
 
-class ProductViewSet(mixins.ListModelMixin, mixins.CreateModelMixin, mixins.UpdateModelMixin, mixins.RetrieveModelMixin,
-                     CustomDestroyMixin, GenericViewSet):
+class ProductViewSet(
+    mixins.ListModelMixin,
+    mixins.CreateModelMixin,
+    mixins.UpdateModelMixin,
+    mixins.RetrieveModelMixin,
+    CustomDestroyMixin,
+    GenericViewSet,
+):
     permission_classes = (AllowAny,)
     pagination_class = CustomPagination
     filter_backends = (DjangoFilterBackend, OrderingFilter, SearchFilter)
@@ -29,7 +35,7 @@ class ProductViewSet(mixins.ListModelMixin, mixins.CreateModelMixin, mixins.Upda
     filterset_fields = ProductListQueryFields.FILTERSET_FIELDS
 
     def get_queryset(self):
-        queryset = Product.objects.all().prefetch_related("rating").annotate(num_stars=Round(Avg('rating__num_stars')))
+        queryset = Product.objects.all().prefetch_related("rating").annotate(num_stars=Round(Avg("rating__num_stars")))
         return queryset
 
     def get_serializer_class(self):

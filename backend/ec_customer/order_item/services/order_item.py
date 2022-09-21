@@ -8,10 +8,10 @@ class OrderItemSvc:
     @staticmethod
     def validate_quantity(product, quantity):
         if quantity == 0:
-            raise APIErr(message.QUANTITY_IS_ZERO % {'name': product.name})
+            raise APIErr(message.QUANTITY_IS_ZERO % {"name": product.name})
 
         if quantity > product.quantity:
-            raise APIErr(message.NOT_ENOUGH_QUANTITY % {'name': product.name, 'quantity': product.quantity})
+            raise APIErr(message.NOT_ENOUGH_QUANTITY % {"name": product.name, "quantity": product.quantity})
 
         return product
 

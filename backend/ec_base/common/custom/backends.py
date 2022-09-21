@@ -13,7 +13,7 @@ class ModelBackend(BaseBackend):
         provider = request.data.get(UserEnum.PROVIDER)
         user_model = get_user_model_by_provider(provider=provider)
         username = kwargs.get(user_model.USERNAME_FIELD)
-        password = kwargs.get('password')
+        password = kwargs.get("password")
         if not username or not password:
             return
 

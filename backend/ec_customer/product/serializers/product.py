@@ -22,8 +22,13 @@ class ProductCreateSlz(ProductBaseSlz):
     class Meta:
         model = ProductBaseSlz.Meta.model
         fields = ProductBaseSlz.Meta.fields + (
-            ProductFields.NAME, ProductFields.QUANTITY, ProductFields.PURCHASE_PRICE, ProductFields.PRICE,
-            ProductFields.DESC, ProductFields.CATEGORY_ID, ProductFields.PHOTO_ID,
+            ProductFields.NAME,
+            ProductFields.QUANTITY,
+            ProductFields.PURCHASE_PRICE,
+            ProductFields.PRICE,
+            ProductFields.DESC,
+            ProductFields.CATEGORY_ID,
+            ProductFields.PHOTO_ID,
         )
 
 
@@ -34,8 +39,13 @@ class ProductUpdateSlz(ProductBaseSlz):
     class Meta:
         model = ProductBaseSlz.Meta.model
         fields = ProductBaseSlz.Meta.fields + (
-            ProductFields.NAME, ProductFields.QUANTITY, ProductFields.PURCHASE_PRICE, ProductFields.PRICE,
-            ProductFields.DESC, ProductFields.CATEGORY_ID, ProductFields.PHOTO_ID
+            ProductFields.NAME,
+            ProductFields.QUANTITY,
+            ProductFields.PURCHASE_PRICE,
+            ProductFields.PRICE,
+            ProductFields.DESC,
+            ProductFields.CATEGORY_ID,
+            ProductFields.PHOTO_ID,
         )
 
 
@@ -45,10 +55,18 @@ class ProductListSlz(ProductBaseSlz):
 
     class Meta:
         model = ProductBaseSlz.Meta.model
-        fields = ProductBaseSlz.Meta.fields + (
-            ProductFields.NAME, ProductFields.QUANTITY, ProductFields.PRICE, ProductFields.CATEGORY,
-            ProductFields.PHOTO_ID,
-        ) + (RatingFields.NUM_STARS,) + (CommonFields.CREATED_AT,)
+        fields = (
+            ProductBaseSlz.Meta.fields
+            + (
+                ProductFields.NAME,
+                ProductFields.QUANTITY,
+                ProductFields.PRICE,
+                ProductFields.CATEGORY,
+                ProductFields.PHOTO_ID,
+            )
+            + (RatingFields.NUM_STARS,)
+            + (CommonFields.CREATED_AT,)
+        )
 
 
 class ProductRetrieveSlz(ProductBaseSlz):
@@ -57,10 +75,18 @@ class ProductRetrieveSlz(ProductBaseSlz):
 
     class Meta:
         model = ProductBaseSlz.Meta.model
-        fields = ProductBaseSlz.Meta.fields + (
-            ProductFields.NAME, ProductFields.QUANTITY, ProductFields.PRICE, ProductFields.DESC,
-            ProductFields.CATEGORY, ProductFields.PHOTO_ID,
-        ) + (RatingFields.NUM_STARS,)
+        fields = (
+            ProductBaseSlz.Meta.fields
+            + (
+                ProductFields.NAME,
+                ProductFields.QUANTITY,
+                ProductFields.PRICE,
+                ProductFields.DESC,
+                ProductFields.CATEGORY,
+                ProductFields.PHOTO_ID,
+            )
+            + (RatingFields.NUM_STARS,)
+        )
 
 
 class ProductRetrieveForStaffSlz(ProductBaseSlz):
@@ -69,15 +95,27 @@ class ProductRetrieveForStaffSlz(ProductBaseSlz):
 
     class Meta:
         model = ProductBaseSlz.Meta.model
-        fields = ProductBaseSlz.Meta.fields + (
-            ProductFields.NAME, ProductFields.QUANTITY, ProductFields.PRICE, ProductFields.PURCHASE_PRICE,
-            ProductFields.DESC, ProductFields.CATEGORY, ProductFields.PHOTO_ID,
-        ) + (RatingFields.NUM_STARS,)
+        fields = (
+            ProductBaseSlz.Meta.fields
+            + (
+                ProductFields.NAME,
+                ProductFields.QUANTITY,
+                ProductFields.PRICE,
+                ProductFields.PURCHASE_PRICE,
+                ProductFields.DESC,
+                ProductFields.CATEGORY,
+                ProductFields.PHOTO_ID,
+            )
+            + (RatingFields.NUM_STARS,)
+        )
 
 
 class ProductForOrderItemRetrieveSlz(ProductBaseSlz):
     class Meta:
         model = ProductBaseSlz.Meta.model
         fields = ProductBaseSlz.Meta.fields + (
-            ProductFields.NAME, ProductFields.QUANTITY, ProductFields.PRICE, ProductFields.PHOTO_ID
+            ProductFields.NAME,
+            ProductFields.QUANTITY,
+            ProductFields.PRICE,
+            ProductFields.PHOTO_ID,
         )

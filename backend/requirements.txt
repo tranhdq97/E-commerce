@@ -11,3 +11,4 @@ drf_writable_nested~=0.6.4
 whitenoise~=6.2.0
 django-crum~=0.7.9
 gunicorn~=20.1.0
+pre-commit~=2.20.0

@@ -12,6 +12,7 @@ from ec_base.common.utils.strings import check_regex
 
 class CustomTokenObtainPairSerializer(TokenObtainPairSerializer):
     """Custom JWT default serializer"""
+
     provider = serializers.CharField(required=True)
 
     def get_token(self, user, provider=None):
@@ -23,12 +24,15 @@ class CustomTokenObtainPairSerializer(TokenObtainPairSerializer):
         provider = attrs.get(UserEnum.PROVIDER)
         attrs = super().validate(attrs)
         refresh = self.get_token(self.user, provider)
-        attrs['access'] = str(refresh.access_token)
-        attrs['refresh'] = str(refresh)
+        attrs["access"] = str(refresh.access_token)
+        attrs["refresh"] = str(refresh)
         return attrs
 
     def validate_provider(self, provider):
-        if provider not in (UserEnum.STAFF, UserEnum.CUSTOMER,):
+        if provider not in (
+            UserEnum.STAFF,
+            UserEnum.CUSTOMER,
+        ):
             raise APIErr(message.PROVIDE_MUST_BE_STAFF_OR_CUSTOMER)
 
         return provider

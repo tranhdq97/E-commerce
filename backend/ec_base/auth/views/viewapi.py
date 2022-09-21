@@ -8,13 +8,9 @@ from ec_base.auth.services.auth import AuthSvc
 
 
 @extend_schema(
-    methods=['PUT'],
-    tags=['auth'],
-    request=ChangePasswordSlz,
-    responses={200: {}},
-    description='Change password'
+    methods=["PUT"], tags=["auth"], request=ChangePasswordSlz, responses={200: {}}, description="Change password"
 )
-@api_view(['PUT'])
+@api_view(["PUT"])
 @permission_classes([IsAuthenticated])
 def change_password(request):
     service = AuthSvc()
@@ -22,13 +18,7 @@ def change_password(request):
     return Response(data=data)
 
 
-@extend_schema(
-    methods=['GET'],
-    tags=['auth'],
-    description='Get me',
-    request=None,
-    responses={200: {}}
-)
+@extend_schema(methods=["GET"], tags=["auth"], description="Get me", request=None, responses={200: {}})
 @api_view(["GET"])
 @permission_classes([IsAuthenticated])
 def get_me(request):

@@ -11,14 +11,22 @@ from ec_base.common.serializer.custom_mixins import CustomDestroyMixin
 from ec_base.common.utils.exceptions import PermissionDenied
 from ec_base.file_management.models import FileManagement
 from ec_storage.file_management.filters.filemanagement import FileManagementListQueryFields
-from ec_storage.file_management.serializers.file_management import FileManagementCreateSlz, FileManagementListSlz, \
-    FileManagementRetrieveSlz, FileManagementUpdateSlz
+from ec_storage.file_management.serializers.file_management import (
+    FileManagementCreateSlz,
+    FileManagementListSlz,
+    FileManagementRetrieveSlz,
+    FileManagementUpdateSlz,
+)
 
 
-class FileManagementViewSet(CreateModelMixin, RetrieveModelMixin, ListModelMixin, CustomDestroyMixin, UpdateModelMixin,
-                            GenericViewSet):
+class FileManagementViewSet(
+    CreateModelMixin, RetrieveModelMixin, ListModelMixin, CustomDestroyMixin, UpdateModelMixin, GenericViewSet
+):
     serializer_class = FileManagementCreateSlz
-    parser_classes = (MultiPartParser, FormParser,)
+    parser_classes = (
+        MultiPartParser,
+        FormParser,
+    )
     queryset = FileManagement.objects.all()
     permission_classes = (AllowAny,)
     filter_backends = (DjangoFilterBackend, OrderingFilter, SearchFilter)

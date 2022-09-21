@@ -10,8 +10,8 @@ from ec_base.master.models import MasterProductCategory
 class Product(Creator, Editor, DateTimeModel):
     name = models.CharField(max_length=256)
     quantity = models.IntegerField(default=0)
-    purchase_price = models.FloatField(default=0.)
-    price = models.FloatField(default=0.)
+    purchase_price = models.FloatField(default=0.0)
+    price = models.FloatField(default=0.0)
     desc = models.TextField()
     is_deleted = models.BooleanField(default=False)
     category = models.ForeignKey(to=MasterProductCategory, on_delete=models.RESTRICT, related_name=DBTable.PRODUCT)

@@ -11,21 +11,23 @@ from ec_base.user_info.models.user_info import UserInfo
 class UserInfoBaseSlz(serializers.ModelSerializer):
     class Meta:
         model = UserInfo
-        fields = (CommonFields.ID, UserInfoFields.FIRST_NAME, UserInfoFields.LAST_NAME, UserInfoFields.DOB,
-                  UserInfoFields.PHONE_NUMBER)
+        fields = (
+            CommonFields.ID,
+            UserInfoFields.FIRST_NAME,
+            UserInfoFields.LAST_NAME,
+            UserInfoFields.DOB,
+            UserInfoFields.PHONE_NUMBER,
+        )
 
 
 class UserInfoCreateSlz(UserInfoBaseSlz):
-    sex_id = ForeignKeyField(model=MasterSex, required=False)
-    city_id = ForeignKeyField(model=MasterCity, required=False)
-    district_id = ForeignKeyField(model=MasterDistrict, required=False)
-    photo_id = ForeignKeyField(model=FileManagement, required=False)
-
     class Meta:
         model = UserInfoBaseSlz.Meta.model
-        fields = UserInfoBaseSlz.Meta.fields + (
-            UserInfoFields.SEX_ID, UserInfoFields.CITY_ID, UserInfoFields.DISTRICT_ID, UserInfoFields.PHOTO_ID,)
-        read_only_fields = (CommonFields.ID,)
+        fields = (
+            CommonFields.ID,
+            UserInfoFields.LAST_NAME,
+            CommonFields.CREATED_AT,
+        )
 
 
 class UserInfoUpdateSlz(UserInfoBaseSlz):
@@ -36,8 +38,18 @@ class UserInfoUpdateSlz(UserInfoBaseSlz):
 
     class Meta:
         model = UserInfoBaseSlz.Meta.model
-        fields = UserInfoBaseSlz.Meta.fields + (
-            UserInfoFields.SEX_ID, UserInfoFields.CITY_ID, UserInfoFields.DISTRICT_ID, UserInfoFields.PHOTO_ID,)
+        fields = (
+            UserInfoBaseSlz.Meta.fields
+            + (
+                UserInfoFields.SEX_ID,
+                UserInfoFields.CITY_ID,
+                UserInfoFields.DISTRICT_ID,
+                UserInfoFields.BUILDING,
+                UserInfoFields.POSTAL_CODE,
+                UserInfoFields.PHOTO_ID,
+            )
+            + (CommonFields.UPDATED_AT,)
+        )
 
 
 class UserInfoRetrieveSlz(UserInfoBaseSlz):
@@ -47,9 +59,18 @@ class UserInfoRetrieveSlz(UserInfoBaseSlz):
 
     class Meta:
         model = UserInfoBaseSlz.Meta.model
-        fields = UserInfoBaseSlz.Meta.fields + (
-            UserInfoFields.SEX, UserInfoFields.CITY, UserInfoFields.DISTRICT, UserInfoFields.PHOTO_ID,
-        ) + (CommonFields.CREATED_AT, CommonFields.UPDATED_AT)
+        fields = (
+            UserInfoBaseSlz.Meta.fields
+            + (
+                UserInfoFields.SEX,
+                UserInfoFields.CITY,
+                UserInfoFields.DISTRICT,
+                UserInfoFields.PHOTO_ID,
+                UserInfoFields.BUILDING,
+                UserInfoFields.POSTAL_CODE,
+            )
+            + (CommonFields.CREATED_AT, CommonFields.UPDATED_AT)
+        )
 
 
 class UserInfoListSlz(UserInfoBaseSlz):

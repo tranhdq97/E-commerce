@@ -21,7 +21,10 @@ class OrderRetrieveSlz(OrderBaseSlz):
     class Meta:
         model = OrderBaseSlz.Meta.model
         fields = OrderBaseSlz.Meta.fields + (
-            OrderFields.STATUS, OrderFields.SHIPPING_STATUS, OrderFields.PAYMENT_STATUS, OrderFields.ORDER_ITEMS
+            OrderFields.STATUS,
+            OrderFields.SHIPPING_STATUS,
+            OrderFields.PAYMENT_STATUS,
+            OrderFields.ORDER_ITEMS,
         )
 
 

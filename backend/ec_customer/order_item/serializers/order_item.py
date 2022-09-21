@@ -16,7 +16,9 @@ class OrderItemCreateSlz(OrderItemBaseSlz):
     class Meta:
         model = OrderItemBaseSlz.Meta.model
         fields = OrderItemBaseSlz.Meta.fields + (
-            OrderItemFields.PRODUCT_ID, OrderItemFields.QUANTITY, OrderItemFields.DISCOUNTS,
+            OrderItemFields.PRODUCT_ID,
+            OrderItemFields.QUANTITY,
+            OrderItemFields.DISCOUNTS,
         )
 
 
@@ -27,5 +29,7 @@ class OrderItemRetrieveSlz(OrderItemBaseSlz):
     class Meta:
         model = OrderItemBaseSlz.Meta.model
         fields = OrderItemBaseSlz.Meta.fields + (
-            OrderItemFields.PRODUCT, OrderItemFields.DISCOUNTS, OrderItemFields.QUANTITY
+            OrderItemFields.PRODUCT,
+            OrderItemFields.DISCOUNTS,
+            OrderItemFields.QUANTITY,
         )

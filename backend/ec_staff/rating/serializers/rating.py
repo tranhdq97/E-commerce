@@ -10,7 +10,10 @@ from ec_base.rating.models import Rating
 class RatingBaseSlz(serializers.ModelSerializer):
     class Meta:
         model = Rating
-        fields = (CommonFields.ID, RatingFields.PRODUCT_ID,)
+        fields = (
+            CommonFields.ID,
+            RatingFields.PRODUCT_ID,
+        )
 
 
 class RatingCreateSlz(RatingBaseSlz):
@@ -19,7 +22,11 @@ class RatingCreateSlz(RatingBaseSlz):
 
     class Meta:
         model = RatingBaseSlz.Meta.model
-        fields = RatingBaseSlz.Meta.fields + (RatingFields.COMMENT, RatingFields.NUM_STARS, RatingFields.MEDIA_ID,)
+        fields = RatingBaseSlz.Meta.fields + (
+            RatingFields.COMMENT,
+            RatingFields.NUM_STARS,
+            RatingFields.MEDIA_ID,
+        )
 
 
 class RatingUpdateSlz(RatingBaseSlz):
@@ -29,7 +36,10 @@ class RatingUpdateSlz(RatingBaseSlz):
     class Meta:
         model = RatingBaseSlz.Meta.model
         fields = RatingBaseSlz.Meta.fields + (
-            RatingFields.COMMENT, RatingFields.NUM_STARS, RatingFields.MEDIA_ID,)
+            RatingFields.COMMENT,
+            RatingFields.NUM_STARS,
+            RatingFields.MEDIA_ID,
+        )
 
 
 class RatingListSlz(RatingBaseSlz):
@@ -41,5 +51,8 @@ class RatingListSlz(RatingBaseSlz):
 class RatingRetrieveSlz(RatingBaseSlz):
     class Meta:
         model = RatingBaseSlz.Meta.model
-        fields = RatingBaseSlz.Meta.fields + (RatingFields.COMMENT, RatingFields.NUM_STARS, RatingFields.MEDIA_ID) + (
-            CommonFields.CREATED_AT, CommonFields.CREATED_BY_ID, CommonFields.UPDATED_AT, CommonFields.UPDATED_BY_ID)
+        fields = (
+            RatingBaseSlz.Meta.fields
+            + (RatingFields.COMMENT, RatingFields.NUM_STARS, RatingFields.MEDIA_ID)
+            + (CommonFields.CREATED_AT, CommonFields.CREATED_BY_ID, CommonFields.UPDATED_AT, CommonFields.UPDATED_BY_ID)
+        )

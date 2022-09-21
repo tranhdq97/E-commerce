@@ -7,33 +7,33 @@ from ec_base.common.constant.constant import RegexPattern
 from ec_base.common.constant.db_fields import CommonFields, UserFields
 from ec_base.common.utils.exceptions import APIErr
 from ec_base.common.utils.strings import check_regex
-from ec_base.customer.models.customer import Customer
+from ec_base.staff.models.staff import Staff
 from ec_base.user_info.models.user_info import UserInfo
 from ec_base.user_info.serializers.user_info import UserInfoCreateSlz, UserInfoUpdateSlz
 
 
-class CustomerBaseSlz(serializers.ModelSerializer):
+class StaffBaseSlz(serializers.ModelSerializer):
     class Meta:
-        model = Customer
+        model = Staff
         fields = (CommonFields.ID,)
 
 
-class CustomerUpdateSlz(CustomerBaseSlz, WritableNestedModelSerializer):
+class StaffUpdateSlz(StaffBaseSlz, WritableNestedModelSerializer):
     info = UserInfoUpdateSlz(many=False)
 
     class Meta:
-        model = CustomerBaseSlz.Meta.model
-        fields = CustomerBaseSlz.Meta.fields + (UserFields.INFO,)
+        model = StaffBaseSlz.Meta.model
+        fields = StaffBaseSlz.Meta.fields + (UserFields.INFO,)
 
 
-class CustomerCreateSlz(CustomerBaseSlz):
+class StaffCreateSlz(StaffBaseSlz):
     email = serializers.EmailField(required=True)
     password = serializers.CharField(required=True, write_only=True)
     info = UserInfoCreateSlz(many=False)
 
     class Meta:
-        model = CustomerBaseSlz.Meta.model
-        fields = CustomerBaseSlz.Meta.fields + (
+        model = StaffBaseSlz.Meta.model
+        fields = StaffBaseSlz.Meta.fields + (
             UserFields.EMAIL,
             UserFields.PASSWORD,
             UserFields.INFO,
@@ -57,5 +57,5 @@ class CustomerCreateSlz(CustomerBaseSlz):
         with transaction.atomic():
             info = validated_data.get(UserFields.INFO)
             validated_data[UserFields.INFO] = UserInfo.objects.create(**info)
-            customer = self.Meta.model.objects.create_user(**validated_data)
-            return customer
+            staff = self.Meta.model.objects.create_user(**validated_data)
+            return staff

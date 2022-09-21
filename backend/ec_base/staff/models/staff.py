@@ -12,8 +12,9 @@ class Staff(CustomBaseUserModel):
     is_leave = models.BooleanField(default=False)
     is_admin = models.BooleanField(default=False)
     info = models.OneToOneField(to=UserInfo, on_delete=models.RESTRICT, null=True, related_name=DBTable.STAFF)
-    type = models.ForeignKey(MasterStaffType, on_delete=models.RESTRICT, default=MasterStaffTypeID.UNAPPROVED,
-                             related_name=DBTable.STAFF)
+    type = models.ForeignKey(
+        MasterStaffType, on_delete=models.RESTRICT, default=MasterStaffTypeID.UNAPPROVED, related_name=DBTable.STAFF
+    )
 
     def has_perm(self, perm, obj=None):
         return True
