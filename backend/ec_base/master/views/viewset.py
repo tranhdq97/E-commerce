@@ -35,7 +35,7 @@ class MasterViewSet(mixins.ListModelMixin, mixins.CreateModelMixin, mixins.Destr
         perm_switcher = {
             BaseViewAction.LIST: (AllowAny,),
             BaseViewAction.DESTROY: (IsSuperStaff | IsManager,),
-            BaseViewAction.CREATE: (IsSuperStaff | IsManager,)
+            BaseViewAction.CREATE: (IsSuperStaff | IsManager,),
         }
         self.permission_classes = perm_switcher.get(self.action)
         if self.permission_classes is None:
@@ -45,16 +45,17 @@ class MasterViewSet(mixins.ListModelMixin, mixins.CreateModelMixin, mixins.Destr
 
     @extend_schema(description=f'Choices: {" | ".join(Master.list(allowed_to_create=False))}')
     def destroy(self, request, *args, **kwargs):
-        master_name = kwargs.pop('_'.join([DBTable.MASTER, MasterFields.NAME]))
+        master_name = kwargs.pop("_".join([DBTable.MASTER, MasterFields.NAME]))
         pk = kwargs.pop(CommonFields.ID)
         service = MasterBaseService(master_name)
         service.delete(pk)
         return Response(status=200)
 
-    @extend_schema(parameters=[BaseMasterListReqParams],
-                   description=f'Choices: {" | ".join(Master.list(allowed_to_create=False))}')
+    @extend_schema(
+        parameters=[BaseMasterListReqParams], description=f'Choices: {" | ".join(Master.list(allowed_to_create=False))}'
+    )
     def list(self, request, **kwargs):
-        master_name = kwargs.pop('_'.join([DBTable.MASTER, MasterFields.NAME]))
+        master_name = kwargs.pop("_".join([DBTable.MASTER, MasterFields.NAME]))
         service = MasterBaseService(master_name)
         queryset = service.list(parent_id=request.query_params.get(MasterFields.PARENT_ID))
         queryset = self.filter_queryset(queryset).filter(is_deleted=False, **kwargs)
@@ -63,7 +64,7 @@ class MasterViewSet(mixins.ListModelMixin, mixins.CreateModelMixin, mixins.Destr
 
     @extend_schema(description=f'Choices: {" | ".join(Master.list(allowed_to_create=True))}')
     def create(self, request, **kwargs):
-        master_name = kwargs.pop('_'.join([DBTable.MASTER, MasterFields.NAME]))
+        master_name = kwargs.pop("_".join([DBTable.MASTER, MasterFields.NAME]))
         service = MasterBaseService(master_name)
         serializer = service.create(request.data)
         return Response(serializer.data)

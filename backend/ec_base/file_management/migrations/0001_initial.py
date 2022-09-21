@@ -12,27 +12,37 @@ class Migration(migrations.Migration):
     initial = True
 
     dependencies = [
-        (ec_base.common.constant.app_label.ModelAppLabel['MASTER'], '0001_initial'),
+        (ec_base.common.constant.app_label.ModelAppLabel["MASTER"], "0001_initial"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='FileManagement',
+            name="FileManagement",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('created_at', models.DateTimeField(auto_now_add=True)),
-                ('updated_at', models.DateTimeField(auto_now=True)),
-                ('name', models.CharField(max_length=256, null=True)),
-                ('desc', models.TextField(null=True)),
-                ('file', models.FileField(upload_to=ec_base.common.utils.strings.get_file_field_directory,
-                                          validators=[ec_base.common.utils.validators.FileSizeValidator(200)])),
-                ('is_deleted', models.BooleanField(default=False)),
-                ('type', models.ForeignKey(on_delete=django.db.models.deletion.RESTRICT,
-                                           related_name=ec_base.common.constant.db_table.DBTable['FILE_MANAGEMENT'],
-                                           to='master.masterfiletype')),
+                ("id", models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name="ID")),
+                ("created_at", models.DateTimeField(auto_now_add=True)),
+                ("updated_at", models.DateTimeField(auto_now=True)),
+                ("name", models.CharField(max_length=256, null=True)),
+                ("desc", models.TextField(null=True)),
+                (
+                    "file",
+                    models.FileField(
+                        upload_to=ec_base.common.utils.strings.get_file_field_directory,
+                        validators=[ec_base.common.utils.validators.FileSizeValidator(200)],
+                    ),
+                ),
+                ("is_deleted", models.BooleanField(default=False)),
+                (
+                    "type",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.RESTRICT,
+                        related_name=ec_base.common.constant.db_table.DBTable["FILE_MANAGEMENT"],
+                        to="master.masterfiletype",
+                    ),
+                ),
             ],
             options={
-                'db_table': ec_base.common.constant.db_table.DBTable['FILE_MANAGEMENT'],
+                "db_table": ec_base.common.constant.db_table.DBTable["FILE_MANAGEMENT"],
             },
         ),
     ]

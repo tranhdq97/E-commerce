@@ -2,7 +2,9 @@ from ec_base.common.constant.db_fields import CommonFields, UserFields, UserInfo
 
 
 class CustomerListQueryFields:
-    SEARCH_FIELDS = ('__'.join([UserFields.INFO, UserInfoFields.PHONE_NUMBER]),
-                     '__'.join([UserFields.INFO, UserInfoFields.FIRST_NAME]),)
+    SEARCH_FIELDS = (
+        "__".join([UserFields.INFO, UserInfoFields.PHONE_NUMBER]),
+        "__".join([UserFields.INFO, UserInfoFields.FIRST_NAME]),
+    )
     ORDER_FIELDS = (CommonFields.ID,)
-    ORDER_DEFAULT_FIELD = f'{CommonFields.ID}'
+    ORDER_DEFAULT_FIELD = f"{CommonFields.ID}"

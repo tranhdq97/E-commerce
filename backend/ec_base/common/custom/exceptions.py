@@ -11,11 +11,7 @@ logger = logging.getLogger(__name__)
 
 def server_error(request, *args, **kwargs):
     """Generic 500 error handler."""
-    data = {
-        'status_code': 'error',
-        'message': _('Internal Service error'),
-        'details': []
-    }
+    data = {"status_code": "error", "message": _("Internal Service error"), "details": []}
     return JsonResponse(data, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 
@@ -25,15 +21,15 @@ def custom_exception_handler(exc, context):
     if response is not None and isinstance(exc, exceptions.APIException):
         headers = {}
 
-        if getattr(exc, 'auth_header', None):
-            headers['WWW-Authenticate'] = exc.auth_header
-        if getattr(exc, 'wait', None):
-            headers['Retry-After'] = '%d' % exc.wait
+        if getattr(exc, "auth_header", None):
+            headers["WWW-Authenticate"] = exc.auth_header
+        if getattr(exc, "wait", None):
+            headers["Retry-After"] = "%d" % exc.wait
 
         data = {
-            'status_code': exc.default_code,
-            'message': exc.default_detail if isinstance(exc.detail, (list, dict)) else exc.detail,
-            'detail': exc.detail,
+            "status_code": exc.default_code,
+            "message": exc.default_detail if isinstance(exc.detail, (list, dict)) else exc.detail,
+            "detail": exc.detail,
         }
         set_rollback()
         logger.warning(f"API bad request {exc}")

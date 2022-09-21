@@ -8,8 +8,8 @@ from ec_base.common.models.managers import CustomUserManager
 
 class CurrentUserField(ForeignKey):
     def __init__(self, to, **kwargs):
-        self.auto_current = kwargs.pop('auto_current', False)
-        self.auto_current_add = kwargs.pop('auto_current_add', False)
+        self.auto_current = kwargs.pop("auto_current", False)
+        self.auto_current_add = kwargs.pop("auto_current_add", False)
         super().__init__(to, **kwargs)
 
     def pre_save(self, model_instance, add):
@@ -26,11 +26,11 @@ class CurrentUserField(ForeignKey):
 
 class Creator(models.Model):
     created_by = CurrentUserField(
-        to='staff.Staff',
+        to="staff.Staff",
         auto_current_add=True,
         null=True,
         on_delete=models.RESTRICT,
-        related_name="%(app_label)s_%(class)s_created_by"
+        related_name="%(app_label)s_%(class)s_created_by",
     )
 
     class Meta:
@@ -39,11 +39,11 @@ class Creator(models.Model):
 
 class Editor(models.Model):
     updated_by = CurrentUserField(
-        to='staff.Staff',
+        to="staff.Staff",
         auto_current=True,
         null=True,
         on_delete=models.RESTRICT,
-        related_name="%(app_label)s_%(class)s_updated_by"
+        related_name="%(app_label)s_%(class)s_updated_by",
     )
 
     class Meta:
@@ -52,11 +52,11 @@ class Editor(models.Model):
 
 class CustomerCreator(models.Model):
     created_by = CurrentUserField(
-        to='customer.Customer',
+        to="customer.Customer",
         auto_current_add=True,
         null=True,
         on_delete=models.RESTRICT,
-        related_name="%(app_label)s_%(class)s_created_by"
+        related_name="%(app_label)s_%(class)s_created_by",
     )
 
     class Meta:
@@ -65,11 +65,11 @@ class CustomerCreator(models.Model):
 
 class CustomerEditor(models.Model):
     updated_by = CurrentUserField(
-        to='customer.Customer',
+        to="customer.Customer",
         auto_current=True,
         null=True,
         on_delete=models.RESTRICT,
-        related_name="%(app_label)s_%(class)s_updated_by"
+        related_name="%(app_label)s_%(class)s_updated_by",
     )
 
     class Meta:
@@ -85,10 +85,10 @@ class DateTimeModel(models.Model):
 
 
 class CustomBaseUserModel(AbstractBaseUser, DateTimeModel):
-    email = models.EmailField(verbose_name='email address', max_length=255, unique=True)
+    email = models.EmailField(verbose_name="email address", max_length=255, unique=True)
     is_active = models.BooleanField(default=True)
     objects = CustomUserManager()
-    USERNAME_FIELD = 'email'
+    USERNAME_FIELD = "email"
     REQUIRED_FIELDS = []
 
     @property

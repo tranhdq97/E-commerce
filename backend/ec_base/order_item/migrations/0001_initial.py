@@ -11,29 +11,43 @@ class Migration(migrations.Migration):
     initial = True
 
     dependencies = [
-        ('product', '0001_initial'),
-        (ec_base.common.constant.app_label.ModelAppLabel['ORDER'], '0001_initial'),
-        ('discount', '0001_initial'),
+        ("product", "0001_initial"),
+        (ec_base.common.constant.app_label.ModelAppLabel["ORDER"], "0001_initial"),
+        ("discount", "0001_initial"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='OrderItem',
+            name="OrderItem",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('quantity', models.IntegerField()),
-                ('discounts',
-                 models.ManyToManyField(related_name=ec_base.common.constant.related_name.RelatedName['ORDER_ITEMS'],
-                                        to='discount.discount')),
-                ('order', models.ForeignKey(on_delete=django.db.models.deletion.RESTRICT,
-                                            related_name=ec_base.common.constant.db_table.DBTable['ORDER_ITEM'],
-                                            to='order.order')),
-                ('product', models.ForeignKey(on_delete=django.db.models.deletion.RESTRICT,
-                                              related_name=ec_base.common.constant.db_table.DBTable['ORDER_ITEM'],
-                                              to='product.product')),
+                ("id", models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name="ID")),
+                ("quantity", models.IntegerField()),
+                (
+                    "discounts",
+                    models.ManyToManyField(
+                        related_name=ec_base.common.constant.related_name.RelatedName["ORDER_ITEMS"],
+                        to="discount.discount",
+                    ),
+                ),
+                (
+                    "order",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.RESTRICT,
+                        related_name=ec_base.common.constant.db_table.DBTable["ORDER_ITEM"],
+                        to="order.order",
+                    ),
+                ),
+                (
+                    "product",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.RESTRICT,
+                        related_name=ec_base.common.constant.db_table.DBTable["ORDER_ITEM"],
+                        to="product.product",
+                    ),
+                ),
             ],
             options={
-                'db_table': ec_base.common.constant.db_table.DBTable['ORDER_ITEM'],
+                "db_table": ec_base.common.constant.db_table.DBTable["ORDER_ITEM"],
             },
         ),
     ]

@@ -26,7 +26,7 @@ class ProductViewSet(mixins.ListModelMixin, mixins.RetrieveModelMixin, GenericVi
     filterset_fields = ProductListQueryFields.FILTERSET_FIELDS
 
     def get_queryset(self):
-        queryset = Product.objects.all().prefetch_related("rating").annotate(num_stars=Round(Avg('rating__num_stars')))
+        queryset = Product.objects.all().prefetch_related("rating").annotate(num_stars=Round(Avg("rating__num_stars")))
         return queryset
 
     def get_serializer_class(self):

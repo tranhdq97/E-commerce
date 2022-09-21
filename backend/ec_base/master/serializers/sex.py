@@ -7,4 +7,7 @@ from ec_base.master.models.sex import MasterSex
 class MasterSexSlz(serializers.ModelSerializer):
     class Meta:
         model = MasterSex
-        fields = (CommonFields.ID, MasterFields.NAME,)
+        fields = (
+            CommonFields.ID,
+            MasterFields.NAME,
+        )

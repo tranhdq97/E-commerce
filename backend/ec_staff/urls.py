@@ -15,12 +15,13 @@ Including another URLconf
 """
 from django.urls import path, include
 
-handler500 = 'ec_base.common.custom.exceptions.server_error'
+handler500 = "ec_base.common.custom.exceptions.server_error"
 
 urlpatterns = [
-    path('', include('ec_base.urls')),
-    path('api/rating/', include('ec_staff.rating.urls'), name='rating'),
-    path('api/product/', include('ec_staff.product.urls'), name='product'),
-    path('api/discount/', include('ec_staff.discount.urls'), name='discount'),
-    path('api/customer/', include('ec_staff.customer.urls'), name='customer'),
+    path("", include("ec_base.urls")),
+    path("api/rating/", include("ec_staff.rating.urls"), name="rating"),
+    path("api/product/", include("ec_staff.product.urls"), name="product"),
+    path("api/discount/", include("ec_staff.discount.urls"), name="discount"),
+    path("api/customer/", include("ec_staff.customer.urls"), name="customer"),
+    path("api/staff/", include("ec_staff.staff.urls"), name="staff"),
 ]

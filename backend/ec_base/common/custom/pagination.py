@@ -7,7 +7,7 @@ from rest_framework.response import Response
 
 class CustomPagination(PageNumberPagination):
     page_size = 50
-    page_size_query_param = 'page_size'
+    page_size_query_param = "page_size"
 
     def paginate_queryset(self, queryset, request, view=None):
         try:
@@ -16,7 +16,7 @@ class CustomPagination(PageNumberPagination):
             return []
 
     def get_paginated_response(self, data):
-        if hasattr(self, 'page') and self.page_size is not None:
+        if hasattr(self, "page") and self.page_size is not None:
             return super().get_paginated_response(data)
         else:
-            return Response(OrderedDict([('count', None), ('next', None), ('previous', None), ('results', data)]))
+            return Response(OrderedDict([("count", None), ("next", None), ("previous", None), ("results", data)]))

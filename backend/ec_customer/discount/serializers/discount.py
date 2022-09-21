@@ -21,8 +21,14 @@ class DiscountRetrieveSlz(DiscountBaseSlz):
 
     class Meta:
         model = DiscountBaseSlz.Meta.model
-        fields = DiscountBaseSlz.Meta.fields + (DiscountFields.DISCOUNT_TYPE, DiscountFields.DISCOUNT_RATE,) + (
-            CommonFields.CREATED_BY_ID, CommonFields.UPDATED_BY_ID, CommonFields.CREATED_AT, CommonFields.UPDATED_AT)
+        fields = (
+            DiscountBaseSlz.Meta.fields
+            + (
+                DiscountFields.DISCOUNT_TYPE,
+                DiscountFields.DISCOUNT_RATE,
+            )
+            + (CommonFields.CREATED_BY_ID, CommonFields.UPDATED_BY_ID, CommonFields.CREATED_AT, CommonFields.UPDATED_AT)
+        )
 
 
 class DiscountCreateSlz(DiscountBaseSlz):
@@ -31,8 +37,11 @@ class DiscountCreateSlz(DiscountBaseSlz):
 
     class Meta:
         model = DiscountBaseSlz.Meta.model
-        fields = DiscountBaseSlz.Meta.fields + (DiscountFields.DISCOUNT_TYPE_ID, DiscountFields.DISCOUNT_RATE_ID) + (
-            CommonFields.CREATED_AT,)
+        fields = (
+            DiscountBaseSlz.Meta.fields
+            + (DiscountFields.DISCOUNT_TYPE_ID, DiscountFields.DISCOUNT_RATE_ID)
+            + (CommonFields.CREATED_AT,)
+        )
 
 
 class DiscountUpdateSlz(DiscountBaseSlz):
@@ -41,8 +50,11 @@ class DiscountUpdateSlz(DiscountBaseSlz):
 
     class Meta:
         model = DiscountBaseSlz.Meta.model
-        fields = DiscountBaseSlz.Meta.fields + (DiscountFields.DISCOUNT_TYPE_ID, DiscountFields.DISCOUNT_RATE_ID) + (
-            CommonFields.UPDATED_AT,)
+        fields = (
+            DiscountBaseSlz.Meta.fields
+            + (DiscountFields.DISCOUNT_TYPE_ID, DiscountFields.DISCOUNT_RATE_ID)
+            + (CommonFields.UPDATED_AT,)
+        )
 
 
 class DiscountForOrderItemRetrieveSlz(DiscountBaseSlz):

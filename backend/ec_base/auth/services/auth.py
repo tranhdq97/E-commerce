@@ -13,11 +13,11 @@ logger = logging.getLogger(__name__)
 class AuthSvc:
     @staticmethod
     def change_password(user, data):
-        logger.info(f'START | change_password')
+        logger.info("START | change_password")
         slz = ChangePasswordSlz(data=data, context=dict(user=user))
         slz.is_valid(raise_exception=True)
         slz.update(user, data)
-        logger.info(f'END   | change_password')
+        logger.info("END   | change_password")
         return dict(massage=message.PASSWORD_CHANGE_SUCCESSFUL)
 
     @staticmethod

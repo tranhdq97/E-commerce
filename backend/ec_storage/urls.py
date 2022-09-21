@@ -19,11 +19,11 @@ from django.urls import path, include
 
 from ec_base.urls import swagger_urlpatterns
 
-handler500 = 'ec_base.common.custom.exceptions.server_error'
+handler500 = "ec_base.common.custom.exceptions.server_error"
 
 urlpatterns = swagger_urlpatterns + [
-    path('api/auth/', include('ec_base.auth.urls'), name='auth'),
-    path('api/file-management/', include('ec_storage.file_management.urls'), name='file management'),
+    path("api/auth/", include("ec_base.auth.urls"), name="auth"),
+    path("api/file-management/", include("ec_storage.file_management.urls"), name="file management"),
 ]
 
 if settings.DEBUG:

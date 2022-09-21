@@ -6,16 +6,16 @@ from ec_base.common.utils.utils import BaseEnum
 
 class Master(BaseEnum):
     # table_name, model_name, allowed_to_create
-    m_sex = DBTable.MASTER_SEX, 'MasterSex', False
-    m_city = DBTable.MASTER_CITY, 'MasterCity', True
-    m_district = DBTable.MASTER_DISTRICT, 'MasterDistrict', False
-    m_discount_rate = DBTable.MASTER_DISCOUNT_RATE, 'MasterDiscountRate', False
-    m_discount_type = DBTable.MASTER_DISCOUNT_TYPE, 'MasterDiscountType', True
-    m_file_type = DBTable.MASTER_FILE_TYPE, 'MasterFileType', False
-    m_order_status = DBTable.MASTER_ORDER_STATUS, 'MasterOrderStatus', False
-    m_payment_status = DBTable.MASTER_PAYMENT_STATUS, 'MasterPaymentStatus', False
-    m_shipping_status = DBTable.MASTER_SHIPPING_STATUS, 'MasterShippingStatus', False
-    m_customer_type = DBTable.MASTER_CUSTOMER_TYPE, 'MasterCustomerType', False
+    m_sex = DBTable.MASTER_SEX, "MasterSex", False
+    m_city = DBTable.MASTER_CITY, "MasterCity", True
+    m_district = DBTable.MASTER_DISTRICT, "MasterDistrict", False
+    m_discount_rate = DBTable.MASTER_DISCOUNT_RATE, "MasterDiscountRate", False
+    m_discount_type = DBTable.MASTER_DISCOUNT_TYPE, "MasterDiscountType", True
+    m_file_type = DBTable.MASTER_FILE_TYPE, "MasterFileType", False
+    m_order_status = DBTable.MASTER_ORDER_STATUS, "MasterOrderStatus", False
+    m_payment_status = DBTable.MASTER_PAYMENT_STATUS, "MasterPaymentStatus", False
+    m_shipping_status = DBTable.MASTER_SHIPPING_STATUS, "MasterShippingStatus", False
+    m_customer_type = DBTable.MASTER_CUSTOMER_TYPE, "MasterCustomerType", False
 
     @staticmethod
     def list(allowed_to_create=False):

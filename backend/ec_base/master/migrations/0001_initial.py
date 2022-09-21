@@ -11,145 +11,153 @@ import ec_base.common.constant.related_name
 class Migration(migrations.Migration):
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='MasterCity',
+            name="MasterCity",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=255, unique=True)),
-                ('is_deleted', models.BooleanField(default=False)),
+                ("id", models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name="ID")),
+                ("name", models.CharField(max_length=255, unique=True)),
+                ("is_deleted", models.BooleanField(default=False)),
             ],
             options={
-                'db_table': ec_base.common.constant.db_table.DBTable['MASTER_CITY'],
+                "db_table": ec_base.common.constant.db_table.DBTable["MASTER_CITY"],
             },
         ),
         migrations.CreateModel(
-            name='MasterCustomerType',
+            name="MasterCustomerType",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=255, unique=True)),
-                ('is_deleted', models.BooleanField(default=False)),
+                ("id", models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name="ID")),
+                ("name", models.CharField(max_length=255, unique=True)),
+                ("is_deleted", models.BooleanField(default=False)),
             ],
             options={
-                'db_table': ec_base.common.constant.db_table.DBTable['MASTER_CUSTOMER_TYPE'],
+                "db_table": ec_base.common.constant.db_table.DBTable["MASTER_CUSTOMER_TYPE"],
             },
         ),
         migrations.CreateModel(
-            name='MasterDiscountRate',
+            name="MasterDiscountRate",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('is_deleted', models.BooleanField(default=False)),
-                ('name', models.IntegerField(unique=True)),
+                ("id", models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name="ID")),
+                ("is_deleted", models.BooleanField(default=False)),
+                ("name", models.IntegerField(unique=True)),
             ],
             options={
-                'db_table': ec_base.common.constant.db_table.DBTable['MASTER_DISCOUNT_RATE'],
+                "db_table": ec_base.common.constant.db_table.DBTable["MASTER_DISCOUNT_RATE"],
             },
         ),
         migrations.CreateModel(
-            name='MasterDiscountType',
+            name="MasterDiscountType",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=255, unique=True)),
-                ('is_deleted', models.BooleanField(default=False)),
+                ("id", models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name="ID")),
+                ("name", models.CharField(max_length=255, unique=True)),
+                ("is_deleted", models.BooleanField(default=False)),
             ],
             options={
-                'db_table': ec_base.common.constant.db_table.DBTable['MASTER_DISCOUNT_TYPE'],
+                "db_table": ec_base.common.constant.db_table.DBTable["MASTER_DISCOUNT_TYPE"],
             },
         ),
         migrations.CreateModel(
-            name='MasterFileType',
+            name="MasterFileType",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=255, unique=True)),
-                ('is_deleted', models.BooleanField(default=False)),
+                ("id", models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name="ID")),
+                ("name", models.CharField(max_length=255, unique=True)),
+                ("is_deleted", models.BooleanField(default=False)),
             ],
             options={
-                'db_table': ec_base.common.constant.db_table.DBTable['MASTER_FILE_TYPE'],
+                "db_table": ec_base.common.constant.db_table.DBTable["MASTER_FILE_TYPE"],
             },
         ),
         migrations.CreateModel(
-            name='MasterOrderStatus',
+            name="MasterOrderStatus",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=255, unique=True)),
-                ('is_deleted', models.BooleanField(default=False)),
+                ("id", models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name="ID")),
+                ("name", models.CharField(max_length=255, unique=True)),
+                ("is_deleted", models.BooleanField(default=False)),
             ],
             options={
-                'db_table': ec_base.common.constant.db_table.DBTable['MASTER_ORDER_STATUS'],
+                "db_table": ec_base.common.constant.db_table.DBTable["MASTER_ORDER_STATUS"],
             },
         ),
         migrations.CreateModel(
-            name='MasterPaymentStatus',
+            name="MasterPaymentStatus",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=255, unique=True)),
-                ('is_deleted', models.BooleanField(default=False)),
+                ("id", models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name="ID")),
+                ("name", models.CharField(max_length=255, unique=True)),
+                ("is_deleted", models.BooleanField(default=False)),
             ],
             options={
-                'db_table': ec_base.common.constant.db_table.DBTable['MASTER_PAYMENT_STATUS'],
+                "db_table": ec_base.common.constant.db_table.DBTable["MASTER_PAYMENT_STATUS"],
             },
         ),
         migrations.CreateModel(
-            name='MasterProductCategory',
+            name="MasterProductCategory",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=255, unique=True)),
-                ('is_deleted', models.BooleanField(default=False)),
+                ("id", models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name="ID")),
+                ("name", models.CharField(max_length=255, unique=True)),
+                ("is_deleted", models.BooleanField(default=False)),
             ],
             options={
-                'db_table': ec_base.common.constant.db_table.DBTable['MASTER_PRODUCT_CATEGORY'],
+                "db_table": ec_base.common.constant.db_table.DBTable["MASTER_PRODUCT_CATEGORY"],
             },
         ),
         migrations.CreateModel(
-            name='MasterSex',
+            name="MasterSex",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=255, unique=True)),
-                ('is_deleted', models.BooleanField(default=False)),
+                ("id", models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name="ID")),
+                ("name", models.CharField(max_length=255, unique=True)),
+                ("is_deleted", models.BooleanField(default=False)),
             ],
             options={
-                'db_table': ec_base.common.constant.db_table.DBTable['MASTER_SEX'],
+                "db_table": ec_base.common.constant.db_table.DBTable["MASTER_SEX"],
             },
         ),
         migrations.CreateModel(
-            name='MasterShippingStatus',
+            name="MasterShippingStatus",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=255, unique=True)),
-                ('is_deleted', models.BooleanField(default=False)),
+                ("id", models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name="ID")),
+                ("name", models.CharField(max_length=255, unique=True)),
+                ("is_deleted", models.BooleanField(default=False)),
             ],
             options={
-                'db_table': ec_base.common.constant.db_table.DBTable['MASTER_SHIPPING_STATUS'],
+                "db_table": ec_base.common.constant.db_table.DBTable["MASTER_SHIPPING_STATUS"],
             },
         ),
         migrations.CreateModel(
-            name='MasterStaffType',
+            name="MasterStaffType",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=255, unique=True)),
-                ('is_deleted', models.BooleanField(default=False)),
+                ("id", models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name="ID")),
+                ("name", models.CharField(max_length=255, unique=True)),
+                ("is_deleted", models.BooleanField(default=False)),
             ],
             options={
-                'db_table': ec_base.common.constant.db_table.DBTable['MASTER_STAFF_TYPE'],
+                "db_table": ec_base.common.constant.db_table.DBTable["MASTER_STAFF_TYPE"],
             },
         ),
         migrations.CreateModel(
-            name='MasterDistrict',
+            name="MasterDistrict",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('is_deleted', models.BooleanField(default=False)),
-                ('name', models.CharField(max_length=255)),
-                ('city', models.ForeignKey(on_delete=django.db.models.deletion.RESTRICT,
-                                           related_name=ec_base.common.constant.db_table.DBTable[
-                                               'MASTER_DISTRICT'], to='master.mastercity')),
+                ("id", models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name="ID")),
+                ("is_deleted", models.BooleanField(default=False)),
+                ("name", models.CharField(max_length=255)),
+                (
+                    "city",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.RESTRICT,
+                        related_name=ec_base.common.constant.db_table.DBTable["MASTER_DISTRICT"],
+                        to="master.mastercity",
+                    ),
+                ),
             ],
             options={
-                'db_table': ec_base.common.constant.db_table.DBTable['MASTER_DISTRICT'],
-                'unique_together': {(ec_base.common.constant.db_fields.MasterDistrictFields['NAME'],
-                                     ec_base.common.constant.db_fields.MasterDistrictFields['CITY'])},
+                "db_table": ec_base.common.constant.db_table.DBTable["MASTER_DISTRICT"],
+                "unique_together": {
+                    (
+                        ec_base.common.constant.db_fields.MasterDistrictFields["NAME"],
+                        ec_base.common.constant.db_fields.MasterDistrictFields["CITY"],
+                    )
+                },
             },
         ),
     ]

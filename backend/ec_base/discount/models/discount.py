@@ -8,8 +8,16 @@ from ec_base.master.models import MasterDiscountType, MasterDiscountRate
 
 class Discount(DateTimeModel, Creator, Editor):
     is_deleted = models.BooleanField(default=False)
-    discount_type = models.ForeignKey(to=MasterDiscountType, on_delete=models.RESTRICT, related_name=DBTable.DISCOUNT, )
-    discount_rate = models.ForeignKey(to=MasterDiscountRate, on_delete=models.RESTRICT, related_name=DBTable.DISCOUNT, )
+    discount_type = models.ForeignKey(
+        to=MasterDiscountType,
+        on_delete=models.RESTRICT,
+        related_name=DBTable.DISCOUNT,
+    )
+    discount_rate = models.ForeignKey(
+        to=MasterDiscountRate,
+        on_delete=models.RESTRICT,
+        related_name=DBTable.DISCOUNT,
+    )
 
     class Meta:
         db_table = DBTable.DISCOUNT

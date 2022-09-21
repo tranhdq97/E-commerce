@@ -10,12 +10,12 @@ def check_regex(pattern, input_string):
 
 
 def str2bool(input_string):
-    return str(input_string).lower() in ('yes', 'true', 't', '1')
+    return str(input_string).lower() in ("yes", "true", "t", "1")
 
 
 def hash_file(file, block_size=65536):
     hasher = hashlib.md5()
-    for buf in iter(partial(file.read, block_size), b''):
+    for buf in iter(partial(file.read, block_size), b""):
         hasher.update(buf)
 
     return hasher.hexdigest()

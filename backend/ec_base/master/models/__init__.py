@@ -2,7 +2,6 @@ from ec_base.master.models.city import MasterCity
 from ec_base.master.models.customer_type import MasterCustomerType
 from ec_base.master.models.discount_rate import MasterDiscountRate
 from ec_base.master.models.discount_type import MasterDiscountType
-from ec_base.master.models.discount_type import MasterDiscountType
 from ec_base.master.models.district import MasterDistrict
 from ec_base.master.models.file_type import MasterFileType
 from ec_base.master.models.order_status import MasterOrderStatus
