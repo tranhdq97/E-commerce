@@ -1,13 +1,19 @@
 <script setup lang="ts">
-import { RouterView } from 'vue-router'
+import { computed, defineComponent } from '@vue/runtime-core'
+import { RouterView, useRouter } from 'vue-router'
+
+const router = useRouter()
+const currentRouteName = computed(() => router.currentRoute.value.name)
 </script>
 
 <template>
-  <header>
-    HEADER
-  </header>
+  <header
+    v-if="currentRouteName !== 'register' && currentRouteName !== 'login'"
+  ></header>
   <RouterView />
-  <footer>FOOTER</footer>
+  <footer
+    v-if="currentRouteName !== 'register' && currentRouteName !== 'login'"
+  >FOOTER</footer>
 </template>
 
 <style lang="scss" scoped>

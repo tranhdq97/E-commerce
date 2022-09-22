@@ -7,7 +7,7 @@ export default defineComponent({
       required: true,
       type: String
     },
-    placeHoder: {
+    placeHolder: {
       required: false,
       type: String
     },
@@ -31,7 +31,7 @@ export default defineComponent({
   <div class="wrapper">
     <div class="title">{{ title }}</div>
     <div class="entry-wrapper">
-      <input :type="isPasswordShowed?'text':inputType" :placeholder="placeHoder">
+      <input :type="isPasswordShowed?'text':inputType" :placeholder="placeHolder">
       <slot></slot>
     </div>
     <div class="warning" v-if="error">* {{ error }}</div>
@@ -40,28 +40,27 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .wrapper {
-  background: lightcyan;
-  padding: 1rem;
   display: flex;
   flex-direction: column;
-
+  min-width: 250px;
+  margin-bottom: var(--s-medium);
 }
 .title {
   text-transform: capitalize;
   color: var(--c-primary);
   font-size: var(--f-s-header-4);
   font-weight: var(--f-w-black);
-  padding:10px 0;
+  padding-bottom: var(--s-regular);
 }
 .entry-wrapper {
   background: var(--c-lightgrey);
   border-radius: var(--b-r-normal);
   display: flex;
   flex-direction: row;
-  height: 50px;
+  padding: var(--s-medium) var(--s-regular);
   input {
     width: 100%;
-    padding-left: 10px;
+    padding-left: var(--s-regular);
   }
 }
 .warning {

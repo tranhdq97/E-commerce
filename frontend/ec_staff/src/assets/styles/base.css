@@ -33,6 +33,10 @@
   --c-noticable: #14FE7F;
   --c-white: white;
 }
+:root {
+  --c-primaryHighlight-lighter: #9e99ff;
+  --c-primaryHighlight-darker: #3d33ff;
+}
 
 /* Font size */
 :root {
@@ -41,6 +45,7 @@
   --f-s-header-3: 24px;
   --f-s-header-4: 20px;
   --f-s-regular: 18px;
+  --f-s-semi-regular: 14px;
   --f-s-small: 12px;
 }
 
@@ -60,6 +65,12 @@
   --b-r-normal: 10px
 }
 
+/* Spacing */
+:root {
+  --s-large: 30px;
+  --s-medium: 15px;
+  --s-regular: 10px
+}
 
 .material-symbols-outlined {
   font-variation-settings:
