@@ -1,26 +1,28 @@
-<template>
-  <div class="app">
-    <SideBar />
-    <main>
-      <router-view />
-      <Footer></Footer>
-    </main>
-  </div>
-</template>
+<script setup lang="ts">
+import { computed } from '@vue/runtime-core'
+import { RouterView, useRouter } from 'vue-router'
+import { RouterEnum } from './interfaces/enum/Router';
+import Header from './components/other/Header.vue';
 
-<script setup>
-import Footer from "./components/Footer.vue";
-import SideBar from "./components/SideBar.vue";
+const router = useRouter()
+const currentRouteName = computed(() => router.currentRoute.value.name)
 </script>
 
-<style>
-.app {
-  display: flex;
-}
+<template>
+  <Header
+    v-if="currentRouteName !== RouterEnum.registerName && currentRouteName !== RouterEnum.loginName"
+  ></Header>
+  <RouterView />
+  <footer
+    v-if="currentRouteName !== RouterEnum.registerName && currentRouteName !== RouterEnum.loginName"
+  >FOOTER</footer>
+</template>
 
-main {
-  flex: 1 1 0;
-  overflow-y: scroll;
-  height: 100vh;
-}
+<style lang="scss" scoped>
+  footer {
+    background: lightgreen;
+    padding: 3rem;
+    text-align: center;
+    border: 1px solid lightsalmon;
+  }
 </style>

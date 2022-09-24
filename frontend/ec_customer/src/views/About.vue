@@ -1,20 +1,15 @@
 <template>
   <div class="page">
-    <label>AboutPage</label>
-    <p>Credit 2021</p>
+    <h1>This is an about page</h1>
   </div>
 </template>
 
-<script>
-import { defineComponent } from "vue";
-
-export default defineComponent({
-  name: "AboutPage",
-});
-</script>
-
-<style scoped>
-.page {
-  background: lightcoral;
+<style>
+@media (min-width: 1024px) {
+  .page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+  }
 }
 </style>
