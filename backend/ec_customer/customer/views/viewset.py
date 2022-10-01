@@ -8,7 +8,7 @@ from ec_base.common.constant import message
 from ec_base.common.constant.view_action import BaseViewAction
 from ec_base.common.utils.exceptions import PermissionDenied, APIErr
 from ec_base.customer.models import Customer
-from ec_customer.customer.serializers.customer import CustomerUpdateSlz, CustomerCreateSlz
+from ec_customer.customer.serializers.customer import CustomerUpdateSlz, CustomerCreateSlz, CustomerRetrieveSlz
 from ec_customer.customer.services.customer import CustomerSvc
 
 
@@ -18,7 +18,11 @@ class CustomerViewSet(mixins.CreateModelMixin, mixins.UpdateModelMixin, mixins.R
     queryset = Customer.objects.all()
 
     def get_serializer_class(self):
-        slz_switcher = {BaseViewAction.CREATE: CustomerCreateSlz, BaseViewAction.UPDATE: CustomerUpdateSlz}
+        slz_switcher = {
+            BaseViewAction.CREATE: CustomerCreateSlz,
+            BaseViewAction.UPDATE: CustomerUpdateSlz,
+            BaseViewAction.RETRIEVE: CustomerRetrieveSlz,
+        }
         slz = slz_switcher.get(self.action)
         if slz is None:
             raise APIErr(message.NO_SERIALIZER_MATCHED)
@@ -29,6 +33,7 @@ class CustomerViewSet(mixins.CreateModelMixin, mixins.UpdateModelMixin, mixins.R
         perm_switcher = {
             BaseViewAction.CREATE: (AllowAny,),
             BaseViewAction.UPDATE: (IsCustomer,),
+            BaseViewAction.RETRIEVE: (IsCustomer,),
         }
         self.permission_classes = perm_switcher.get(self.action)
         if self.permission_classes is None:

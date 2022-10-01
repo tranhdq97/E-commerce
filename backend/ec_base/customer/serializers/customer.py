@@ -2,11 +2,11 @@ from rest_framework import serializers
 
 from ec_base.common.constant.db_fields import CommonFields, UserFields
 from ec_base.customer.models import Customer
-from ec_base.user_info.serializers.user_info import UserInfoRetrieveSlz
+from ec_base.user_info.serializers.user_info import UserInfoBaseSlz, UserInfoRetrieveSlz
 
 
-class CustomerRetrieveSlz(serializers.ModelSerializer):
-    info = UserInfoRetrieveSlz(many=False)
+class CustomerBaseSlz(serializers.ModelSerializer):
+    info = UserInfoBaseSlz(many=False)
 
     class Meta:
         model = Customer

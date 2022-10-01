@@ -43,6 +43,7 @@ export default defineComponent({
         })
         router.push(RouterEnum.home)
       } catch (e) {
+        console.log(e)
         const errorDetail = e.response.data.detail
         if (typeof(errorDetail) == "string") {
           submitError.value = errorDetail

@@ -47,7 +47,7 @@ class FileManagementViewSet(
     def get_permissions(self):
         perm_switcher = {
             BaseViewAction.LIST: (IsSuperStaff | IsManager,),
-            BaseViewAction.RETRIEVE: (IsAuthenticated,),
+            BaseViewAction.RETRIEVE: (AllowAny,),
             BaseViewAction.CREATE: (IsAuthenticated,),
             BaseViewAction.UPDATE: (IsAuthenticated,),
             BaseViewAction.DESTROY: (IsAuthenticated,),

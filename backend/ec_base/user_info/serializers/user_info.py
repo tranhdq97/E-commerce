@@ -17,6 +17,7 @@ class UserInfoBaseSlz(serializers.ModelSerializer):
             UserInfoFields.LAST_NAME,
             UserInfoFields.DOB,
             UserInfoFields.PHONE_NUMBER,
+            UserInfoFields.PHOTO,
         )
 
 

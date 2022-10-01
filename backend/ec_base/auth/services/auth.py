@@ -4,8 +4,8 @@ from ec_base.auth.serializers.auth import ChangePasswordSlz
 from ec_base.common.constant import message
 from ec_base.common.constant.auth import UserEnum
 from ec_base.common.utils.decorator import log
-from ec_base.customer.serializers.customer import CustomerRetrieveSlz
-from ec_base.staff.serializers.staff import StaffRetrieveSlz
+from ec_base.customer.serializers.customer import CustomerBaseSlz
+from ec_base.staff.serializers.staff import StaffBaseSlz
 
 logger = logging.getLogger(__name__)
 
@@ -24,8 +24,8 @@ class AuthSvc:
     @log
     def get_me(user):
         slz_switcher = {
-            UserEnum.CUSTOMER: CustomerRetrieveSlz,
-            UserEnum.STAFF: StaffRetrieveSlz,
+            UserEnum.CUSTOMER: CustomerBaseSlz,
+            UserEnum.STAFF: StaffBaseSlz,
         }
         slz = slz_switcher.get(user.provider)(user)
         return slz.data

@@ -9,13 +9,23 @@ from ec_base.common.utils.exceptions import APIErr
 from ec_base.common.utils.strings import check_regex
 from ec_base.staff.models.staff import Staff
 from ec_base.user_info.models.user_info import UserInfo
-from ec_base.user_info.serializers.user_info import UserInfoCreateSlz, UserInfoUpdateSlz
+from ec_base.user_info.serializers.user_info import UserInfoCreateSlz, UserInfoUpdateSlz, UserInfoRetrieveSlz
 
 
 class StaffBaseSlz(serializers.ModelSerializer):
     class Meta:
         model = Staff
         fields = (CommonFields.ID,)
+
+
+class StaffRetrieveSlz(StaffBaseSlz):
+    info = UserInfoRetrieveSlz(many=False)
+
+    class Meta:
+        model = StaffBaseSlz.Meta.model
+        fields = StaffBaseSlz.Meta.fields + (UserFields.EMAIL, UserFields.INFO,) + (
+            CommonFields.CREATED_AT, CommonFields.UPDATED_AT,
+        )
 
 
 class StaffUpdateSlz(StaffBaseSlz, WritableNestedModelSerializer):
