@@ -46,7 +46,8 @@
   --f-s-header-3: 24px;
   --f-s-header-4: 20px;
   --f-s-regular: 18px;
-  --f-s-semi-regular: 14px;
+  --f-s-semi-regular: 16px;
+  --f-s-semi-small: 14px;
   --f-s-small: 12px;
 }
 
@@ -68,9 +69,11 @@
 
 /* Spacing */
 :root {
+  --s-extra-large: 60px;
   --s-large: 30px;
   --s-medium: 15px;
-  --s-regular: 10px
+  --s-regular: 10px;
+  --s-small: 5px;
 }
 
 .material-symbols-outlined {

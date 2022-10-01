@@ -1,22 +1,150 @@
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { RouterEnum } from '@/interfaces/enum/Router';
+import { AuthGetterEnum } from '@/interfaces/enum/Getter';
+import { computed, defineComponent, ref } from 'vue'
+import { useRouter } from 'vue-router';
+import { useStore } from 'vuex';
+import { AuthDispatchEnum } from '@/interfaces/enum/Dispatch';
 
 export default defineComponent({
   setup() {
-    
+    const store = useStore()
+    const router = useRouter()
+    const routerEnum = RouterEnum
+    const isAuthenticated = store.getters[AuthGetterEnum.isAuthenticated]
+    const isExpanded = ref(false)
+    const photo = computed(() => {
+      if (store.getters[AuthGetterEnum.stateUser] && store.getters[AuthGetterEnum.stateUser].photo) {
+        return store.getters[AuthGetterEnum.stateUser].photo
+      } else {
+        return null
+      }
+    })
+    const lang = ref('en')
+
+    const toLogin = () => router.push(routerEnum.login)
+    const closeBar = () => isExpanded.value = false
+    const toggleBar = () => isExpanded.value = !isExpanded.value
+    const logout = () => {
+      store.dispatch(AuthDispatchEnum.logout)
+      router.push(routerEnum.login)
+    }
+
+    return {
+      isAuthenticated,
+      routerEnum,
+      router,
+      photo,
+      lang,
+      toLogin,
+      logout,
+      isExpanded,
+      closeBar,
+      toggleBar,
+    }
   },
 })
 </script>
 
 <template>
-  <div class="wrapper">
-    <span class="material-symbols-outlined">person</span>
+  <div @click="toggleBar">
+    <div class="wrapper">
+      <div v-if="isAuthenticated" class="photo">
+        <img :src="photo" v-if="photo"/>
+        <div v-else class="default_photo">
+          <span class="material-symbols-outlined" >person</span>
+        </div>
+      </div>
+      <span @click="toLogin" v-else class="material-symbols-outlined" >person</span>
+    </div>
+    <div class="expand-mode" v-if="isExpanded" @mouseleave="closeBar">
+      <div class="item" @click="router.push(routerEnum.home)">
+        <span class="material-symbols-outlined">account_circle</span>
+        <div class="title">Profile</div>
+      </div>
+      <div class="item" @click="router.push(routerEnum.home)">
+        <span class="material-symbols-outlined">paid</span>
+        <div class="title">Transactions</div>
+      </div>
+      <div class="item" @click="router.push(routerEnum.home)">
+        <span class="material-symbols-outlined">language</span>
+        <div class="title">
+          Language: {{ lang.toUpperCase() }}
+        </div>
+      </div>
+      <div class="item" @click="router.push(routerEnum.home)">
+        <span class="material-symbols-outlined">settings</span>
+        <div class="title">Settings</div>
+      </div>
+      <div class="item" @click="logout">
+        <span class="material-symbols-outlined">logout</span>
+        <div class="title" @click="logout" >Logout</div>
+      </div>
+    </div>
   </div>
 </template>
 
 <style lang="scss" scoped>
 .wrapper {
-  display:flex;
+  cursor: pointer;
+  display: flex;
+}
+.photo {
+  width: 40px;
+  height: 40px;
+  display: flex;
   align-items:center;
+}
+img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  border: 2px solid var(--c-lightgrey);
+  background: var(--c-white);
+}
+.default_photo {
+  display: flex;
+  justify-content: center;
+  color: var(--c-grey);
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  background: var(--c-lightgrey);
+  align-items: center;
+  span {
+    font-size: 28px;
+  }
+}
+.expand-mode {
+  margin: var(--s-medium) 0;
+  padding: var(--s-small) 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 99;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-small);
+  margin-left: -60px;
+  transition: ease-out 1s;
+  .item {
+    cursor: pointer;
+    padding: var(--s-small) var(--s-regular);
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    font-size: var(--f-s-semi-small);
+    font-weight: var(--f-w-medium);
+    span {
+      height:100%;
+      margin-right: var(--s-small);
+    }
+    .title {
+      color: var(--c-white);
+      text-decoration: none;
+    }
+    &:hover {
+      background: rgba(50, 50, 50, 0.8)
+    }
+  }
 }
 </style>

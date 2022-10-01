@@ -8,7 +8,6 @@ export default {
   namespaced: true,
   actions: {
     async getFile({}, fileId: string) {
-      console.log("File ID ", fileId);
       const resp: File = await axios.get(FileManagementApiEnum.detail.replace(CommonApiEnum.id, fileId));
       return resp.data.file
     }

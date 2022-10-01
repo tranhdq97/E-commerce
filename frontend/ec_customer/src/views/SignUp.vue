@@ -84,6 +84,7 @@ export default defineComponent({
         :password="password"
         @updateEmail="(data) => email = data"
         @updatePassword="(data) => password = data"
+        @keyup.enter="register"
       >
         <EnterField
           title="Last Name"
@@ -93,7 +94,7 @@ export default defineComponent({
           :content="lastName"
           @updateContent="(data) => lastName = data"
         /> 
-        <SubmitButton name="Register" @click="register" />
+        <SubmitButton name="Register" @click="register"/>
         <div class="login-link">
           <router-link class="link" to="/login">Sign In</router-link>
         </div>

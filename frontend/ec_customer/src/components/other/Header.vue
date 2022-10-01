@@ -4,14 +4,25 @@ import HeaderNavigator from '../common/navigators/HeaderNavigator.vue'
 import { RouterEnum } from '@/interfaces/enum/Router';
 import HeaderUserIcon from './HeaderUserIcon.vue';
 import HeaderShoppingCartIcon from './HeaderShoppingCartIcon.vue';
+import SearchSection from './SearchSection.vue';
 
 export default defineComponent({
+  emits: ['openBar', 'closeBar'],
   setup() {
     const router = RouterEnum
+    const isSearching = ref(false)
 
-    return { router }
+    const openBar = () => isSearching.value = true
+    const closeBar = () => isSearching.value = false
+
+    return { 
+      router,
+      isSearching,
+      openBar,
+      closeBar,
+    }
   },
-  components: { HeaderNavigator, HeaderUserIcon, HeaderShoppingCartIcon }
+  components: { HeaderNavigator, HeaderUserIcon, HeaderShoppingCartIcon, SearchSection }
 })
 </script>
 
@@ -20,15 +31,18 @@ export default defineComponent({
     <router-link class="logo" :to="router.home">
       Vape Bros
     </router-link>
-    <div class="navigation">
-      <HeaderNavigator title="Home" :to="router.home" />
-      <HeaderNavigator title="Products" :to="router.products">
-        <div class="dropdown">
-          <span class="material-symbols-outlined">expand_more</span>
-        </div>
-      </HeaderNavigator>
-      <HeaderNavigator title="About" :to="router.about" />
-      <HeaderNavigator title="Contact" :to="router.contact" />
+    <div class="navigation-wrapper">
+      <div class="navigation" v-if="!isSearching">
+        <HeaderNavigator title="Home" :to="router.home" />
+        <HeaderNavigator title="Products" :to="router.products">
+          <div class="dropdown">
+            <span class="material-symbols-outlined">expand_more</span>
+          </div>
+        </HeaderNavigator>
+        <HeaderNavigator title="About" :to="router.about" />
+        <HeaderNavigator title="Contact" :to="router.contact" />
+      </div>
+      <SearchSection  @closeBar="closeBar" @openBar="openBar"/>
     </div>
     <div class="user-section">
       <HeaderUserIcon />
@@ -47,7 +61,7 @@ header {
   justify-content: space-between;
   padding: var(--s-regular) var(--s-large)
 }
-.navigation {
+.navigation, .navigation-wrapper {
   display: flex;
   justify-content: space-between;
   gap: var(--s-large);
@@ -68,7 +82,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: var(--s-medium);
+  gap: var(--s-large);
   color: var(--c-white);
 }
 </style>

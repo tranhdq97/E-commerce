@@ -88,6 +88,7 @@ export default defineComponent({
         :password="password"
         @updateEmail="(data) => email = data"
         @updatePassword="(data) => password = data"
+        @keyup.enter="login"
       >
         <div class="remember-forget">
           <div class="remember-me">
@@ -98,7 +99,7 @@ export default defineComponent({
             <router-link class="link" to="/forgot-password">Forgot password</router-link>
           </div>
         </div>
-        <SubmitButton name="Log In" @click="login" />
+        <SubmitButton name="Log In" @click="login"/>
         <div class="centered">-- or login with --</div>
         <div class="centered">
           <div class="google-icon" @click="clickGoogle">

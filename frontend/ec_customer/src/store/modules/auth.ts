@@ -44,7 +44,7 @@ export default {
     logout({ commit }) {
       VueCookies.remove(TokenEnum.access)
       VueCookies.remove(TokenEnum.refresh)
-      commit(AuthMutationEnum.setUser, user)
+      commit(AuthMutationEnum.removeUser)
     },
     async refreshToken({}) {
       const resp: Token = await axios.post(AuthApiEnum.authTokenRefresh, {

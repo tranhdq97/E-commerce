@@ -16,6 +16,7 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .wrapper {
+  cursor: pointer;
   display:flex;
   align-items:center;
 }
