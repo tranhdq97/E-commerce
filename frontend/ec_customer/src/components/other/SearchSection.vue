@@ -78,8 +78,6 @@ export default defineComponent({
 .search-icon {
   display: flex;
   align-items: center;
-}
-.material-symbols-outlined {
   cursor: pointer;
 }
 

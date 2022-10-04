@@ -1,7 +1,7 @@
 import axios from "axios"
 import type { File } from "@/interfaces/response/File"
-import { FileManagementApiEnum } from "@/interfaces/enum/api/FileManagement";
-import { CommonApiEnum } from "@/interfaces/enum/api/Common";
+import { FileManagementApiEnum } from "@/enum/api/FileManagement";
+import { CommonApiEnum } from "@/enum/api/Common";
 
 
 export default {

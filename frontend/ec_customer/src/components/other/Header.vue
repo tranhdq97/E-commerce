@@ -1,7 +1,7 @@
 <script lang="ts">
 import { defineComponent, ref } from 'vue'
 import HeaderNavigator from '../common/navigators/HeaderNavigator.vue'
-import { RouterEnum } from '@/interfaces/enum/Router';
+import { RouterEnum } from '@/enum/Router';
 import HeaderUserIcon from './HeaderUserIcon.vue';
 import HeaderShoppingCartIcon from './HeaderShoppingCartIcon.vue';
 import SearchSection from './SearchSection.vue';
@@ -33,14 +33,14 @@ export default defineComponent({
     </router-link>
     <div class="navigation-wrapper">
       <div class="navigation" v-if="!isSearching">
-        <HeaderNavigator title="Home" :to="router.home" />
-        <HeaderNavigator title="Products" :to="router.products">
+        <HeaderNavigator title="Home" :to="router.home" iconName="home"/>
+        <HeaderNavigator title="Products" :to="router.products" iconName="category">
           <div class="dropdown">
             <span class="material-symbols-outlined">expand_more</span>
           </div>
         </HeaderNavigator>
-        <HeaderNavigator title="About" :to="router.about" />
-        <HeaderNavigator title="Contact" :to="router.contact" />
+        <HeaderNavigator title="About" :to="router.about" iconName="info"/>
+        <HeaderNavigator title="Contact" :to="router.contact" iconName="contacts"/>
       </div>
       <SearchSection  @closeBar="closeBar" @openBar="openBar"/>
     </div>
@@ -77,6 +77,7 @@ header {
   font-weight: var(--f-w-semi-bold);
   text-decoration: none;
   padding-left: 50px;
+  white-space: nowrap;
 }
 .user-section {
   display: flex;

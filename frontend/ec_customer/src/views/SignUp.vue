@@ -6,9 +6,9 @@ import AuthForm from '@/components/layouts/AuthForm.vue'
 import SubmitButton from '@/components/common/buttons/SubmitButton.vue'
 import EnterField from '../components/common/fields/EnterField.vue'
 import { useRouter } from 'vue-router'
-import { AuthDispatchEnum } from '@/interfaces/enum/Dispatch'
-import { RouterEnum } from '@/interfaces/enum/Router'
-import { AuthEnum } from '@/interfaces/enum/Auth'
+import { AuthDispatchEnum } from '@/enum/Dispatch'
+import { RouterEnum } from '@/enum/Router'
+import { AuthEnum } from '@/enum/Auth'
 
 export default defineComponent({
   components: {

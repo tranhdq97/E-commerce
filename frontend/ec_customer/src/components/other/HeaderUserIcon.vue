@@ -1,10 +1,10 @@
 <script lang="ts">
-import { RouterEnum } from '@/interfaces/enum/Router';
-import { AuthGetterEnum } from '@/interfaces/enum/Getter';
-import { computed, defineComponent, ref } from 'vue'
-import { useRouter } from 'vue-router';
 import { useStore } from 'vuex';
-import { AuthDispatchEnum } from '@/interfaces/enum/Dispatch';
+import { useRouter } from 'vue-router';
+import { RouterEnum } from '@/enum/Router';
+import { AuthGetterEnum } from '@/enum/Getter';
+import { computed, defineComponent, ref } from 'vue'
+import { AuthDispatchEnum } from '@/enum/Dispatch';
 
 export default defineComponent({
   setup() {

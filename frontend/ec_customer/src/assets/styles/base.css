@@ -31,8 +31,9 @@
   --c-semi-grey: #c7c7c7;
   --c-grey: #999999;
   --c-secondaryHighlight: #FF5555;
-  --c-noticable: #14FE7F;
+  --c-remarkable: #14FE7F;
   --c-white: white;
+  --c-yellow: #FFD978;
 }
 :root {
   --c-primaryHighlight-lighter: #9e99ff;
@@ -64,7 +65,9 @@
 
 /* Border radius */
 :root {
-  --b-r-normal: 10px
+  --b-r-semi-large: 20px;
+  --b-r-normal: 10px;
+  --b-r-small: 5px;
 }
 
 /* Spacing */
@@ -76,12 +79,26 @@
   --s-small: 5px;
 }
 
+/* Border color */
+:root {
+  --b-c-regular: rgb(0, 0, 0, 0.1);
+}
+
+:root {
+  --b-s-small: 1px;
+  --b-s-regular: 2px;
+}
+
 .material-symbols-outlined {
   font-variation-settings:
   'FILL' 0,
   'wght' 800,
   'GRAD' 0,
   'opsz' 48
+}
+
+.material-icons {
+  cursor: default;
 }
 
 *,

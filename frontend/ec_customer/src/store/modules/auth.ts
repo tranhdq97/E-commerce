@@ -5,12 +5,12 @@ import type { AuthUser } from "@/interfaces/AuthUser";
 import type { LoginPayload } from "@/interfaces/LoginPayload";
 import type { Token } from "@/interfaces/response/Token";
 import type { GetMe } from "@/interfaces/response/GetMe";
-import { TokenEnum, TokenExpireEnum } from "@/interfaces/enum/Token";
-import { CustomerApiEnum } from "@/interfaces/enum/api/Customer";
-import { AuthApiEnum } from "@/interfaces/enum/api/Auth";
-import { Provider } from "@/interfaces/enum/Provider";
-import { AuthDispatchEnum, FileManagementDispatchEnum } from "@/interfaces/enum/Dispatch";
-import { AuthMutationEnum } from "@/interfaces/enum/Mutation";
+import { TokenEnum, TokenExpireEnum } from "@/enum/Token";
+import { CustomerApiEnum } from "@/enum/api/Customer";
+import { AuthApiEnum } from "@/enum/api/Auth";
+import { Provider } from "@/enum/Provider";
+import { AuthDispatchEnum, FileManagementDispatchEnum } from "@/enum/Dispatch";
+import { AuthMutationEnum } from "@/enum/Mutation";
 
 export interface AuthState {
   user: null | AuthUser

@@ -9,3 +9,9 @@ export enum AuthDispatchEnum {
 export enum FileManagementDispatchEnum {
   getFile = 'fileManagement/getFile'
 }
+
+export enum CartDispatchEnum {
+  addItemToCart = 'shoppingCart/addToCart',
+  removeItemFromCart = 'shoppingCart/removeFromCart',
+  toggleCart = 'shoppingCart/toggleCart',
+}

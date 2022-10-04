@@ -6,7 +6,7 @@ import SignUp from '@/views/SignUp.vue'
 import ForgotPassword from '@/views/ForgotPassword.vue'
 import Products from '@/views/Products.vue'
 import Contact from '@/views/Contact.vue'
-import { RouterEnum } from '@/interfaces/enum/Router'
+import { RouterEnum } from '@/enum/Router'
 
 
 const router = createRouter({
