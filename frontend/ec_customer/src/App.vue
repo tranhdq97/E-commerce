@@ -1,9 +1,8 @@
 <script setup lang="ts">
 import { computed } from '@vue/runtime-core'
 import { RouterView, useRouter } from 'vue-router'
-import Header from './components/other/Header.vue';
+import Header from './components/other/header/Header.vue';
 import { RouterEnum } from './enum/Router';
-import SideBar from './components/other/SideBar.vue';
 
 const router = useRouter()
 const currentRouteName = computed(() => router.currentRoute.value.name)
@@ -11,17 +10,14 @@ const currentRouteName = computed(() => router.currentRoute.value.name)
 </script>
 
 <template>
-  <div class="app-wrapper">
-    <div class="main-wrapper">
-      <Header
-        v-if="currentRouteName !== RouterEnum.registerName && currentRouteName !== RouterEnum.loginName"
-      ></Header>
-      <RouterView />
-      <footer
-        v-if="currentRouteName !== RouterEnum.registerName && currentRouteName !== RouterEnum.loginName"
-      >FOOTER</footer>
-    </div>
-    <SideBar />
+  <div class="main-wrapper">
+    <Header
+      v-if="![RouterEnum.registerName, RouterEnum.loginName].includes(currentRouteName)"
+    ></Header>
+    <RouterView />
+    <footer
+      v-if="![RouterEnum.registerName, RouterEnum.loginName].includes(currentRouteName)"
+    >FOOTER</footer>
   </div>
 </template>
 
@@ -34,11 +30,12 @@ footer {
 }
 .main-wrapper {
   width: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
-}
-.app-wrapper {
-  display: flex;
-  flex-direction: row;
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 </style>

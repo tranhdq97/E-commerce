@@ -29,22 +29,28 @@ export default {
     removeFromCart({ commit }, item:ItemType) {
       commit(CartMutationEnum.removeFromCart.replace(CartMutationEnum.module, ''), item)
     },
-    toggleCart({ commit } ) {
+    toggleCart({ commit, state } ) {
+      console.log('---> ', state.isOpenCart)
       commit(CartMutationEnum.toggleCart.replace(CartMutationEnum.module, ''))
     },
+    closeCart({ state }) {
+      state.isOpenCart = false
+    }
   },
   mutations: {
     addToCart: (state: cartState, item: ItemType) => {
+      item.orderQuantity += 1
       state.itemList.push(item)
     },
     removeFromCart: (state: cartState, item: ItemType) => {
+      item.orderQuantity = 0
       state.itemList = state.itemList.filter(obj => obj.id !== item.id)
     },
     increaseQuantity: (state: cartState, item: ItemType) => {
-      state.itemList.map(obj => obj === item ? item.quantity++ : item)
+      state.itemList.map(obj => obj === item && obj.orderQuantity < obj.quantity ? obj.orderQuantity += 1 : obj)
     },
     decreaseQuantity: (state: cartState, item: ItemType) => {
-      state.itemList.map(obj => obj === item && item.quantity > 0 ? item.quantity-- : item)
+      state.itemList.map(obj => obj === item && obj.orderQuantity > 1 ? obj.orderQuantity -= 1 : obj)
     },
     toggleCart: (state: cartState) => {
       state.isOpenCart = !state.isOpenCart

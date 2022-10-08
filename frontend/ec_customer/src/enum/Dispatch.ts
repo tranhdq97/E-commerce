@@ -14,4 +14,5 @@ export enum CartDispatchEnum {
   addItemToCart = 'shoppingCart/addToCart',
   removeItemFromCart = 'shoppingCart/removeFromCart',
   toggleCart = 'shoppingCart/toggleCart',
+  closeCart = 'shoppingCart/closeCart',
 }

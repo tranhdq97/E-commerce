@@ -1,8 +1,8 @@
 export interface ItemType {
-  array_index: null | number,
   id: number,
   name: string,
   quantity: number,
+  orderQuantity: number,
   photo: null | string,
   unitPrice: number,
   isAdded: boolean

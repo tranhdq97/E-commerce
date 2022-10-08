@@ -39,6 +39,9 @@
   --c-primaryHighlight-lighter: #9e99ff;
   --c-primaryHighlight-darker: #3d33ff;
 }
+:root {
+  --c-transparent: rgba(0, 0, 0, 0.6);
+}
 
 /* Font size */
 :root {
@@ -89,7 +92,13 @@
   --b-s-regular: 2px;
 }
 
+/* Transition time */
+:root {
+  --t-regular: ease-in 0.5s;
+}
+
 .material-symbols-outlined {
+  cursor: pointer;
   font-variation-settings:
   'FILL' 0,
   'wght' 800,

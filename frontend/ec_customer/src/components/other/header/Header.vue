@@ -1,10 +1,10 @@
 <script lang="ts">
 import { defineComponent, ref } from 'vue'
-import HeaderNavigator from '../common/navigators/HeaderNavigator.vue'
 import { RouterEnum } from '@/enum/Router';
 import HeaderUserIcon from './HeaderUserIcon.vue';
 import HeaderShoppingCartIcon from './HeaderShoppingCartIcon.vue';
 import SearchSection from './SearchSection.vue';
+import HeaderNavigator from '@/components/common/navigators/HeaderNavigator.vue';
 
 export default defineComponent({
   emits: ['openBar', 'closeBar'],
@@ -53,8 +53,8 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 header {
-  background: transparent;
-  z-index: 100;
+  background: rgb(0, 0, 0, 0.4);
+  z-index: 98;
   width: 100%;
   position: fixed;
   display: flex;

@@ -125,7 +125,6 @@ img {
   flex-direction: column;
   gap: var(--s-small);
   margin-left: -60px;
-  transition: ease-out 1s;
   .item {
     cursor: pointer;
     padding: var(--s-small) var(--s-regular);
