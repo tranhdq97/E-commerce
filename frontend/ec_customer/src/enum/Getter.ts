@@ -4,9 +4,15 @@ export enum AuthGetterEnum {
 }
 
 export enum CartGetterEnum {
-  numberOfUniqueItems = 'shoppingCart/numberOfUniqueItems',
-  ItemAmount = 'shoppingCart/ItemAmount',
-  itemList = 'shoppingCart/itemList',
-  currency = 'shoppingCart/currency',
   isOpenCart = 'shoppingCart/isOpenCart',
+}
+
+export enum ItemListGetterEnum {
+  itemList = 'itemList/itemList',
+  currency = 'itemList/currency',
+  addedItemList = 'itemList/addedItemList',
+  isMaximun = 'itemList/isMaximun',
+  isMinimum = 'itemList/isMinimum',
+  orderFactor = 'itemList/orderFactor',
+  isDesc = 'itemList/isDesc',
 }

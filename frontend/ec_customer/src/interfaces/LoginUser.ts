@@ -1,6 +1,6 @@
 interface LoginUser {
-  email: string
-  password: string
+  email: string,
+  password: string,
   provider: string
 }
 

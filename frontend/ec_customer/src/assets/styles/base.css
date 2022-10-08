@@ -40,7 +40,7 @@
   --c-primaryHighlight-darker: #3d33ff;
 }
 :root {
-  --c-transparent: rgba(0, 0, 0, 0.6);
+  --c-transparent: rgba(0, 0, 0, 0.8);
 }
 
 /* Font size */
@@ -95,6 +95,17 @@
 /* Transition time */
 :root {
   --t-regular: ease-in 0.5s;
+}
+
+/* Border size */
+:root {
+  --b-s-small: 1px;
+  --b-s-regular: 3px;
+}
+
+:root {
+  --bannerHeight: 500px;
+  --headerHeight: 71px;
 }
 
 .material-symbols-outlined {

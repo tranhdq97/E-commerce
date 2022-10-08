@@ -1,33 +1,35 @@
 <script lang="ts">
-import { CartDispatchEnum } from '@/enum/Dispatch'
-import { CartMutationEnum } from '@/enum/Mutation'
-import { defineComponent } from 'vue'
+import { ItemListDispatchEnum } from '@/enum/Dispatch'
+import { ItemListGetterEnum } from '@/enum/Getter'
+import { computed, defineComponent } from 'vue'
 import { useStore } from 'vuex'
 
 export default defineComponent({
   props: {
     item: {
       required: true,
-      type: Object
+      type: Object,
     }
   },
-  setup(props ) {
+  setup(props) {
     const store = useStore()
-
+    const currency = computed(() => store.getters[ItemListGetterEnum.currency])
+    
     const increaseQuantity  = () => {
-      store.commit(CartMutationEnum.increaseItemQuantity, props.item)
+      store.dispatch(ItemListDispatchEnum.increaseQuantity, props.item)
     }
     const decreaseQuantity = () => {
-      store.commit(CartMutationEnum.decreaseItemQuantity, props.item)
+      store.dispatch(ItemListDispatchEnum.decreaseQuantity, props.item)
     }
     const resetQuantity = () => {
-
+      store.dispatch(ItemListDispatchEnum.resetQuantity, props.item)
     }
     const removeItem = () => {
-      
+      store.dispatch(ItemListDispatchEnum.removeFromCart, props.item)
     }
     
     return {
+      currency,
       increaseQuantity,
       decreaseQuantity,
       resetQuantity,
@@ -41,14 +43,11 @@ export default defineComponent({
   <div class="item-wrapper">
     <img :src="item.photo" />
     <div class="purchase-info">
-      <div>
-        <div class="title">{{ item.name }}</div>
-      </div>
-      
+      <div class="title">{{ item.name }}</div>
       <div class="quantity">
         <div class="button">
-          <span class="material-symbols-outlined">delete_forever</span>
-          <span class="material-symbols-outlined">autorenew</span>
+          <span class="material-symbols-outlined btn" @click="removeItem">delete_forever</span>
+          <span class="material-symbols-outlined btn" @click="resetQuantity">autorenew</span>
         </div>
         <div class="quantity-manipulation">
           <div class="btn" @click="decreaseQuantity">-</div>
@@ -57,9 +56,9 @@ export default defineComponent({
         </div>
       </div>
       <div class="money-wrapper">
-        <span class="material-symbols-outlined">money</span>
+        <span class="material-symbols-outlined">payments</span>
         <div class="money">{{ item.orderQuantity * item.unitPrice }}</div>
-        <div class="currency">{{ item.currency }}</div>
+        <div class="currency">{{ currency }}</div>
       </div>
     </div>
   </div>
@@ -69,53 +68,69 @@ export default defineComponent({
 .item-wrapper {
   display: flex;
   flex-direction: row;
+  align-items: center;
   padding: var(--s-medium);
-  border-bottom: 1px solid var(--c-grey);
+  border-bottom: var(--b-s-small) solid var(--c-grey);
+  font-size: var(--f-s-semi-small);
+  font-weight: var(--f-w-medium);
+
+  &:hover {
+    background-color: rgb(255, 255, 255, 0.1);
+  }
 }
 img {
-  width: 80px;
-  height: 80px;
+  cursor: pointer;
+  width: 90px;
+  height: 90px;
   border-radius: var(--b-r-small);
   margin-right: var(--s-medium);
 }
 .title {
   display: flex;
-  width: 100%;
+  justify-content: stretch;
   overflow-wrap: break-word;
-  font-size: var(--f-s-semi-small);
-  font-weight: var(--f-w-medium);
 }
 .material-symbols-outlined {
-  border-radius: var(--b-r-small);
-  border: 1px solid white;
-  padding: var(--s-small);
-  margin-right: var(--s-small);
+  &.btn {
+    border-radius: var(--b-r-small);
+    border: var(--b-s-small) solid var(--c-grey);
+    padding: var(--s-small);
+    margin-right: var(--s-small);
+  }
 }
 .purchase-info {
-  width: 220px;
   display: flex;
+  flex-grow: 2;
   flex-direction: column;
-  justify-content: space-between;
+  gap: var(--s-small);
 }
 .quantity {
-  width: 100%;
   display: flex;
+  justify-content: space-between;
 }
 .quantity-manipulation {
   display: flex;
   gap: var(--s-medium);
   align-items: center;
   border-radius: var(--b-r-small);
-  border: 1px solid white;
+  border: var(--b-s-small) solid white;
   padding: 0 var(--s-medium);
-}
-.btn {
-  cursor: pointer;
+  .btn {
+    cursor: pointer;
+  }
 }
 .money-wrapper {
   display: flex;
   flex-direction: row;
   align-content: center;
+  align-items: stretch;
+  .material-symbols-outlined {
+    cursor: default;
+  }
+  .money {
+    margin-right: var(--s-small);
+    text-align: right;
+    flex-grow: 1;
+  }
 }
-
 </style>

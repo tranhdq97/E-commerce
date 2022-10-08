@@ -11,8 +11,16 @@ export enum FileManagementDispatchEnum {
 }
 
 export enum CartDispatchEnum {
-  addItemToCart = 'shoppingCart/addToCart',
   removeItemFromCart = 'shoppingCart/removeFromCart',
   toggleCart = 'shoppingCart/toggleCart',
   closeCart = 'shoppingCart/closeCart',
+}
+
+export enum ItemListDispatchEnum {
+  addToCart = 'itemList/addToCart',
+  removeFromCart = 'itemList/removeFromCart',
+  increaseQuantity = 'itemList/increaseQuantity',
+  decreaseQuantity = 'itemList/decreaseQuantity',
+  resetQuantity = 'itemList/resetQuantity',
+  orderItemList = 'itemList/orderItemList',
 }

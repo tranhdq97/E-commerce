@@ -52,7 +52,7 @@ export default defineComponent({
   display: flex;
 }
 span {
-  font-size: var(--f-s-header-3);
+  font-size: var(--f-s-semi-regular);
   color: var(--c-yellow);
 }
 </style>

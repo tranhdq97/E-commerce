@@ -5,9 +5,5 @@ export enum AuthMutationEnum {
 
 export enum CartMutationEnum {
   module = 'shoppingCart/',
-  addToCart = 'shoppingCart/addToCart',
-  removeFromCart = 'shoppingCart/removeFromCart',
-  increaseItemQuantity = 'shoppingCart/increaseQuantity',
-  decreaseItemQuantity = 'shoppingCart/decreaseQuantity',
-  toggleCart = 'shoppingCart/toggleCart',
+  toggleCart = 'toggleCart',
 }

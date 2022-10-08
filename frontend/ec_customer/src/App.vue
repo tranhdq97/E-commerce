@@ -17,17 +17,11 @@ const currentRouteName = computed(() => router.currentRoute.value.name)
     <RouterView />
     <footer
       v-if="![RouterEnum.registerName, RouterEnum.loginName].includes(currentRouteName)"
-    >FOOTER</footer>
+    ></footer>
   </div>
 </template>
 
 <style lang="scss" scoped>
-footer {
-  background: lightgreen;
-  padding: 3rem;
-  text-align: center;
-  border: 1px solid lightsalmon;
-}
 .main-wrapper {
   width: 100%;
   height: 100vh;

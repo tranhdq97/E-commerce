@@ -1,29 +1,27 @@
 <script lang="ts">
 import { CartDispatchEnum } from '@/enum/Dispatch'
-import { CartGetterEnum } from '@/enum/Getter'
+import { CartGetterEnum, ItemListGetterEnum } from '@/enum/Getter'
 import { computed, defineComponent, ref } from 'vue'
 import { useStore } from 'vuex'
 import CartBar from './cart/CartBar.vue'
 
 export default defineComponent({
-    setup() {
-        const store = useStore();
-        const numberOfUniqueItems = computed(() => store.getters[CartGetterEnum.numberOfUniqueItems]);
-        const currency = computed(() => store.getters[CartGetterEnum.currency]);
-        const itemList = computed(() => store.getters[CartGetterEnum.itemList]);
-        const isOpenCart = computed(() => store.getters[CartGetterEnum.isOpenCart]);
-        const toggleCart = () => {
-            store.dispatch(CartDispatchEnum.toggleCart);
-        };
-        return {
-            currency,
-            itemList,
-            isOpenCart,
-            numberOfUniqueItems,
-            toggleCart,
-        };
-    },
-    components: { CartBar }
+  setup() {
+    const store = useStore();
+    const addedItemList = computed(() => store.getters[ItemListGetterEnum.addedItemList]);
+    const currency = computed(() => store.getters[ItemListGetterEnum.currency]);
+    const isOpenCart = computed(() => store.getters[CartGetterEnum.isOpenCart]);
+    const toggleCart = () => {
+      store.dispatch(CartDispatchEnum.toggleCart);
+    };
+    return {
+      currency,
+      isOpenCart,
+      addedItemList,
+      toggleCart,
+    };
+  },
+  components: { CartBar }
 })
 </script>
 
@@ -35,7 +33,7 @@ export default defineComponent({
     >
       <span class="material-symbols-outlined">shopping_cart</span>
     </div>
-    <div class="number">{{ numberOfUniqueItems }}</div>
+    <div class="number">{{ addedItemList.length }}</div>
     <CartBar />
   </div>
 </template>
@@ -52,13 +50,12 @@ export default defineComponent({
   border-radius: var(--b-r-small);
 }
 .isOpenCart {
-  background: var(--c-primary);
-  transition: ease-in 0.4s;
+  background: var(--c-transparent);
 }
 .number {
   color: var(--c-primary);
   font-weight: var(--f-w-semi-bold);
-  margin-left: -5px;
+  margin-left: -2px;
   margin-top: 20px;
   background: var(--c-remarkable);
   position: absolute;

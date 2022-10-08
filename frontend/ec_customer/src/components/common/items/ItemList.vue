@@ -1,33 +1,16 @@
 <script lang="ts">
-import { CartDispatchEnum } from '@/enum/Dispatch';
-import type { ItemType } from '@/interfaces/Cart';
-import { defineComponent } from 'vue'
+import { ItemListGetterEnum } from '@/enum/Getter';
+import { computed, defineComponent } from 'vue'
 import { useStore } from 'vuex';
 import Item from './Item.vue'
 
 export default defineComponent({
-  emits: ['addToCart', 'removeFromCart'],
-  props: {
-    itemList: {
-      required: true,
-      type: Array
-    }
-  },
   setup() {
     const store = useStore()
-
-    const addItemToCart = (item: ItemType) => {
-      item.isAdded = true
-      store.dispatch(CartDispatchEnum.addItemToCart, item);
-    };
-    const removeItemFromCart = (item: ItemType) => {
-      item.isAdded = false
-      store.dispatch(CartDispatchEnum.removeItemFromCart, item);
-    };
+    const itemList = computed(() => store.getters[ItemListGetterEnum.itemList])
 
     return {
-      addItemToCart,
-      removeItemFromCart,
+      itemList,
     }
   },
   components: { Item }
@@ -40,12 +23,20 @@ export default defineComponent({
       v-for="item in itemList" 
       :key="item.id" 
       :item="item"
-      @addToCart="addItemToCart(item)"
-      @removeFromCart="removeItemFromCart(item)"
     />
+    <div class="last-item"></div>
   </div>
 </template>
 
 <style lang="scss" scoped>
+.item-list-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: var(--s-large);
+}
+.last-item {
+  flex-grow: 1;
+}
 
 </style>

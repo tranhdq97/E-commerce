@@ -1,5 +1,8 @@
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { ItemListDispatchEnum } from '@/enum/Dispatch'
+import { ItemListGetterEnum } from '@/enum/Getter'
+import { computed, defineComponent } from 'vue'
+import { useStore } from 'vuex'
 import Star from './Star.vue'
 
 export default defineComponent({
@@ -9,8 +12,24 @@ export default defineComponent({
       type: Object,
     }
   },
-  emits: ['addToCart', 'removeFromCart'],
-  setup() {
+  setup(props) {
+    const store = useStore()
+    const isRunOutQuantity = computed(() => props.item.quantity === 0)
+    const currency = computed(() => store.getters[ItemListGetterEnum.currency])
+
+    const addToCart = () => {
+      store.dispatch(ItemListDispatchEnum.addToCart, props.item)
+    }
+    const removeFromCart = () => {
+      store.dispatch(ItemListDispatchEnum.removeFromCart, props.item)
+    }
+    
+    return {
+      currency,
+      isRunOutQuantity,
+      addToCart,
+      removeFromCart,
+    }
   },
   components: { Star }
 })
@@ -18,31 +37,36 @@ export default defineComponent({
 
 <template>
   <div class="wrapper">
-    <div class="photo">
-      <img :src="item.photo" alt="photo" />
-    </div>
+    <img :src="item.photo" alt="photo" />
     <div class="info-wrapper">
       <div class="name">{{ item.name }}</div>
       <div class="product-info">
         <div class="product-detail">
-          <Star :numberStars="item.numStars" :numberVotes="item.numberVotes"/>
-          <div class="info-text">Price: {{ item.unitPrice }} {{ item.currency }}</div>
-          <div class="info-text">No.Orders: {{ item.numberOrders }}</div>
+          <Star :numberStars="item.numStars" :numberVotes="item.numVotes"/>
+          <div class="info-text">Quantity: <span>{{ item.quantity }}</span></div>
+          <div class="info-text">Price: <span>{{ item.unitPrice }} {{ currency }}</span></div>
+          <div class="info-text">No.Orders: <span>{{ item.numOrders }}</span></div>
         </div>
         <div class="add-remove">
           <span
-            v-if="item.isAdded" 
+            v-if="!isRunOutQuantity && item.isAdded"
             class="material-icons remove"
-            @click="$emit('removeFromCart')"
+            @click="removeFromCart"
           >
             library_add_check
           </span>
           <span
-            v-else
+            v-if="!isRunOutQuantity && !item.isAdded"
             class="material-icons add"
-            @click="$emit('addToCart')"
+            @click="addToCart"
           >
             library_add
+          </span>
+          <span
+            class="material-icons run-out"
+            v-if="isRunOutQuantity"
+          >
+            remove_shopping_cart
           </span>
         </div>
       </div>
@@ -54,15 +78,14 @@ export default defineComponent({
 .wrapper {
   display: flex;
   flex-direction: column;
-  width: 280px;
+  width: 220px;
   border-radius: var(--b-r-semi-large);
   border: var(--b-s-regular) solid var(--b-c-regular);
 }
 .info-wrapper {
-  padding-bottom: var(--s-regular);
   .name {
     text-align: center;
-    font-size: var(--f-s-header-4);
+    font-size: var(--f-s-semi-regular);
     font-weight: var(--f-w-extra-bold);
     text-transform: capitalize;
     color: var(--c-primary);
@@ -71,18 +94,23 @@ export default defineComponent({
   }
 }
 .add-remove {
-  margin-right: var(--s-medium);
+  padding: 0 var(--s-medium);
   display: flex;
+  border-left: var(--b-s-small) solid var(--b-c-regular);
   span {
     cursor: pointer;
     display: flex;
-    font-size: var(--f-s-header-1);
+    font-size: var(--f-s-header-2);
     align-items: center;
     &.add {
       color: var(--c-secondary);
     }
     &.remove {
       color: var(--c-remarkable);
+    }
+    &.run-out {
+      color: var(--c-grey);
+      cursor: default;
     }
   }
 }
@@ -91,24 +119,23 @@ export default defineComponent({
   justify-content: space-between;
   flex-direction: row;
 }
-.photo {
-  width: inherit;
-  height: 280px;
-  align-items: center;
-  justify-content: center;
-  img {
-    border-top-left-radius: var(--b-r-semi-large);
-    border-top-right-radius: var(--b-r-semi-large);
-    width: 276px;
-    height: 279px;
-  }
+img {
+  border-top-left-radius: var(--b-r-semi-large);
+  border-top-right-radius: var(--b-r-semi-large);
+  width: 214px;
+  height: 214px;
 }
 .info-text {
+  display: flex;
   color: var(--c-secondary);
-  font-size: var(--f-s-semi-small);
+  font-size: var(--f-s-small);
   font-weight: var(--f-w-semi-bold);
+  span {
+    flex-grow: 1;
+    text-align: right;
+  }
 }
 .product-detail {
-  margin-left: var(--s-regular);
+  margin:0 0 var(--s-small) var(--s-regular);
 }
 </style>

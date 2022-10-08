@@ -4,6 +4,6 @@ export enum TokenEnum {
 }
 
 export enum TokenExpireEnum {
-  access = 10,
+  access = 10 * 60,
   refresh = 100 * 24 * 60 * 60
 }
