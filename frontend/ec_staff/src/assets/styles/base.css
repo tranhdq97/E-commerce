@@ -1,0 +1,104 @@
+/* color palette from <https://github.com/vuejs/theme> */
+:root {
+  --vt-c-white: #ffffff;
+  --vt-c-white-soft: #f8f8f8;
+  --vt-c-white-mute: #f2f2f2;
+
+  --vt-c-black: #181818;
+  --vt-c-black-soft: #222222;
+  --vt-c-black-mute: #282828;
+
+  --vt-c-indigo: #2c3e50;
+
+  --vt-c-divider-light-1: rgba(60, 60, 60, 0.29);
+  --vt-c-divider-light-2: rgba(60, 60, 60, 0.12);
+  --vt-c-divider-dark-1: rgba(84, 84, 84, 0.65);
+  --vt-c-divider-dark-2: rgba(84, 84, 84, 0.48);
+
+  --vt-c-text-light-1: var(--vt-c-indigo);
+  --vt-c-text-light-2: rgba(60, 60, 60, 0.66);
+  --vt-c-text-dark-1: var(--vt-c-white);
+  --vt-c-text-dark-2: rgba(235, 235, 235, 0.64);
+}
+
+/* Color palette */
+:root {
+  --c-error: #FF5555;
+  --c-primary: #1C1B1F;
+  --c-secondary: #3F3D56;
+  --c-primaryHighlight: #6C63FF;
+  --c-lightgrey: #E6E6E6;
+  --c-grey: #999999;
+  --c-secondaryHighlight: #FF5555;
+  --c-noticable: #14FE7F;
+  --c-white: white;
+}
+:root {
+  --c-primaryHighlight-lighter: #9e99ff;
+  --c-primaryHighlight-darker: #3d33ff;
+}
+
+/* Font size */
+:root {
+  --f-s-header-1: 48px;
+  --f-s-header-2: 32px;
+  --f-s-header-3: 24px;
+  --f-s-header-4: 20px;
+  --f-s-regular: 18px;
+  --f-s-semi-regular: 14px;
+  --f-s-small: 12px;
+}
+
+/* Font weight */
+:root {
+  --f-w-black: 900;
+  --f-w-extra-bold: 800;
+  --f-w-semi-bold: 600;
+  --f-w-medium: 500;
+  --f-w-regular: 400;
+  --f-w-exta-light: 200;
+  --f-w-thin: 100;
+}
+
+/* Border radius */
+:root {
+  --b-r-normal: 10px
+}
+
+/* Spacing */
+:root {
+  --s-large: 30px;
+  --s-medium: 15px;
+  --s-regular: 10px
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 800,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  position: relative;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--color-text);
+  background: var(--color-background);
+  transition: color 0.5s, background-color 0.5s;
+  line-height: 1.6;
+  font-family: 'Poppins', sans-serif;
+  font-weight: var(--f-w-regular);
+  font-size: var(--f-s-regular);
+  color: var(--c-primary);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

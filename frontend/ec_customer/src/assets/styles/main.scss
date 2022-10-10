@@ -1,0 +1,9 @@
+@import "./base.css";
+
+input {
+  background: transparent;
+  font-weight: var(--f-w-regular);
+  font-size: var(--f-s-regular);
+  outline: none;
+  border: none;
+}

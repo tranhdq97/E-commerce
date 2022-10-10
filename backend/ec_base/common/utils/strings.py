@@ -24,4 +24,4 @@ def hash_file(file, block_size=65536):
 def get_file_field_directory(instance, filename):
     instance.file.open()
     filename_base, filename_ext = os.path.splitext(filename)
-    return f'{instance.type_id}/{datetime.today().strftime("%Y/%m/%d")}/{hash_file(instance.file)}.{filename_ext}'
+    return f'{instance.type_id}/{datetime.today().strftime("%Y/%m/%d")}/{filename_base}{filename_ext}'

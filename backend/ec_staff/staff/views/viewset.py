@@ -8,16 +8,11 @@ from ec_base.common.constant import message
 from ec_base.common.constant.view_action import BaseViewAction
 from ec_base.common.utils.exceptions import PermissionDenied, APIErr
 from ec_base.staff.models import Staff
-from ec_staff.staff.serializers.staff import StaffUpdateSlz, StaffCreateSlz
+from ec_staff.staff.serializers.staff import StaffUpdateSlz, StaffCreateSlz, StaffRetrieveSlz
 from ec_staff.staff.services.staff import StaffSvc
 
 
-class StaffViewSet(
-    mixins.CreateModelMixin,
-    mixins.UpdateModelMixin,
-    mixins.RetrieveModelMixin,
-    GenericViewSet,
-):
+class StaffViewSet(mixins.CreateModelMixin, mixins.UpdateModelMixin, mixins.RetrieveModelMixin, GenericViewSet):
     permission_classes = (AllowAny,)
     serializer_class = StaffCreateSlz
     queryset = Staff.objects.all()
@@ -26,6 +21,7 @@ class StaffViewSet(
         slz_switcher = {
             BaseViewAction.CREATE: StaffCreateSlz,
             BaseViewAction.UPDATE: StaffUpdateSlz,
+            BaseViewAction.RETRIEVE: StaffRetrieveSlz,
         }
         slz = slz_switcher.get(self.action)
         if slz is None:
@@ -37,6 +33,7 @@ class StaffViewSet(
         perm_switcher = {
             BaseViewAction.CREATE: (AllowAny,),
             BaseViewAction.UPDATE: (IsStaff,),
+            BaseViewAction.RETRIEVE: (IsStaff,),
         }
         self.permission_classes = perm_switcher.get(self.action)
         if self.permission_classes is None:
