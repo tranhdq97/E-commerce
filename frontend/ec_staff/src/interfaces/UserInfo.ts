@@ -1,5 +1,5 @@
 interface UserInfo {
-  id: null | number
+  id: null | number,
   lastName: string,
   firstName: null | string,
 }

@@ -78,7 +78,7 @@ export default defineComponent({
   }
   .submit-error {
     text-align: center;
-    font-size: var(--f-s-semi-regular);
+    font-size: var(--f-s-semi-small);
     font-weight: var(--f-w-extra-bold);
     color: var(--c-error);
   }

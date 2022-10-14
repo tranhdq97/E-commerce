@@ -4,12 +4,5 @@
   </div>
 </template>
 
-<style>
-@media (min-width: 1024px) {
-  .page {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-  }
-}
+<style lang="scss" scoped>
 </style>

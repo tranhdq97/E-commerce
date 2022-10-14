@@ -6,9 +6,9 @@ import Auth from '@/components/layouts/Auth.vue'
 import AuthForm from '@/components/layouts/AuthForm.vue'
 import SubmitButton from '@/components/common/buttons/SubmitButton.vue'
 import EnterField from '@/components/common/fields/EnterField.vue'
-import { AuthEnum } from '@/interfaces/enum/Auth'
-import { RouterEnum } from '@/interfaces/enum/Router'
-import { AuthDispatchEnum } from '@/interfaces/enum/Dispatch'
+import { AuthEnum } from '@/enum/Auth'
+import { RouterEnum } from '@/enum/Router'
+import { AuthDispatchEnum } from '@/enum/Dispatch'
 
 export default defineComponent({
   components: {
@@ -43,6 +43,7 @@ export default defineComponent({
         })
         router.push(RouterEnum.home)
       } catch (e) {
+        console.log("Login Error: ", e)
         const errorDetail = e.response.data.detail
         if (typeof(errorDetail) == "string") {
           submitError.value = errorDetail
@@ -87,6 +88,7 @@ export default defineComponent({
         :password="password"
         @updateEmail="(data) => email = data"
         @updatePassword="(data) => password = data"
+        @keyup.enter="login"
       >
         <div class="remember-forget">
           <div class="remember-me">
@@ -97,7 +99,7 @@ export default defineComponent({
             <router-link class="link" to="/forgot-password">Forgot password</router-link>
           </div>
         </div>
-        <SubmitButton name="Log In" @click="login" />
+        <SubmitButton name="Log In" @click="login"/>
         <div class="centered">-- or login with --</div>
         <div class="centered">
           <div class="google-icon" @click="clickGoogle">

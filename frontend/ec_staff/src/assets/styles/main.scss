@@ -7,3 +7,8 @@ input {
   outline: none;
   border: none;
 }
+
+.app {
+  display: flex;
+  flex-direction: row;
+}

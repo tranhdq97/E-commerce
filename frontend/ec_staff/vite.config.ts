@@ -15,9 +15,14 @@ export default defineConfig({
   server: {
     proxy: {
       '^/staff': {
-        target: 'http://localhost:8001',
+        target: 'http://localhost:8010',
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/staff/, '/api')
+      },
+      '^/storage': {
+        target: 'http://localhost:8030',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/storage/, '/api')
       }
     }
   }

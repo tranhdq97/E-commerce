@@ -1,16 +1,19 @@
+from django.db import IntegrityError
 from django.db.models import Avg
 from django.db.models.functions import Round
 from django_filters.rest_framework.backends import DjangoFilterBackend
 from rest_framework import mixins
 from rest_framework.filters import OrderingFilter, SearchFilter
 from rest_framework.permissions import AllowAny
+from rest_framework.response import Response
 from rest_framework.viewsets import GenericViewSet
 
 from ec_base.auth.permissions.permission import IsSuperStaff, IsManager
+from ec_base.common.constant import message
 from ec_base.common.constant.view_action import BaseViewAction
 from ec_base.common.custom.pagination import CustomPagination
 from ec_base.common.serializer.custom_mixins import CustomDestroyMixin
-from ec_base.common.utils.exceptions import PermissionDenied
+from ec_base.common.utils.exceptions import PermissionDenied, APIErr
 from ec_base.product.models import Product
 from ec_staff.product.filters.product import ProductListQueryFields
 from ec_staff.product.serializers.product import ProductListSlz, ProductRetrieveSlz, ProductCreateSlz, ProductUpdateSlz
@@ -61,3 +64,9 @@ class ProductViewSet(
             raise PermissionDenied()
 
         return super().get_permissions()
+
+    def create(self, request, *args, **kwargs):
+        try:
+            return super().create(request, *args, **kwargs)
+        except IntegrityError:
+            raise APIErr(detail=message.ALREADY_EXISTS)

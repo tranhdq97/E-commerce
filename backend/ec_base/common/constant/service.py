@@ -16,6 +16,7 @@ class Master(BaseEnum):
     m_payment_status = DBTable.MASTER_PAYMENT_STATUS, "MasterPaymentStatus", False
     m_shipping_status = DBTable.MASTER_SHIPPING_STATUS, "MasterShippingStatus", False
     m_customer_type = DBTable.MASTER_CUSTOMER_TYPE, "MasterCustomerType", False
+    m_product_category = DBTable.MASTER_PRODUCT_CATEGORY, "MasterProductCategory", True
 
     @staticmethod
     def list(allowed_to_create=False):

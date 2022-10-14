@@ -8,5 +8,11 @@ export enum RouterEnum {
   register = '/register',
   registerName = 'register',
   forgotPassword = '/forgot-password',
-  forgotPasswordName = 'forgotPassword'
+  forgotPasswordName = 'forgotPassword',
+  products = '/products',
+  productsName = 'products',
+  categories = '/categories',
+  categoriesName = 'categories',
+  discounts = '/discounts',
+  discountsName = 'discounts',
 }

@@ -124,7 +124,7 @@ img {
   display: flex;
   flex-direction: column;
   gap: var(--s-small);
-  margin-left: -60px;
+  right: 0;
   .item {
     cursor: pointer;
     padding: var(--s-small) var(--s-regular);

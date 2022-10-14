@@ -6,9 +6,9 @@ import AuthForm from '@/components/layouts/AuthForm.vue'
 import SubmitButton from '@/components/common/buttons/SubmitButton.vue'
 import EnterField from '../components/common/fields/EnterField.vue'
 import { useRouter } from 'vue-router'
-import { AuthDispatchEnum } from '@/interfaces/enum/Dispatch'
-import { RouterEnum } from '@/interfaces/enum/Router'
-import { AuthEnum } from '@/interfaces/enum/Auth'
+import { AuthDispatchEnum } from '@/enum/Dispatch'
+import { RouterEnum } from '@/enum/Router'
+import { AuthEnum } from '@/enum/Auth'
 
 export default defineComponent({
   components: {
@@ -84,6 +84,7 @@ export default defineComponent({
         :password="password"
         @updateEmail="(data) => email = data"
         @updatePassword="(data) => password = data"
+        @keyup.enter="register"
       >
         <EnterField
           title="Last Name"
@@ -93,7 +94,7 @@ export default defineComponent({
           :content="lastName"
           @updateContent="(data) => lastName = data"
         /> 
-        <SubmitButton name="Register" @click="register" />
+        <SubmitButton name="Register" @click="register"/>
         <div class="login-link">
           <router-link class="link" to="/login">Sign In</router-link>
         </div>

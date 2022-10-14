@@ -27,15 +27,35 @@
   --c-primary: #1C1B1F;
   --c-secondary: #3F3D56;
   --c-primaryHighlight: #6C63FF;
-  --c-lightgrey: #E6E6E6;
+  --c-lightgrey: #ececec;
+  --c-semi-grey: #c7c7c7;
   --c-grey: #999999;
   --c-secondaryHighlight: #FF5555;
-  --c-noticable: #14FE7F;
+  --c-remarkable: #14FE7F;
   --c-white: white;
+  --c-yellow: #FFD978;
 }
 :root {
   --c-primaryHighlight-lighter: #9e99ff;
   --c-primaryHighlight-darker: #3d33ff;
+}
+:root {
+  --c-transparent: rgba(0, 0, 0, 0.8);
+  --c-popup-transparent: rgba(0, 0, 0, 0.5);
+  --c-enter-transparent: rgba(0, 0, 0, 0.1);
+  --c-light-transparent: rgba(0, 0, 0, 0.05);
+  --c-white-transparent: rgba(255, 255, 255, 0.9);
+}
+:root {
+  --c-highlight: #18A0FB;
+  --c-regular: #4e4e4e;
+  --c-light-regular: #808080;
+  --c-background: #dfdfdf;
+}
+
+/* Border color */
+:root {
+  --b-c-regular: rgb(0, 0, 0, 0.1);
 }
 
 /* Font size */
@@ -45,7 +65,8 @@
   --f-s-header-3: 24px;
   --f-s-header-4: 20px;
   --f-s-regular: 18px;
-  --f-s-semi-regular: 14px;
+  --f-s-semi-regular: 16px;
+  --f-s-semi-small: 14px;
   --f-s-small: 12px;
 }
 
@@ -62,22 +83,57 @@
 
 /* Border radius */
 :root {
-  --b-r-normal: 10px
+  --b-r-semi-large: 20px;
+  --b-r-normal: 10px;
+  --b-r-small: 5px;
 }
 
 /* Spacing */
 :root {
+  --s-extra-large: 60px;
   --s-large: 30px;
   --s-medium: 15px;
-  --s-regular: 10px
+  --s-regular: 10px;
+  --s-small: 5px;
+}
+
+:root {
+  --b-s-small: 1px;
+  --b-s-regular: 2px;
+}
+
+/* Transition time */
+:root {
+  --t-regular: ease-in 0.5s;
+}
+
+/* Border size */
+:root {
+  --b-s-small: 1px;
+  --b-s-regular: 3px;
+}
+
+:root {
+  --bannerHeight: 500px;
+  --headerHeight: 71px;
+}
+
+/* Time out */
+:root {
+  --t-o-add: 2s;
 }
 
 .material-symbols-outlined {
+  cursor: pointer;
   font-variation-settings:
   'FILL' 0,
   'wght' 800,
   'GRAD' 0,
   'opsz' 48
+}
+
+.material-icons {
+  cursor: pointer;
 }
 
 *,
@@ -89,15 +145,14 @@
 }
 
 body {
-  min-height: 100vh;
   color: var(--color-text);
   background: var(--color-background);
   transition: color 0.5s, background-color 0.5s;
   line-height: 1.6;
   font-family: 'Poppins', sans-serif;
   font-weight: var(--f-w-regular);
-  font-size: var(--f-s-regular);
-  color: var(--c-primary);
+  font-size: var(--f-s-semi-small);
+  color: var(--c-regular);
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

@@ -18,5 +18,6 @@ class Product(Creator, Editor, DateTimeModel):
     photo = models.ForeignKey(to=FileManagement, on_delete=models.RESTRICT, related_name=DBTable.PRODUCT, null=True)
 
     class Meta:
+        unique_together = (('name', 'category'),)
         db_table = DBTable.PRODUCT
         app_label = ModelAppLabel.PRODUCT
