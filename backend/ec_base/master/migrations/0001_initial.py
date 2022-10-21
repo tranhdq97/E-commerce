@@ -154,7 +154,7 @@ class Migration(migrations.Migration):
                 "db_table": ec_base.common.constant.db_table.DBTable["MASTER_DISTRICT"],
                 "unique_together": {
                     (
-                        ec_base.common.constant.db_fields.MasterDistrictFields["NAME"],
+                        ec_base.common.constant.db_fields.MasterFields["NAME"],
                         ec_base.common.constant.db_fields.MasterDistrictFields["CITY"],
                     )
                 },

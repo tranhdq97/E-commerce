@@ -12,12 +12,12 @@ class Product(Creator, Editor, DateTimeModel):
     quantity = models.IntegerField(default=0)
     purchase_price = models.FloatField(default=0.0)
     price = models.FloatField(default=0.0)
-    desc = models.TextField()
+    desc = models.TextField(null=True, blank=True)
     is_deleted = models.BooleanField(default=False)
     category = models.ForeignKey(to=MasterProductCategory, on_delete=models.RESTRICT, related_name=DBTable.PRODUCT)
     photo = models.ForeignKey(to=FileManagement, on_delete=models.RESTRICT, related_name=DBTable.PRODUCT, null=True)
 
     class Meta:
-        unique_together = (('name', 'category'),)
+        unique_together = (("name", "category"),)
         db_table = DBTable.PRODUCT
         app_label = ModelAppLabel.PRODUCT

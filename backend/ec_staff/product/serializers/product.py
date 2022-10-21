@@ -40,9 +40,6 @@ class ProductUpdateSlz(ProductBaseSlz):
         model = ProductBaseSlz.Meta.model
         fields = ProductBaseSlz.Meta.fields + (
             ProductFields.NAME,
-            ProductFields.QUANTITY,
-            ProductFields.PURCHASE_PRICE,
-            ProductFields.PRICE,
             ProductFields.DESC,
             ProductFields.CATEGORY_ID,
             ProductFields.PHOTO_ID,
@@ -81,26 +78,6 @@ class ProductRetrieveSlz(ProductBaseSlz):
                 ProductFields.NAME,
                 ProductFields.QUANTITY,
                 ProductFields.PRICE,
-                ProductFields.DESC,
-                ProductFields.CATEGORY,
-                ProductFields.PHOTO_ID,
-            )
-            + (RatingFields.NUM_STARS,)
-        )
-
-
-class ProductRetrieveForStaffSlz(ProductBaseSlz):
-    category = BaseMasterRetrieveSlz(many=False)
-    num_stars = serializers.FloatField()
-
-    class Meta:
-        model = ProductBaseSlz.Meta.model
-        fields = (
-            ProductBaseSlz.Meta.fields
-            + (
-                ProductFields.NAME,
-                ProductFields.QUANTITY,
-                ProductFields.PRICE,
                 ProductFields.PURCHASE_PRICE,
                 ProductFields.DESC,
                 ProductFields.CATEGORY,
@@ -119,3 +96,14 @@ class ProductForOrderItemRetrieveSlz(ProductBaseSlz):
             ProductFields.PRICE,
             ProductFields.PHOTO_ID,
         )
+
+
+class ProductQuantityUpdateSlz(ProductBaseSlz):
+    class Meta:
+        model = ProductBaseSlz.Meta.model
+        fields = ProductBaseSlz.Meta.fields + (ProductFields.QUANTITY,)
+        extra_kwargs = {
+            ProductFields.QUANTITY: {
+                "required": True,
+            }
+        }

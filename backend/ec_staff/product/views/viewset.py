@@ -10,13 +10,22 @@ from rest_framework.viewsets import GenericViewSet
 
 from ec_base.auth.permissions.permission import IsSuperStaff, IsManager
 from ec_base.common.constant import message
-from ec_base.common.constant.view_action import BaseViewAction
+from ec_base.common.constant.db_fields import ProductFields, RatingFields
+from ec_base.common.constant.db_table import DBTable
+from ec_base.common.constant.view_action import BaseViewAction, ProductViewAction
 from ec_base.common.custom.pagination import CustomPagination
 from ec_base.common.serializer.custom_mixins import CustomDestroyMixin
 from ec_base.common.utils.exceptions import PermissionDenied, APIErr
 from ec_base.product.models import Product
 from ec_staff.product.filters.product import ProductListQueryFields
-from ec_staff.product.serializers.product import ProductListSlz, ProductRetrieveSlz, ProductCreateSlz, ProductUpdateSlz
+from ec_staff.product.serializers.product import (
+    ProductListSlz,
+    ProductRetrieveSlz,
+    ProductCreateSlz,
+    ProductUpdateSlz,
+    ProductQuantityUpdateSlz,
+)
+from ec_staff.product.services.product import ProductSvc
 
 
 class ProductViewSet(
@@ -38,7 +47,11 @@ class ProductViewSet(
     filterset_fields = ProductListQueryFields.FILTERSET_FIELDS
 
     def get_queryset(self):
-        queryset = Product.objects.all().prefetch_related("rating").annotate(num_stars=Round(Avg("rating__num_stars")))
+        queryset = (
+            Product.objects.all()
+            .prefetch_related(DBTable.RATING)
+            .annotate(num_stars=Round(Avg("__".join([DBTable.RATING, RatingFields.NUM_STARS]))))
+        )
         return queryset
 
     def get_serializer_class(self):
@@ -47,6 +60,7 @@ class ProductViewSet(
             BaseViewAction.RETRIEVE: ProductRetrieveSlz,
             BaseViewAction.CREATE: ProductCreateSlz,
             BaseViewAction.UPDATE: ProductUpdateSlz,
+            ProductViewAction.UPDATE_QUANTITY: ProductQuantityUpdateSlz,
         }
         slz = slz_switcher.get(self.action, ProductListSlz)
         return slz
@@ -58,6 +72,7 @@ class ProductViewSet(
             BaseViewAction.CREATE: (IsManager | IsSuperStaff,),
             BaseViewAction.UPDATE: (IsManager | IsSuperStaff,),
             BaseViewAction.DESTROY: (IsManager | IsSuperStaff,),
+            ProductViewAction.UPDATE_QUANTITY: (IsManager | IsSuperStaff,),
         }
         self.permission_classes = perm_switcher.get(self.action)
         if self.permission_classes is None:
@@ -70,3 +85,9 @@ class ProductViewSet(
             return super().create(request, *args, **kwargs)
         except IntegrityError:
             raise APIErr(detail=message.ALREADY_EXISTS)
+
+    def update_quantity(self, request, *args, **kwargs):
+        instance = self.get_object()
+        updated_instance = ProductSvc.update_quantity(instance, request.data.get(ProductFields.QUANTITY))
+        slz = self.get_serializer(instance=updated_instance)
+        return Response(data=slz.data)

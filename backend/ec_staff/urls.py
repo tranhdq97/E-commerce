@@ -24,4 +24,5 @@ urlpatterns = [
     path("api/discount/", include("ec_staff.discount.urls"), name="discount"),
     path("api/customer/", include("ec_staff.customer.urls"), name="customer"),
     path("api/staff/", include("ec_staff.staff.urls"), name="staff"),
+    path("api/master/", include("ec_staff.master.urls"), name="master"),
 ]

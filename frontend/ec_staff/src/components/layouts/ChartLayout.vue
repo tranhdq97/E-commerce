@@ -1,9 +1,6 @@
 <script lang="ts">
-import { defineComponent, ref } from 'vue'
-import { Line } from 'vue-chartjs'
-import { Chart as ChartJS, CategoryScale, Legend, LinearScale, Title, Tooltip, LineElement, PointElement } from 'chart.js'
-
-ChartJS.register(Title, Tooltip, Legend, LineElement, PointElement, CategoryScale, LinearScale)
+import { SortByEnum } from '@/enum/SortBy';
+import { defineComponent } from 'vue'
 
 export default defineComponent({
   props: {
@@ -11,35 +8,14 @@ export default defineComponent({
       required: true,
       type: String,
     },
+    sortBy: {
+      required: false,
+      default: SortByEnum.thisMonth,
+      // type
+    }
   },
   setup() {
-    const sortBy = ref('current year')
-    const chartOptions = {
-      responsive: true
-    }
-    const chartData = {
-      labels: ['January', 'February', 'March', 'January', 'February', 'March', 'January', 'February', 'March', 'January', 'February', 'March' ],
-      datasets: [ 
-        { 
-          label: 'Data One',
-          backgroundColor: '#f87979',
-          data: [40, 21, 12, 12 ],
-        },
-        { 
-          label: 'Data Two',
-          backgroundColor: '#f22342',
-          data: [100, 221, 112, 12 ],
-        } 
-      ],
-    }
-
-    return {
-      sortBy,
-      chartOptions,
-      chartData,
-    }
   },
-  components: { Line, }
 })
 </script>
 
@@ -55,17 +31,7 @@ export default defineComponent({
         </div>
       </div>
     </div>
-    <Line
-      :chart-options="chartOptions"
-      :chart-data="chartData"
-      chart-id="line-chart"
-      dataset-id-key="label"
-      :plugins="() => []"
-      css-classes="line-chart"
-      :style="() => {}"
-      :height="300"
-      :width="700"
-    />
+    <slot></slot>
   </div>
 </template>
 
@@ -103,8 +69,5 @@ export default defineComponent({
       color: var(--c-primary);
     }
   }
-}
-.line-chart {
-  padding: var(--s-medium);
 }
 </style>

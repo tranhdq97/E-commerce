@@ -17,7 +17,7 @@ export default {
   state: {
     isOpenSideBar: false,
     selectedMainRoute: SideBarEnum.products,
-    selectedSubRoute: RouterEnum.categories,
+    selectedSubRoute: RouterEnum.categoriesName,
   } as SideBarState,
   getters: {
     isOpenSideBar: (state: SideBarState) => state.isOpenSideBar,

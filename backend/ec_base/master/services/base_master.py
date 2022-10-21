@@ -23,7 +23,7 @@ class MasterBaseService:
         return get_object_or_404(self.model, pk=pk)
 
     def list(self, parent_id=None):
-        queryset = self.model.objects.all().filter()
+        queryset = self.model.objects.filter(is_deleted=False)
         if self.master_name == DBTable.MASTER_DISTRICT and parent_id is not None:
             return queryset.filter(city_id=parent_id)
 

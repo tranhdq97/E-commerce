@@ -16,6 +16,7 @@ class DBTable(str, BaseEnum):
     MASTER_SHIPPING_STATUS = "m_shipping_status"
     MASTER_PAYMENT_STATUS = "m_payment_status"
     MASTER_CUSTOMER_TYPE = "m_customer_type"
+    MASTER_FILTER_BY = "m_filter_by"
 
     STAFF = "staff"
     USER_INFO = "user_info"

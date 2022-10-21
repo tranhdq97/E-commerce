@@ -20,10 +20,17 @@ export enum SideBarDispatchEnum {
 export enum ProductCategoryDispatchEnum {
   addNewCategory = 'productCategory/addNewCategory',
   getCategoryList = 'productCategory/getCategoryList',
+  updateSaleQuantityOverview = 'productCategory/updateSaleQuantityOverview',
+  updateSaleAmountOverview = 'productCategory/updateSaleAmountOverview',
 }
 
 export enum ProductDispatchEnum {
   addNewProduct = 'product/addNewProduct',
   selectCategory = 'product/selectCategory',
   getProductList = 'product/getProductList',
+  updateQuantity = 'product/updateQuantity',
+}
+
+export enum FilterByDispatchEnum {
+  getFilterByList = 'filterBy/getFilterByList',
 }

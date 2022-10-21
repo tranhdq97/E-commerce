@@ -8,6 +8,7 @@ export default defineComponent({
     field: { required: true, type: Object, },
     type: { required: false, default: 'text', type: String},
     row: { required: false, default: '4', type: String },
+    isDisabled: { required: false, default: false, type: Boolean },
   },
   emits: ['updateField',],
   setup() {
@@ -19,8 +20,9 @@ export default defineComponent({
 
 <template>
   <div class="wrapper">
-    <div class="title">{{ title }}</div>
+    <div :class="isDisabled ? 'title is-disabled' : 'title'">{{ title }}</div>
     <textarea
+      :class="isDisabled ? 'is-disabled' : ''"
       :rows="row"
       :type="type"
       :placeholder="placeHolder" 
@@ -42,6 +44,10 @@ export default defineComponent({
   font-size: var(--f-s-semi-regular);
   font-weight: var(--f-w-semi-bold);
   margin-bottom: var(--s-small);
+  color: var(--c-primary);
+  &.is-disabled {
+    color: var(--c-grey);
+  }
 }
 textarea {
   font-size: var(--f-s-semi-small);
@@ -51,5 +57,8 @@ textarea {
   background: var(--c-enter-transparent);
   border: none;
   outline: none;
+  &.is-disabled {
+    pointer-events: none;
+  }
 }
 </style>

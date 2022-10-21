@@ -4,4 +4,5 @@ export enum ProductApiEnum {
   delete = '/staff/product/{id}/delete',
   detail = '/staff/product/{id}/detail',
   update = '/staff/product/{id}/update',
+  update_quantity = '/staff/product/{id}/update-quantity',
 }

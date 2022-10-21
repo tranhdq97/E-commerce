@@ -132,8 +132,21 @@
   'opsz' 48
 }
 
+.material-symbols-rounded {
+  cursor: pointer;
+}
+
 .material-icons {
   cursor: pointer;
+}
+
+*::-webkit-scrollbar {
+  background: none;
+  width: 3px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: var(--c-highlight);
 }
 
 *,

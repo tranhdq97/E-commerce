@@ -9,10 +9,28 @@ import authAxios from './services/api'
 import { TokenEnum } from './enum/Token'
 import { RouterEnum } from './enum/Router'
 import { AuthDispatchEnum } from './enum/Dispatch'
-import auth from './store/modules/auth'
+import axios from 'axios'
+import { Chart } from 'chart.js'
+
+Chart.defaults.responsive = true
+Chart.defaults.maintainAspectRatio = false
+Chart.defaults.interaction.intersect = false
+
+axios.interceptors.request.use(
+  function(config) {
+    const time = new Date()
+    config.headers.TimezoneOffset = - time.getTimezoneOffset() / 60
+    return config
+  },
+  function(error) {
+    return Promise.reject(error)
+  }
+)
 
 authAxios.interceptors.request.use(
   function(config) {
+    const time = new Date()
+    config.headers.TimezoneOffset = - time.getTimezoneOffset() / 60
     config.headers.Authorization = "Bearer " + VueCookies.get(TokenEnum.access)
     return config
   },

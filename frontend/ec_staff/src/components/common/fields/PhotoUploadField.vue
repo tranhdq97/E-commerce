@@ -7,6 +7,7 @@ export default defineComponent({
   props: {
     title: { required: true, type: String, },
     field: { required: true, type: Object, },
+    isDisabled: { required: false, default: false, type: Boolean },
   },
   emits: ['updateField',],
   setup(props, { emit }) {
@@ -35,9 +36,13 @@ export default defineComponent({
 
 <template>
   <div class="wrapper">
-    <div class="title">{{ title }}</div>
+    <div :class="isDisabled ? 'title is-disabled' : 'title'">{{ title }}</div>
     <div>
-      <input id="img" @change="chooseImage" type='file' ref="fileInput" class="frame"/>
+      <input
+        :class="isDisabled ? 'is-disabled' : ''"
+        @change="chooseImage" 
+        type='file' 
+        class="frame"/>
       <img :src="field.file" v-if="field.isAdded" />
     </div>
   </div>
@@ -55,6 +60,9 @@ export default defineComponent({
   font-size: var(--f-s-semi-regular);
   font-weight: var(--f-w-semi-bold);
   margin-bottom: var(--s-small);
+  &.is-disabled {
+    color: var(--c-grey);
+  }
 }
 .frame {
   width: 250px;
@@ -69,10 +77,20 @@ export default defineComponent({
     background: var(--c-highlight);
     color: var(--c-white);
   }
+  &.is-disabled {
+    &::-webkit-file-upload-button {
+      background: var(--c-grey);
+    }
+  }
 }
 img {
   margin-top: var(--s-regular);
   width: 250px;
   height: 250px;
+}
+input {
+  &.is-disabled {
+    pointer-events: none;
+  }
 }
 </style>

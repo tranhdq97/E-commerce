@@ -1,0 +1,30 @@
+[
+  {
+    "model": "master.MasterFilterBy",
+    "fields": {
+      "id": 3,
+      "name": "this year"
+    }
+  },
+  {
+    "model": "master.MasterFilterBy",
+    "fields": {
+      "id": 2,
+      "name": "this month"
+    }
+  },
+  {
+    "model": "master.MasterFilterBy",
+    "fields": {
+      "id": 4,
+      "name": "last 5 years"
+    }
+  },
+  {
+    "model": "master.MasterFilterBy",
+    "fields": {
+      "id": 1,
+      "name": "today"
+    }
+  }
+]

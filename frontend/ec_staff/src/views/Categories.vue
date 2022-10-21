@@ -1,13 +1,15 @@
 <script lang="ts">
 import { computed, defineComponent, ref, watch } from 'vue'
-import Popup from '../components/common/Popup.vue'
-import EnterSearchField from '../components/common/fields/EnterSearchField.vue'
+import Popup from '@/components/common/Popup.vue'
+import EnterSearchField from '@/components/common/fields/EnterSearchField.vue'
 import { useStore } from 'vuex'
 import { ProductCategoryGetterEnum } from '@/enum/Getter'
 import { RouterEnum } from '@/enum/Router'
 import { ProductCategoryDispatchEnum, SideBarDispatchEnum } from '@/enum/Dispatch'
 import { SideBarEnum } from '@/enum/SideBar'
-import OverviewLineChart from '../components/other/categoryPage/OverviewLineChart.vue'
+import AmountOverview from '@/components/other/categoryPage/AmountOverview.vue'
+import CategoryList from '@/components/other/categoryPage/CategoryList.vue'
+
 
 export default defineComponent({
   setup() {
@@ -16,11 +18,9 @@ export default defineComponent({
       mainRoute: SideBarEnum.products,
       subRoute: RouterEnum.categoriesName,
     })
-    store.dispatch(ProductCategoryDispatchEnum.getCategoryList)
     const category = ref({ name: '', isAdded: false })
-    const categoryList = computed(() => {
-      return store.getters[ProductCategoryGetterEnum.categoryList]
-    })
+    const categoryList = computed(() => store.getters[ProductCategoryGetterEnum.categoryList])
+    store.dispatch(ProductCategoryDispatchEnum.getCategoryList)
 
     async function addNewCategory() {
       try {
@@ -47,7 +47,7 @@ export default defineComponent({
       addNewCategory,
     }
   },
-  components: { Popup, EnterSearchField, OverviewLineChart }
+  components: { Popup, EnterSearchField, AmountOverview, CategoryList }
 })
 </script>
 
@@ -64,9 +64,22 @@ export default defineComponent({
         @updateField="(field) => category = field"
       />
     </Popup>
-    <OverviewLineChart title="Category overview" />
+    <div class="first-row">
+      <CategoryList title="Category list"/>
+      <AmountOverview />
+    </div>
   </div>
 </template>
 
-<style>
+<style lang="scss" scoped>
+.page {
+  display: flex;
+  flex-flow: row wrap;
+  flex-direction: column;
+}
+.first-row {
+  display: flex;
+  width: 100%;
+  gap: var(--s-large);
+}
 </style>

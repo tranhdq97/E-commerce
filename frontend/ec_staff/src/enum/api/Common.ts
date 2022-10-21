@@ -6,5 +6,10 @@ export enum CommonApiEnum {
 export enum MasterNameEnum {
   productCategory = "m_product_category",
   city = 'm_city',
-  discount_type = 'm_discount_type', 
+  discountType = 'm_discount_type',
+  filterBy = 'm_filter_by',
+}
+
+export enum ProductCategoryEnum {
+  filterById = 'filter_by_id',
 }

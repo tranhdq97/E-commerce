@@ -11,8 +11,14 @@ export enum SideBarGetterEnum {
 
 export enum ProductCategoryGetterEnum {
   categoryList = 'productCategory/categoryList',
+  saleQuantityOverviewData = 'productCategory/saleQuantityOverviewData',
+  saleAmountOverviewData = 'productCategory/saleAmountOverviewData',
 }
 
 export enum ProductGetterEnum {
   productList = 'product/productList',
+}
+
+export enum FilterByGetterEnum {
+  filterByList = 'filterBy/filterByList',
 }

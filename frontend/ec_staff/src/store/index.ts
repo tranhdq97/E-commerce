@@ -5,6 +5,7 @@ import fileManagement from "./modules/fileManagement";
 import sideBar from "./modules/sideBar";
 import productCategory from "./modules/productCategory";
 import product from "./modules/product";
+import filterBy from "./modules/filterBy";
 
 export default createStore({
   modules: {
@@ -13,6 +14,7 @@ export default createStore({
     sideBar,
     productCategory,
     product,
+    filterBy,
   },
   plugins: [createPersistedState()],
 })

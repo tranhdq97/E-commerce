@@ -6,6 +6,8 @@ class CommonFields(str, BaseEnum):
     ID = "id"
     USER = "user"
     IS_DELETED = "is_deleted"
+    FILTER_BY = 'filter_by'
+    FILTER_BY_ID = 'filter_by_id'
     CREATED_AT = "created_at"
     UPDATED_AT = "updated_at"
     CREATED_BY = "created_by"
@@ -21,9 +23,13 @@ class MasterFields(str, BaseEnum):
 
 
 class MasterDistrictFields(str, BaseEnum):
-    NAME = "name"
     CITY = "city"
     CITY_ID = "city_id"
+
+
+class MasterProductCategoryFields(str, BaseEnum):
+    QUANTITY = 'quantity'
+    AMOUNT = 'amount'
 
 
 # --------------------------------------  Others
@@ -115,3 +121,5 @@ class OrderItemFields(str, BaseEnum):
     QUANTITY = "quantity"
     DISCOUNTS = "discounts"
     ACTUAL_AMOUNT = "actual_amount"
+    TOTAL_QUANTITY = 'total_quantity'
+    TOTAL_AMOUNT = 'total_amount'

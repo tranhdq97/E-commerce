@@ -79,6 +79,8 @@ services:
       - db
     volumes:
       - "./ec_storage:/app/ec_storage"
+      - "./media:/app/media"
+
     command: bash -c "sleep 5 &&
       python manage_storage.py runserver 0.0.0.0:8000"
 #    gunicorn $DJANGO_APP_TARGET -b :$PORT --timeout 3600 --threads 4"

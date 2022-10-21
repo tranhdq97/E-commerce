@@ -11,12 +11,7 @@ import { RouterEnum } from '@/enum/Router'
 import { AuthDispatchEnum } from '@/enum/Dispatch'
 
 export default defineComponent({
-  components: {
-  Auth,
-  AuthForm,
-  SubmitButton,
-  EnterField
-  },
+  components: { Auth, AuthForm, SubmitButton, EnterField },
   setup() {
     const store = useStore()
     const router = useRouter()
@@ -43,7 +38,6 @@ export default defineComponent({
         })
         router.push(RouterEnum.home)
       } catch (e) {
-        console.log("Login Error: ", e)
         const errorDetail = e.response.data.detail
         if (typeof(errorDetail) == "string") {
           submitError.value = errorDetail
@@ -69,7 +63,6 @@ export default defineComponent({
       email,
       password,
       rememberMe,
-
       login,
       clickGoogle,
       clickFacebook,

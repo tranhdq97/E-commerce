@@ -36,3 +36,10 @@ class MasterShippingStatusID(int, BaseEnum):
 class MasterPaymentStatusID(int, BaseEnum):
     UNPAID = 1
     PAID = 2
+
+
+class MasterFilterByID(int, BaseEnum):
+    TODAY = 1
+    THIS_MONTH = 2
+    THIS_YEAR = 3
+    LAST_FIVE_YEARS = 4

@@ -8,13 +8,14 @@ export default defineComponent({
     title: { required: true, type: String, },
     placeHolder: { required: false, type: String, },
     isClickable: { required: false, type: Boolean, default: false},
-    field: { required: true, type: Object, }
+    field: { required: true, type: Object, },
+    isDisabled: { required: false, default: false, type: Boolean },
   },
   emits: ['updateField', 'selectRecommendation',],
   setup(props, {emit}) {
     const isOpenRecommendations = ref(false)
     const recommendationList = computed(() => props.itemList.filter((item) => {
-      return item.name.search(props.field.name.toLowerCase()) !== -1 ? true : false
+      return item.name.toLowerCase().search(props.field.name.toLowerCase()) !== -1 ? true : false
     }))
 
     const toggleOpenRecommendations = () => {
@@ -24,19 +25,22 @@ export default defineComponent({
         isOpenRecommendations.value = false
       }
     }
+    const onChange = (item: CommonMaster) => {
+      toggleOpenRecommendations()
+      props.field.name.length === 0 || (props.field.name.length > 0 && item.id) ? emit('updateField', { ...item, id: null }) : null
+    }
     const closeRecommendations = () => isOpenRecommendations.value = false
     const selectRecommendation = (item: CommonMaster) => {
       emit('updateField', item)
       emit('selectRecommendation', item)
       isOpenRecommendations.value = false
-    } 
-
+    }
     return {
       recommendationList,
       isOpenRecommendations,
-      toggleOpenRecommendations,
+      onChange,
       closeRecommendations,
-      selectRecommendation
+      selectRecommendation,
     }
   },
 })
@@ -44,14 +48,14 @@ export default defineComponent({
 
 <template>
   <div class="wrapper">
-    <div class="title">{{ title }}</div>
+    <div :class="isDisabled ? 'title is-disabled' : 'title'">{{ title }}</div>
     <input
-      :class="field.isAdded ? 'is-added' : ''"
+      :class="field.isAdded ? 'is-added' : isDisabled ? 'is-disabled' : ''"
       type="text"
       :placeholder="placeHolder" 
       :value="field.name"
       @input="(e) => $emit('updateField', { ...field, name: e.target.value })"
-      @keyup="toggleOpenRecommendations"
+      @keyup="onChange(field)"
     />
     <div
       class="recommendations"
@@ -87,6 +91,10 @@ export default defineComponent({
   font-size: var(--f-s-semi-regular);
   font-weight: var(--f-w-semi-bold);
   margin-bottom: var(--s-small);
+  color: var(--c-primary);
+  &.is-disabled {
+    color: var(--c-grey);
+  }
 }
 input {
   font-size: var(--f-s-semi-small);
@@ -95,6 +103,9 @@ input {
   border-radius: var(--b-r-small);
   background: var(--c-enter-transparent);
   text-transform: capitalize;
+  &.is-disabled {
+    pointer-events: none;
+  }
 }
 .recommendations {
   display: flex;

@@ -10,3 +10,4 @@ from ec_base.master.models.product_category import MasterProductCategory
 from ec_base.master.models.sex import MasterSex
 from ec_base.master.models.shipping_status import MasterShippingStatus
 from ec_base.master.models.staff_type import MasterStaffType
+from ec_base.master.models.filter_by import MasterFilterBy

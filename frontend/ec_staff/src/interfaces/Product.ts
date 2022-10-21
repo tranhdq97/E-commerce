@@ -8,3 +8,8 @@ export interface Product {
   photoId: null | number,
   quantity: null | number,
 }
+
+export interface ProductQuantity {
+  id: number,
+  quantity: number,
+}

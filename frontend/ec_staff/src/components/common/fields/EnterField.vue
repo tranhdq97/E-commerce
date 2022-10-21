@@ -3,30 +3,12 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   props: {
-    title: {
-      required: true,
-      type: String
-    },
-    placeHolder: {
-      required: false,
-      type: String
-    },
-    inputType: {
-      required: true,
-      type: String
-    },
-    content: {
-      required: true,
-      type: String
-    },
-    error: {
-      required: false,
-      type: String
-    },
-    isPasswordShowed: {
-      required: false,
-      type: Boolean
-    },
+    title: { required: true, type: String },
+    placeHolder: { required: false, type: String },
+    inputType: { required: true, type: String },
+    content: { required: true, type: String },
+    error: { required: false, type: String },
+    isPasswordShowed: { required: false, type: Boolean },
   },
   emits: ['updateContent']
 })

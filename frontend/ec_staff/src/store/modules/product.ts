@@ -1,9 +1,10 @@
 import axios from "axios"
-import type { Product } from "@/interfaces/Product"
+import type { Product, ProductQuantity } from "@/interfaces/Product"
 import { ProductApiEnum } from "@/enum/api/Product"
 import type { CommonMaster } from "@/interfaces/Master"
 import { ProductDispatchEnum } from "@/enum/Dispatch"
 import authAxios from "@/services/api"
+import { CommonApiEnum } from "@/enum/api/Common"
 
 export interface ProductState {
   productList: Array<Product>,
@@ -25,8 +26,17 @@ export default {
     async addNewProduct ({ state }, newProduct: Product) {
       const resp = await authAxios.post(ProductApiEnum.create, newProduct)
       if (!state.productList.some((item) => item.id === resp.data.id)) {
-        state.productList.push({ id: resp.data.id, name: resp.data.name })
+        state.productList.push({ ...resp.data })
       }
+      return resp
+    },
+    async updateQuantity ({ state }, productQuantity: ProductQuantity) {
+      const resp = await authAxios.put(
+        ProductApiEnum.update_quantity.replace(CommonApiEnum.id, productQuantity.id.toString()), { quantity: Number(productQuantity.quantity), }
+      )
+      state.productList.map((item: Product) => {
+        item.id === productQuantity.id ? item.quantity = resp.data.quantity : null
+      })
       return resp
     },
     async selectCategory({ state, dispatch }, category: CommonMaster) {

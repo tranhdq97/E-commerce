@@ -44,11 +44,11 @@ export default defineComponent({
   justify-content: space-between;
 }
 .photo {
+  display: flex;
   padding-right: 20px;
   justify-items: center;
   img {
     width: 100%;
-    height: 99vh;
     min-width: 500px;
   }
 }

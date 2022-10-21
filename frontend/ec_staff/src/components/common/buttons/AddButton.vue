@@ -17,6 +17,7 @@ export default defineComponent({
 .button-wrapper {
   cursor: pointer;
   background: rgba(255,255,255, 0.4);
+  color: var(--c-highlight);
   display: flex;
   padding: var(--s-regular);
   border-radius: var(--b-r-normal);
